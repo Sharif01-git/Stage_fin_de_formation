@@ -16,3 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Page_connexionA', function () {
+    return view('Page_connexionA');
+});
+
+Route::get('/Page_connexionU', function () {
+    return view('Page_connexionU');
+});
+
+Route::get('/Infirmière', function () {
+    return view('Infirmière');
+});
+
+Route::get('/Medecin', function () {
+    return view('Medecin');
+});
+
+Route::get('/Pharmacien', function () {
+    return view('Pharmacien');
+});
+
+Route::get('/Admin', function () {
+    return view('Admin');
+});
