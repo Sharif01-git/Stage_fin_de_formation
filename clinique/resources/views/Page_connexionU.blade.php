@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>Page de connexion</title>
+		<title>Page de connexion Utilisateur</title>
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="login-form login-signin">
 								<div class="text-center mb-10 mb-lg-20">
 									<h2 class="font-weight-bold">Se connecter</h2>
-									<p class="text-muted font-weight-bold">Entrer votre pseudo et votre mot de passe</p>
+									<p class="text-muted font-weight-bold">Entrer votre Email et votre mot de passe</p>
 								</div>
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_login_signin_form">
