@@ -149,14 +149,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireP/FormulaireP1')}}" class="menu-link">
 													<span class="menu-text">Liste des produits</span>
 													<span class="menu-desc">Consulter la liste des produits en stock</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireP/FormulaireP2')}}" class="menu-link">
 													<span class="menu-text">Vente de produits</span>
 													<span class="menu-desc">Enrégistrer une nouvelle vente</span>
 													<i class="menu-arrow"></i>

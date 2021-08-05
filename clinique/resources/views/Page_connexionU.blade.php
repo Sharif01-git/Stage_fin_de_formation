@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>Page de connexion Utilisateur</title>
+		<title>Page de connexion</title>
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -159,8 +159,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-lg-center">
 						<div class="d-flex flex-column justify-content-center">
-							<h3 class="display-3 font-weight-bold my-7 text-white">Bienvenue sur l'appli...</h3>
-							<p class="font-weight-bold font-size-lg text-white opacity-80">Veuillez vous connecter pour accéder à votre page d'accueil!!!</p>
+							<h3 class="display-3 font-weight-bold my-7 text-white" >Bienvenue sur GES-CLIN</h3>
+							<p class="font-weight-bold font-size-lg text-white opacity-80" >Veuillez vous connecter pour accéder à votre page d'accueil!!!</p>
 						</div>
 					</div>
 					<!--end::Content body-->

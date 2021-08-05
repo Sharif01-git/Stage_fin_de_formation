@@ -14,7 +14,7 @@ License: You must have a valid license purchased only from themeforest(the above
 -->
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="../../">
+	<head><base href="../../../">
 		<meta charset="utf-8" />
 		<title>Page d'accueil Infirmière</title>
 		<meta name="description" content="Page with empty content" />
@@ -24,16 +24,16 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Page Vendors Styles(used by this page)-->
-		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/logos/clinique6.jpg" />
+		<link rel="shortcut icon" href="../assets/media/logos/clinique6.jpg" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -149,28 +149,28 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+                                                <a href="{{url('FormulaireI/FormulaireI1')}}" class="menu-link">
 													<span class="menu-text">Enrégistrer patient</span>
 													<span class="menu-desc">Enrégistrer un nouveau patient</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireI/FormulaireI2')}}" class="menu-link">
 													<span class="menu-text">Caisse</span>
-													<span class="menu-desc">Enrégistrer achet de bon de consulation/carnet</span>
+													<span class="menu-desc">Enrégistrer achat de bon de consulation/carnet</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireI/FormulaireI3')}}" class="menu-link" >
 													<span class="menu-text">Facturation</span>
 													<span class="menu-desc">Etablir facture</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireI/FormulaireI4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
 													<span class="menu-desc">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>

@@ -25,6 +25,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Fonts-->
 		<!--begin::Page Vendors Styles(used by this page)-->
 		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/pages/wizard/wizard-4.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendors Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
 		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
@@ -147,21 +148,21 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--begin::Header Nav-->
 										<ul class="menu-nav">
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireA/FormulaireA1')}}" class="menu-link">
 													<span class="menu-text">Ajouter utilisateur</span>
 													<span class="menu-desc">Enrégistrer un nouveau utilisateur</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="{{url('FormulaireA/FormulaireA2')}}" class="menu-link">
 													<span class="menu-text">Liste utilisateurs</span>
 													<span class="menu-desc">Consulter la liste des utilisateurs</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+												<a href="" class="menu-link">
 													<span class="menu-text">Statistiques</span>
 													<span class="menu-desc">Consulter les statistiques</span>
 													<i class="menu-arrow"></i>

@@ -41,6 +41,24 @@
 <!--begin::Page Scripts(used by this page)-->
 <script src="assets/js/pages/widgets.js"></script>
 <!--end::Page Scripts-->
+
+<!--begin::Page Scripts(used by Ajouter utilisateur)-->
+<script src="assets/js/pages/custom/user/add-user.js"></script>
+<!--end::Page Scripts-->
+
+<!--begin::Page Scripts(used by Information utilisateur)-->
+<script src="assets/js/pages/widgets.js"></script>
+<script src="assets/js/pages/custom/profile/profile.js"></script>
+<!--end::Page Scripts-->
+
+<!--begin::Page Scripts(used by listes)-->
+<script src="assets/js/pages/crud/ktdatatable/base/data-local.js"></script>
+<!--end::Page Scripts-->
+
+<!--begin::Page Scripts(used by formulaire)-->
+<script src="assets/js/pages/crud/forms/widgets/form-repeater.js"></script>
+<!--end::Page Scripts-->
+
 </body>
 <!--end::Body-->
 </html>
