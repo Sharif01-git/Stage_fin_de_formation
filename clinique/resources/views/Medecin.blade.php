@@ -3,6 +3,6 @@
 
 
 @extends('Layout.footer')
-@extends('Layout.content')
+@extends('Layout.contentM')
 @extends('Layout.headerM')
 

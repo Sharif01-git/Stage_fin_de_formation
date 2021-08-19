@@ -15,11 +15,13 @@ class CreateTraitementsTable extends Migration
     {
         Schema::create('traitements', function (Blueprint $table) {
             $table->id();
-            $table->string('Libelletrait');
-            $table->date('date_traitement');
+            $table->string('nomp')->nullable();
+            $table->string('prenomp')->nullable();
+            $table->string('libelletrait');
+            $table->date('date_trait');
             $table->string('auteur');
-            $table->Integer('medecin_id')->unsigned();
-            $table->Integer('patient_id')->unsigned();
+            $table->Integer('medecin_id')->nullable();
+            $table->Integer('patient_id')->nullable();
             //$table->foreign('medecin_id')->references('id')->on('medecins');
             //$table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();

@@ -18,8 +18,9 @@ class CreateDossiermedicalsTable extends Migration
             $table->string('libelledoss');
             $table->text('diagnostic');
             $table->Integer('patient_id');
+            $table->date('date_creation');
            // $table->foreign('patient_id')->references('id')->on('patients');
-            $table->timestamps('date_creation');
+            $table->timestamps();
         });
     }
 

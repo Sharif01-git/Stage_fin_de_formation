@@ -22,13 +22,18 @@ class CreatePatientsTable extends Migration
             $table->string('profession');
             $table->integer('tel');
             $table->string('nationalite');
+            $table->string('Email')->nullable();
             $table->string('maladiepart');
             $table->string('adressep');
             $table->string('allergie');
-            $table->Integer('infirmire_id');
-           // $table->foreign('infirmiere_id')->references('id')->on('infirmieres');
-            $table->Integer('dossierm_id');
-           // $table->foreign('dossierm_id')->references('id')->on('dossiermedicals');
+            $table->float('temperature');
+            $table->float('poids');
+            $table->float('tension');
+            $table->float('pouls');
+            $table->float('taille');
+            $table->string('groupage');
+            $table->Integer('infirmire_id')->nullable();
+            $table->Integer('dossierm_id')->nullable();
             $table->timestamps();
         });
     }

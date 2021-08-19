@@ -53,12 +53,25 @@
 
 <!--begin::Page Scripts(used by listes)-->
 <script src="assets/js/pages/crud/ktdatatable/base/data-local.js"></script>
+<script src="assets/js/pages/crud/ktdatatable/base/html-table.js"></script>
 <!--end::Page Scripts-->
 
 <!--begin::Page Scripts(used by formulaire)-->
 <script src="assets/js/pages/crud/forms/widgets/form-repeater.js"></script>
 <!--end::Page Scripts-->
 
+<script src="assets/js/pages/custom/login/login-general.js"></script>
+
+<!--begin::Page Scripts(used by contentA)-->
+<script src="assets/js/pages/widgets.js"></script>
+<!--end::Page Scripts-->
+
+<!--begin::Page Scripts(used by contentM)-->
+<script src="assets/js/pages/features/calendar/basic.js"></script>
+<!--end::Page Scripts-->
+<!--begin::Page Scripts(used by statistique)-->
+<script src="assets/js/pages/features/charts/apexcharts.js"></script>
+<!--end::Page Scripts-->
 </body>
 <!--end::Body-->
 </html>

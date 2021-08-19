@@ -15,18 +15,18 @@ class CreateConsultationsTable extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
-            $table->string('Libelleconsul');
-            $table->date('dateconsultation');
-            $table->double('prix');
-            $table->float('tension');
-            $table->float('temperature');
-            $table->float('poids');
-            $table->float('pouls');
-            $table->float('tail');
-            $table->string('groupage');
+            $table->string('nomp')->nullable();
+            $table->string('prenomp')->nullable();
+            $table->string('motifconsul');
+            $table->date('dateconsult');
+            $table->string('maladiepart');
+            $table->string('allergie');
+            $table->string('modevie');
+            $table->text('histoire');
             $table->text('diagnostic');
-            $table->Integer('medecin_id');
-            $table->Integer('patient_id');
+            $table->text('conduite');
+            $table->Integer('medecin_id')->nullable();
+            $table->Integer('patient_id')->nullable();
            // $table->foreign('medecin_id')->references('id')->on('medecins');
            // $table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();

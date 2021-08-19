@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model{
     protected $fillable = ['id','nomp','prenomp','age','sexe','profession','tel','nationalite','maladiepart','adressep','allergie'
-    ,'infirmire_id','dossierm_id'];
+   ,'Email','temperature','poids','tension','pouls','taille','groupage'];
     public function infirmieres(){
         return $this->belongsToMany(Infirmiere::class);
     }

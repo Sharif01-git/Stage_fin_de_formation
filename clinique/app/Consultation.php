@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Consultation extends Model{
-    protected $fillable = ['id','Libelleconsul','dateconsultation','prix','tension','temperature','poids','pouls','tail','groupage','diagnostic','medecin_id','patient_id'];
+    protected $fillable = ['id','motifconsul' ,'dateconsult' ,'maladiepart' ,'allergie' ,'modevie' ,'histoire' ,'diagnostic' ,'conduite'];
     public function medecins(){
         return $this->belongsToMany(Medecin::class);
     }

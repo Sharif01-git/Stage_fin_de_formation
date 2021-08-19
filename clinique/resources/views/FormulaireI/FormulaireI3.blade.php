@@ -1,3 +1,3 @@
-@extends('Layout.footer')
-@extends('Layout/FormI.FormI3')
+
+@extends('Layout/FormI.listePa')
    @extends('Layout.headerI')

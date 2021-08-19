@@ -1,5 +1,7 @@
 <?php
 
+use App\Profil;
+use App\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,13 +17,16 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('name');
             $table->string('prenom');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->Integer('administrateur_id');
-            $table->Integer('profil_id');
+            $table->integer('telephone');
+            $table->string('adresse');
+            $table->string('profil');
+            $table->integer('role')->nullable();
+            $table->Integer('administrateur_id')->nullable();
            // $table->foreign('administrateur_id')->references('id')->on('administrateurs');
            // $table->foreign('profil_id')->references('id')->on('profils');
             $table->rememberToken();

@@ -15,9 +15,12 @@ class CreateOrdonnancesTable extends Migration
     {
         Schema::create('ordonnances', function (Blueprint $table) {
             $table->id();
-            $table->string('libelleord');
-            $table->text('contenu');
-            $table->Integer('medecin_id');
+            $table->string('nomp');
+            $table->string('prenomp');
+            $table->Integer('age');
+            $table->string('sexe');
+            $table->text('produits');
+            $table->integer('patient_id');
            // $table->foreign('medecin_id')->references('id')->on('medecins');
             $table->timestamps();
         });

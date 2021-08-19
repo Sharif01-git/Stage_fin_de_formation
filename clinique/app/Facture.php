@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Facture extends Model{
-    protected $fillable = ['id','libellefacture','prixboncarn','prixconsult','prixtrait','prixprod','prixtotal','pharmacien_id','infirmiere_id'];
+    protected $fillable = ['id','libellefac','datefac','prixbonconsul','prixcarnet','prixtrait','prixprod','prixtotal'];
     public function infirmieres(){
         return $this->belongsToMany(Infirmiere::class);
     }

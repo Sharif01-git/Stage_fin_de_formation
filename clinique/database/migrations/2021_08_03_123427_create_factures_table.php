@@ -15,14 +15,15 @@ class CreateFacturesTable extends Migration
     {
         Schema::create('factures', function (Blueprint $table) {
             $table->id();
-            $table->string('libellefacture');
-            $table->double('prixboncarn')->nullable();
-            $table->double('prixconsult')->nullable();
-            $table->double('prixtrait')->nullable();
-            $table->double('prixprod')->nullable();
-            $table->double('prixtotal')->nullable();
-            $table->Integer('pharmacien_id');
-            $table->Integer('infirmiere_id');
+            $table->string('libellefac');
+            $table->date('datefac');
+            $table->double('prixbonconsul');
+            $table->double('prixcarnet');
+            $table->double('prixtrait');
+            $table->double('prixprod');
+            $table->double('prixtotal');
+            $table->Integer('caissier_id')->nullable();
+            $table->Integer('patient_id')->nullable();
            // $table->foreign('pharmacien_id')->references('id')->on('pharmaciens');
         //$table->foreign('infirmiere_id')->references('id')->on('infirmieres');
             $table->timestamps();
