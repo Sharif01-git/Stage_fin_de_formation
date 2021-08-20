@@ -189,7 +189,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!--begin::Form-->
-                    <form method="POST" action="{{ route('ModifPa'.$patient->id)}}">
+                    <form  action="{{ url('ModifPa'.$patient->id)}}" method="POST">
                         @csrf
                         <div class="card-body" style="padding-left: 18.25rem;">
                             <!--begin: Code-->

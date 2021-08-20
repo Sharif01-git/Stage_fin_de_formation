@@ -31,7 +31,7 @@ class HomeController extends Controller
     {
 
          Auth::user();
-        return view('home');
+        return view('/Infirmière');
          /*if($user->profil ==('Medecin')){
              return  view('/Medecin');
          }elseif(Auth::user()->profil ==('Infirmière')){

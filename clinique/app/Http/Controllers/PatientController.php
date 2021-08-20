@@ -41,8 +41,8 @@ class PatientController extends Controller
     }
 
     public function edit(Patient $patient){
-        $patients = Patient::findOrFail($patient);
-        return view('/ModifPa', compact('patients'));
+       // $patients = Patient::findOrFail($patient);
+        return view('/ModifPa')->with('patient',$patient);
     }
 
     public function update(Request $request, Patient $patient){

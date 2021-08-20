@@ -9,7 +9,7 @@ class CaisseController extends Controller
 {
     public function index(){
         $factures = Facture::all();
-        return view('/FormulaireI/FormulaireI3',compact('factures','factures'));
+        return view('/Caisse',compact('factures','factures'));
     }
 
     public function formulaire(){

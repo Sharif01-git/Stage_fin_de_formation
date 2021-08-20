@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBonconscarnTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateBonconscarnTable extends Migration
      */
     public function up()
     {
-        Schema::create('bonconscarn', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('libelle');
-            $table->double('prixachat');
-            $table->Integer('infirmiere_id');
-            //$table->foreign('infirmiere_id')->references('id')->on('infirmieres');
+            $table->string('title');
+            $table->dateTime('start');
+            $table->dateTime('end');
+            $table->Integer('medecin_id')->nullable();
+            $table->Integer('infirmiere_id')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateBonconscarnTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bonconscarn');
+        Schema::dropIfExists('events');
     }
 }

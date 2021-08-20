@@ -123,7 +123,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
                                     <div class="form-group py-3 border-top m-0">
                                         <select name="profil" class="form-control ">
-                                            <option value="">Select</option>
+                                            <option value="">Fonction</option>
                                             <option value="Adminstrateur">Adminstrateur</option>
                                             <option value="Infirmière">Infirmière</option>
                                             <option value="Médecin">Médecin</option>
@@ -191,8 +191,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div class="d-flex flex-column-auto justify-content-between mt-15">
 							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 Metronic</div>
 							<div class="d-flex order-1 order-sm-2 my-2">
-								<a href="#" class="text-muted text-hover-primary">Privacy</a>
-								<a href="#" class="text-muted text-hover-primary ml-4">Legal</a>
+								<a href="#" class="text-muted text-hover-primary">Privé</a>
+								<a href="#" class="text-muted text-hover-primary ml-4">Légal</a>
 								<a href="#" class="text-muted text-hover-primary ml-4">Contact</a>
 							</div>
 						</div>

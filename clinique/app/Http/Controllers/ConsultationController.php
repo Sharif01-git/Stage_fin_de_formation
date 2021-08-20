@@ -9,7 +9,7 @@ class ConsultationController extends Controller
 {
     public function index(){
         $consultations = Consultation::all();
-        return view('/FormulaireI/FormulaireI3',compact('consultations','consultations'));
+        return view('/Consultation',compact('consultations','consultations'));
     }
 
     public function formulaire(){

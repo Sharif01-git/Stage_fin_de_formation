@@ -9,7 +9,7 @@ class TraitementController extends Controller
 {
     public function index(){
         $traitements = Traitement::all();
-        return view('/FormulaireI/FormulaireI3',compact('traitements','traitements'));
+        return view('/Traitement',compact('traitements','traitements'));
     }
 
     public function formulaire(){

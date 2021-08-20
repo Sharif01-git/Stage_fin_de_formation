@@ -688,7 +688,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-2 col-form-label text-right">Produits & Dosage</label>
                                 <div class="col-lg-4 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="" maxlength="500" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" maxlength="500" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

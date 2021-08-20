@@ -59,6 +59,12 @@ Route::post('Caisse', 'CaisseController@traitement');
 Route::get('/FormulaireI/FormulaireI3','PatientController@index');
 Route::get('/FormulaireA/FormulaireA2','HomeController@liste');
 
+//fullcalender
+Route::get('fullcalendar','FullCalendarController@index');
+Route::get('fullcalendar/create','FullCalendarController@create');
+Route::post('fullcalendar/update','FullCalendarController@update');
+Route::post('fullcalendar/delete','FullCalendarController@destroy');
+
 
 /*---------Vues-----------*/
 
@@ -83,9 +89,9 @@ Route::get('/Admin', function () {
 
 
 //Vues pour infirmière
-Route::get('/FormulaireI/FormulaireI4', function () {
+/*Route::get('/FormulaireI/FormulaireI4', function () {
     return view('formulaireI/FormulaireI4');
-});
+});*/
 
 //Vues pour Medecin
 

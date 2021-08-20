@@ -4,8 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Administrateur extends Model{
-    protected $fillable = ['id','dater','heured','heuref','medecin_id','infirmiere_id'];
+class Event extends Model
+{
+    protected $fillable = ['id','title','start','end'];
     public function medecins(){
         return $this->belongsToMany(Medecin::class);
     }

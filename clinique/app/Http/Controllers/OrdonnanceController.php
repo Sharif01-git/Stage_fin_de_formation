@@ -9,7 +9,7 @@ class OrdonnanceController extends Controller
 {
     public function index(){
         $ordonnances = Ordonnance::all();
-        return view('/FormulaireI/FormulaireI3',compact('ordonnances','ordonnances'));
+        return view('/Ordonnance',compact('ordonnances','ordonnances'));
     }
 
     public function formulaire(){
