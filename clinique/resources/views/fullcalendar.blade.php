@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--end::Notice-->
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
-                    <div class="card-header">
+                    <div class="card-header" style="padding-left: 35%;">
                         <h3 class="card-title">Formulaire de programmation de rendez-vous</h3>
                         <div class="card-toolbar">
                         </div>

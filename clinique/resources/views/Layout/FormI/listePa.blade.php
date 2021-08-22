@@ -16,8 +16,8 @@
 								<!--begin::Card-->
 								<div class="card card-custom">
 									<div class="card-header flex-wrap border-0 pt-6 pb-0">
-										<div class="card-title">
-											<h3 class="card-label">Liste des patients
+										<div class="card-title" style="padding-left: 40%;">
+											<h3 class="card-label">Liste des patients</h3>
 										</div>
 										<div class="card-toolbar">
 										</div>
@@ -53,21 +53,21 @@
 										<table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
 											<thead>
 												<tr>
-													<th title="Field #1">ID</th>
+
 													<th title="Field #2">Nom</th>
 													<th title="Field #3">Prénom</th>
 													<th title="Field #4">Age</th>
 													<th title="Field #5">Telephone</th>
 													<th title="Field #6">Allergie</th>
 													<th title="Field #7">Sexe</th>
-                                                    <th title="Field #8">Enrégistré le</th>
+                                                    <th title="Field #8">Enrégistré le :</th>
                                                     <th title="Field #9">Action</th>
 												</tr>
 											</thead>
 											<tbody>
                                                 @foreach ($patients as $patient )
 												<tr>
-													<td>{{$patient->id}}</td>
+
 													<td>{{$patient->nomp}}</td>
 													<td>{{$patient->prenomp}}</td>
 													<td>{{$patient->age}}</td>
@@ -76,7 +76,15 @@
 													<td>{{$patient->sexe}}</td>
                                                     <td>{{$patient->created_at}}</td>
                                                     <td>
-                                                     <a class="btn btn-primary" href="{{ url('ModifPa'.$patient->id) }}">Modifier</a>
+                                                <form method="POST" action="{{route('ModifPa.destroy',$patient->id)}}">
+                                                     <a class="fa fa-edit" href="{{ route('ModifPa.edit',$patient->id) }}"></a>
+                                                     {{ csrf_field() }}
+                                                     {{ method_field('DELETE')}}
+                                                    <!-- <input type="submit" value="Delete">-->
+                                                    <a href="{{route('ModifPa.destroy',$patient->id)}}"> <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
+
+                                                    <a class="fa fa-eye" href=""  style="color:gray"></a>
+                                                </form>
                                                     </td>
 												</tr>
                                                 @endforeach

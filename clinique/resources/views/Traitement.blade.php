@@ -647,7 +647,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Formulaire d'enrégistrement des informations après traitement</h3>
+                        <h3 class="card-title" style="padding-left: 30%;">Formulaire d'enrégistrement des informations après traitement</h3>
                         <div class="card-toolbar">
 
                         </div>
@@ -655,28 +655,28 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!--begin::Form-->
                     <form class="form" action="/Traitement" method="POST">
                         @csrf
-                        <div class="card-body">
+                        <div class="card-body" align="center">
                             <!--begin: Code-->
 
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Libellé du traitement</label>
-                                <div class="col-lg-4">
+                            <div class="form-group ">
+                                <label class="col-lg-9 col-form-label text-left">Libellé du traitement</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="libelletrait" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Date du traitement</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Date du traitement</label>
+                                <div class="col-lg-9">
                                     <input type="date" class="form-control" name="date_trait" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Auteur</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" placeholder="auteur" name="auteur" />
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Auteur</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" placeholder="" name="auteur" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -684,10 +684,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
+                                <div class="col-lg-10"><button type="reset" class="btn font-weight-bold btn-secondary">Retour</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
-                                    <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button>
+
                                 </div>
                             </div>
                         </div>
@@ -696,7 +696,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <!--end::Card-->
                 <!--begin::Card-->
-
+            </div>
                 <!--end::Card-->
             </div>
             <!--end::Container-->

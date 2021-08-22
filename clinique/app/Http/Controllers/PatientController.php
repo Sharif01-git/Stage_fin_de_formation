@@ -11,6 +11,10 @@ class PatientController extends Controller
         $patients = Patient::all();
         return view('/FormulaireI/FormulaireI3',compact('patients','patients'));
     }
+    public function liste(){
+        $patients = Patient::all();
+        return view('/FormulaireM/FormulaireM5',compact('patients','patients'));
+    }
 
     public function formulaire(){
         return view('/Patient');
@@ -37,12 +41,12 @@ class PatientController extends Controller
             'groupage'=>$request->groupage,
 
         ]);
-        return view('/FormulaireI/FormulaireI3')->with('success', 'Le patient a été enrégistré avec succès');
+        return view('/Infirmière')->with('success', 'Le patient a été enrégistré avec succès');
     }
 
     public function edit(Patient $patient){
-       // $patients = Patient::findOrFail($patient);
-        return view('/ModifPa')->with('patient',$patient);
+        //$patients = Patient::findOrFail($patient);
+        return view('ModifPa')->with('patient',$patient);
     }
 
     public function update(Request $request, Patient $patient){
@@ -66,6 +70,11 @@ class PatientController extends Controller
             'taille'=>$request->taille,
             'groupage'=>$request->groupage,
         ]);
-        return view('/FormulaireI/FormulaireI3')->with('success', 'Les informations du patient ont été modifiés avec succès');
+        return view('/Infirmière')->with('success', 'Les informations du patient ont été modifiés avec succès');
+    }
+
+    public function destroy(Patient $patient){
+        $patient->delete();
+        return view('/Infirmière')->with('success', 'Patient avec succès');
     }
 }

@@ -41,8 +41,9 @@ Route::post('/inscription', 'inscriptionController@traitement');
 Route::get('/Patient', 'PatientController@formulaire');
 Route::post('Patient', 'PatientController@traitement');
 
-Route::get('ModifPa/{patient}', 'PatientController@edit');
-Route::post('ModifPa/{patient}', 'PatientController@update');
+Route::get('ModifPa/{patient}', 'PatientController@edit')->name('ModifPa.edit');
+Route::post('ModifPa/{patient}', 'PatientController@update')->name('ModifPa.update');
+Route::get('patients/{patient}','PatientController@destroy' )->name('ModifPa.destroy');
 
 Route::get('/Consultation', 'ConsultationController@formulaire');
 Route::post('Consultation', 'ConsultationController@traitement');
@@ -57,6 +58,7 @@ Route::get('/Caisse', 'CaisseController@formulaire');
 Route::post('Caisse', 'CaisseController@traitement');
 
 Route::get('/FormulaireI/FormulaireI3','PatientController@index');
+Route::get('/FormulaireM/FormulaireM5','PatientController@liste');
 Route::get('/FormulaireA/FormulaireA2','HomeController@liste');
 
 //fullcalender
@@ -87,6 +89,10 @@ Route::get('/Admin', function () {
     return view('Admin');
 });
 
+Route::get('/Rendezvous', function () {
+    return view('/Rendezvous');
+});
+
 
 //Vues pour infirmière
 /*Route::get('/FormulaireI/FormulaireI4', function () {
@@ -97,10 +103,6 @@ Route::get('/Admin', function () {
 
 Route::get('/FormulaireM/FormulaireM4', function () {
     return view('/FormulaireM/FormulaireM4');
-});
-
-Route::get('/FormulaireM/FormulaireM5', function () {
-    return view('/FormulaireM/FormulaireM5');
 });
 
 //Vues pour Pharmacien

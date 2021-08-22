@@ -648,7 +648,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Formulaire d'enrégistrement des informations après consultation</h3>
+                        <h3 class="card-title" style="padding-left: 28%;">Formulaire d'enrégistrement des informations après consultation</h3>
                         <div class="card-toolbar">
 
                         </div>
@@ -656,62 +656,62 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!--begin::Form-->
                     <form class="form" action="/Consultation" method="POST">
                         @csrf
-                        <div class="card-body">
+                        <div class="card-body" align="center">
                             <!--begin: Code-->
 
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Motif de consultation consultation</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Motif de consultation</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="motifconsul" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Date de cosultation</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Date de cosultation</label>
+                                <div class="col-lg-9">
                                     <input type="date" class="form-control" name="dateconsult" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Maladie particuliaire</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Maladie particuliaire</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="maladiepart" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Allergie</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Allergie</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="allergie" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Habitude de mode de vie</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="modevie" placeholder="Maladie particuliaire du patient" />
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Habitude de mode de vie</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="modevie" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Histoire</label>
-                                <div class="col-lg-4 col-md-9 col-sm-12">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Histoire</label>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="histoire" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Hypothèse Diagnostique</label>
-                                <div class="col-lg-4 col-md-9 col-sm-12">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Hypothèse Diagnostique</label>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="diagnostic" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Conduite à tenir</label>
-                                <div class="col-lg-4 col-md-9 col-sm-12">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Conduite à tenir</label>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="conduite" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -720,16 +720,17 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
+                                <div class="col-lg-10"> <button type="" class="btn font-weight-bold btn-secondary">Retour</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
-                                    <button type="" class="btn font-weight-bold btn-secondary">Retour</button>
+
                                 </div>
                             </div>
                         </div>
                     </form>
                     <!--end::Form-->
                 </div>
+            </div>
                 <!--end::Card-->
                 <!--begin::Card-->
 

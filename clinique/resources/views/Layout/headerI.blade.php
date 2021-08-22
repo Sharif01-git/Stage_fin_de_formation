@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="../assets/media/logos/clinique6.jpg" />
 	</head>
-    
+
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
@@ -97,7 +97,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 											<span class="symbol symbol-35">
-												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">S</span>
+												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30"><img alt="Logo" src="assets/media/logos/clinique1.png" class="max-h-35px" /></span>
 
 											</span>
                                             <a class="dropdown-item " href="/connexionI"><i class="fa fa-power-off m-r-5 m-l-5"></i> </a>
@@ -139,7 +139,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/fullcalendar')}}" class="menu-link">
+												<a href="{{url('/Rendezvous')}}" class="menu-link">
 													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
 													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>

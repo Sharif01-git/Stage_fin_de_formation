@@ -168,7 +168,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Etablissement de la facture</h3>
+                        <h3 class="card-title" style="padding-left: 40%;">Etablissement de la facture</h3>
                         <div class="card-toolbar">
 
                         </div>
@@ -176,55 +176,55 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!--begin::Form-->
                     <form class="form" action="/Caisse" method="POST">
                         @csrf
-                        <div class="card-body">
+                        <div class="card-body" align="center">
                             <!--begin: Code-->
 
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Libellé de facture</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Libellé de facture</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="libellefac" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Date</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Date</label>
+                                <div class="col-lg-9">
                                     <input type="date" class="form-control" name="datefac" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prix du bon de sonsultaion</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix du bon de sonsultaion</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prixbonconsul" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prix de carnet médical</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix de carnet médical</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prixcarnet" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prix de traitement</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix de traitement</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prixtrait" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prix total de produits</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix total de produits</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prixprod" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prix total à payer</label>
-                                <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix total à payer</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prixtotal" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -233,10 +233,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
+                                <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
-                                    <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button>
+
                                 </div>
                             </div>
                         </div>

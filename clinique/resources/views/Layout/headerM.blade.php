@@ -550,7 +550,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">{{auth()->user()->name}}</span>
 											</div>
 											<span class="symbol symbol-35">
-												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">S</span>
+												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30"><img alt="Logo" src="assets/media/logos/clinique1.png" class="max-h-35px" /></span>
 											</span>
                                             <a class="dropdown-item " href="/connexionM"><i class="fa fa-power-off m-r-5 m-l-5"></i> </a>
 										</div>

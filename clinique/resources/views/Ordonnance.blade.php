@@ -654,23 +654,23 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!--begin::Form-->
                     <form class="form" action="/Ordonnance" method="POST">
                         @csrf
-                        <div class="card-body" style="padding-left: 30.25rem;">
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Nom</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="nomp" placeholder="Nom du patient" />
+                        <div class="card-body" align="center">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Nom</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="nomp" placeholder="" />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prénom</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="prenomp" placeholder="Prénom du patient" />
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prénom</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="prenomp" placeholder="" />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Age</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="age" placeholder="Age du patient" />
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Age</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="age" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -685,9 +685,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span></span>Féminin</label>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Produits & Dosage</label>
-                                <div class="col-lg-4 col-md-9 col-sm-12">
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Produits & Dosage</label>
+                                <div class="col-lg-9 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" maxlength="500" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -696,10 +696,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
+                                <div class="col-lg-10"><button type="" class="btn font-weight-bold btn-secondary">Retour</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
-                                    <button type="" class="btn font-weight-bold btn-secondary">Retour</button>
+
                                 </div>
                             </div>
                         </div>

@@ -14,7 +14,7 @@
 								<!--begin::Card-->
 								<div class="card card-custom">
 									<div class="card-header flex-wrap border-0 pt-6 pb-0">
-										<div class="card-title">
+										<div class="card-title" style="padding-left: 40%;">
 											<h3 class="card-label">Liste des utilisateurs
 											<span class="d-block text-muted pt-2 font-size-sm"></span></h3>
 										</div>
@@ -34,31 +34,6 @@
 																</span>
 															</div>
 														</div>
-														<div class="col-md-4 my-2 my-md-0">
-															<div class="d-flex align-items-center">
-																<label class="mr-3 mb-0 d-none d-md-block">Status:</label>
-																<select class="form-control" id="kt_datatable_search_status">
-																	<option value="">All</option>
-																	<option value="1">Pending</option>
-																	<option value="2">Delivered</option>
-																	<option value="3">Canceled</option>
-																	<option value="4">Success</option>
-																	<option value="5">Info</option>
-																	<option value="6">Danger</option>
-																</select>
-															</div>
-														</div>
-														<div class="col-md-4 my-2 my-md-0">
-															<div class="d-flex align-items-center">
-																<label class="mr-3 mb-0 d-none d-md-block">Type:</label>
-																<select class="form-control" id="kt_datatable_search_type">
-																	<option value="">Tout</option>
-																	<option value="1">En ligne</option>
-																	<option value="2">Retail</option>
-																	<option value="3">Direct</option>
-																</select>
-															</div>
-														</div>
 													</div>
 												</div>
 												<div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
@@ -72,7 +47,7 @@
 										<table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
 											<thead>
 												<tr>
-													<th title="Field #1">ID</th>
+
 													<th title="Field #2">Nom</th>
 													<th title="Field #3">Prénom</th>
 													<th title="Field #4">Téléphone</th>
@@ -80,6 +55,8 @@
 													<th title="Field #6">Fonction</th>
 													<th title="Field #7">Email</th>
 													<th title="Field #8">Date de création</th>
+                                                    <th title="Field #9">Statut</th>
+                                                    <th title="Field #9">Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -87,7 +64,7 @@
 
 
 												<tr>
-													<td>{{$user['id']}}</td>
+
 													<td>{{$user['name']}}</td>
 													<td>{{$user['prenom']}}</td>
 													<td>{{$user['telephone']}}</td>
@@ -95,6 +72,11 @@
                                                     <td>{{$user['profil']}}</td>
                                                     <td>{{$user['email']}}</td>
 													<td>{{$user['created_at']}}</td>
+                                                    <td></td>
+                                                    <td>
+                                                        <a class="fa fa-toggle-on" href="" ></a>
+                                                       <a class="fa fa-eye" href="" style="color:gray"></a>
+                                                       </td>
 												</tr>
                                                 @endforeach
 											</tbody>

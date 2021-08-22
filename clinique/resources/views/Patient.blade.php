@@ -138,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('fullcalendar')}}" class="menu-link">
+												<a href="{{url('/Rendezvous')}}" class="menu-link">
 													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
 													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
@@ -185,79 +185,102 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
                         <h3 class="card-title">Formulaire d'enrégistrement patients</h3>
-                        <div class="card-toolbar">
-
-                        </div>
                     </div>
                     <!--begin::Form-->
                     <form class="form" action="/Patient" method="POST">
                         @csrf
-                        <div class="card-body" style="padding-left: 18.25rem;">
+                        <div class="card-body" align="center" >
                             <!--begin: Code-->
-
+                            <h3 class="card-title" color="blue" align="center" style="color:green">Enrégistrement des informations de base</h3>
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Nom</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="nomp" placeholder="Entrez le nom du patient ici" />
+                        <div class="row"  >
+                            <div class="col-xl-6">
+                            <div class="form-group ">
+                                <label class="col-lg-10 col-form-label text-left">Nom</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control " name="nomp" placeholder="Entrez le nom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prénom</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="prenomp" placeholder="Entrez le prénom du patient ici" />
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Prénom</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control " name="prenomp" placeholder="Entrez le prénom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Age</label>
-                                <div class="col-lg-4">
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Age</label>
+                                <div class="col-lg-10">
                                     <input type="" class="form-control" name="age" placeholder="Entrez l'âge du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Profession</label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Profession</label>
+                                <div class="col-lg-10">
                                     <input type="" class="form-control" name="profession" placeholder="Entrez la profession du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Nationalité</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Nationalité</label>
+                                <div class="col-lg-10">
                                     <input type="" class="form-control" name="nationalite" placeholder="Entrez la nationalité du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Adresse</label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Adresse</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="adressep" placeholder="Entrez l'adresse du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Contact</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Contact</label>
+                                <div class="col-lg-10">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
                                                 <i class="la la-chain"></i>
                                             </span>
                                         </div>
-                                        <input type="text" name="tel" class="form-control" placeholder="Phone number" />
+                                        <input type="tel" name="tel" class="form-control" placeholder="Numéro de téléphone" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Email </label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Email </label>
+                                <div class="col-lg-10">
                                     <input type="email" name="Email" class="form-control" placeholder="Enter email" />
                                 </div>
                             </div>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-xl-6">
                             <div class="form-group row align-items-center">
                                 <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                 <div class="radio-inline">
@@ -269,89 +292,120 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span></span>Féminin</label>
                                 </div>
                             </div>
-
+                        </div>
+                        </div>
                             <div class="separator separator-dashed my-8"></div>
-                            <h3 class="card-title">Enrégistrement des constantes</h3>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Température</label>
-                                <div class="col-lg-4">
+                            <h3 class="card-title" align="center" style="color:green">Enrégistrement des constantes</h3>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Température</label>
+                                <div class="col-lg-10">
                                     <input type="text" name="temperature" class="form-control" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Poids</label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Poids</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="poids" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Tension</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Tension</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="tension" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Pouls</label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Pouls</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="pouls" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Taille</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Taille</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="taille" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Maladie particuliaire</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="maladiepart" placeholder="Maladie particuliaire du patient" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Maladie particuliaire</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="maladiepart" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Allergie</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Allergie</label>
+                                <div class="col-lg-10">
                                     <input type="text" class="form-control" name="allergie" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Groupage</label>
-                                <div class="col-lg-4">
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Groupage et Rhésus</label>
+                                <div class="col-lg-10">
                                     <select class="form-control" name="groupage">
-                                        <option value="">Select</option>
+                                        <option value="">Choisir</option>
                                         <option value="O+">O+</option>
                                         <option value="O-">O-</option>
                                         <option value="A+">A+</option>
                                         <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
                                     </select>
                                     <span class="form-text text-muted">Sélectionnez une option s'il vous plaît</span>
                                 </div>
                             </div>
+                            </div>
                         </div>
+                    </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-10">  <button type="reset" class="btn font-weight-bold btn-secondary">Renitialiser</button></div>
+                                <div class="">
                                     <button type="submit" class="btn btn-primary">Soumettre</button>
-                                    <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <!--end::Form-->
                 </div>
+            </div>
                 <!--end::Card-->
                 <!--begin::Card-->
 
                 <!--end::Card-->
             </div>
+        </div>
+    </div>
             <!--end::Container-->
         </div>
         <!--end::Entry-->

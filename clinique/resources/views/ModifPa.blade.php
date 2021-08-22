@@ -182,170 +182,225 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--end::Notice-->
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
-                    <div class="card-header">
+                    <div class="card-header" style="padding-left: 18.25rem;">
                         <h3 class="card-title">Modification des infos du patient</h3>
                         <div class="card-toolbar">
 
                         </div>
                     </div>
                     <!--begin::Form-->
-                    <form  action="{{ url('ModifPa'.$patient->id)}}" method="POST">
+                    <form class="form" action="{{ route('ModifPa.update',$patient->id)}}" method="POST">
                         @csrf
-                        <div class="card-body" style="padding-left: 18.25rem;">
+                        <div class="card-body" align="center" >
                             <!--begin: Code-->
-
+                            <h3 class="card-title" color="blue" align="center" style="color:green">Enrégistrement des informations de base</h3>
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Nom</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="nomp" value="$patient->nom" placeholder="Entrez le nom du patient ici" />
+                        <div class="row"  >
+                            <div class="col-xl-6">
+                            <div class="form-group ">
+                                <label class="col-lg-10 col-form-label text-left">Nom</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control " name="nomp" value="{{$patient->nomp}}" placeholder="Entrez le nom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Prénom</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="prenomp" value="$patient->prenomp" placeholder="Entrez le prénom du patient ici" />
+                          </div>
+                          <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Prénom</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control " name="prenomp" value="{{$patient->prenomp}}" placeholder="Entrez le prénom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Age</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="age" value="$patient->age" placeholder="Entrez l'âge du patient ici" />
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Age</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control" name="age"  value="{{$patient->age}}" placeholder="Entrez l'âge du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Profession</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="profession" value="$patient->profession" placeholder="Entrez la profession du patient ici" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Profession</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control" name="profession" value="{{$patient->profession}}" placeholder="Entrez la profession du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Nationalité</label>
-                                <div class="col-lg-4">
-                                    <input type="" class="form-control" name="nationalite" value="$patient->nationalite" placeholder="Entrez la nationalité du patient ici" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Nationalité</label>
+                                <div class="col-lg-10">
+                                    <input type="" class="form-control" name="nationalite" value="{{$patient->nationalite}}" placeholder="Entrez la nationalité du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Adresse</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="adressep" value="$patient->adressep" placeholder="Entrez l'adresse du patient ici" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Adresse</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="adressep" value="{{$patient->adressep}}" placeholder="Entrez l'adresse du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Contact</label>
-                                <div class="col-lg-4">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Contact</label>
+                                <div class="col-lg-10">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
                                                 <i class="la la-chain"></i>
                                             </span>
                                         </div>
-                                        <input type="text" name="tel" value="$patient->tel" class="form-control" placeholder="Phone number" />
+                                        <input type="text" name="tel" value="{{$patient->tel}}" class="form-control" placeholder="Phone number" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Email </label>
-                                <div class="col-lg-4">
-                                    <input type="email" name="Email" value="$patient->Email" class="form-control" placeholder="Enter email" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Email </label>
+                                <div class="col-lg-10">
+                                    <input type="email" name="Email" value="{{$patient->Email}}" class="form-control" placeholder="Enter email" />
                                 </div>
                             </div>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-xl-6">
                             <div class="form-group row align-items-center">
                                 <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                 <div class="radio-inline">
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="$patient->sexe" />
+                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" />
                                     <span></span>Masculin</label>
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="$patient->sexe"/>
+                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" />
                                     <span></span>Féminin</label>
                                 </div>
                             </div>
-
+                        </div>
+                        </div>
                             <div class="separator separator-dashed my-8"></div>
-                            <h3 class="card-title">Enrégistrement des constantes</h3>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Température</label>
-                                <div class="col-lg-4">
-                                    <input type="text" name="temperature" value="$patient->temperature" class="form-control" placeholder="" />
+                            <h3 class="card-title" align="center" style="color:green">Enrégistrement des constantes</h3>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Température</label>
+                                <div class="col-lg-10">
+                                    <input type="text" name="temperature" value="{{$patient->temperature}}" class="form-control" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Poids</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="poids" value="$patient->poids" placeholder="" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Poids</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="poids"  value="{{$patient->poids}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Tension</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="tension" value="$patient->tension" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Tension</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="tension" value="{{$patient->tension}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Pouls</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="pouls" value="$patient->pouls" placeholder="" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Pouls</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="pouls" value="{{$patient->pouls}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Taille</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="taille" value="$patient->taille" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Taille</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="taille" value="{{$patient->taille}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Maladie particuliaire</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="maladiepart" value="$patient->maladiepart" placeholder="Maladie particuliaire du patient" />
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Maladie particuliaire</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="maladiepart" value="{{$patient->maladiepart}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Allergie</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" name="allergie" value="$patient->allergie" placeholder="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Allergie</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" name="allergie" value="{{$patient->allergie}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-2 col-form-label text-right">Groupage</label>
-                                <div class="col-lg-4">
-                                    <select class="form-control" name="groupage">
-                                        <option value="">Fonction</option>
-                                        <option value="$patient->groupage">O+</option>
-                                        <option value="$patient->groupage">O-</option>
-                                        <option value="$patient->groupage">A+</option>
-                                        <option value="$patient->groupage">A-</option>
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group">
+                                <label class="col-lg-10 col-form-label text-left">Groupage et Rhésus</label>
+                                <div class="col-lg-10">
+                                    <select class="form-control" name="groupage" value="{{$patient->groupage}}">
+                                        <option value="{{$patient->groupage}}">Choisir</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
                                     </select>
                                     <span class="form-text text-muted">Sélectionnez une option s'il vous plaît</span>
                                 </div>
                             </div>
+                            </div>
                         </div>
+                    </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-2"></div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-10">  <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button></div>
+                                <div class="">
                                     <button type="submit" class="btn btn-primary">Soumettre</button>
-                                    <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <!--end::Form-->
                 </div>
+            </div>
                 <!--end::Card-->
                 <!--begin::Card-->
 
