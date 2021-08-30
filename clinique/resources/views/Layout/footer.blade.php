@@ -72,7 +72,7 @@
 <!--begin::Page Scripts(used by statistique)-->
 <script src="assets/js/pages/features/charts/apexcharts.js"></script>
 <!--end::Page Scripts-->
-
+<script src="/js/app.js"></script>
 <!--Fool calendar-->
 <link rel="/stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 
@@ -82,6 +82,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+    <script>
+        var selects = document.querySelectorAll('#quantite');
+        Array.from(selects).forEach((element)=>{
+            element.addEventListener('change', function(){
+                var rowId = this.getAttribute('data-id');
+               // var stock = element.getAttribute('data-stock');
+                var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+                fetch(
+                    `/panier/${rowId}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json, text-plain, */*",
+                            "X-Requested-With": "XMLHttRequest",
+                            "X-CSRF-TOKEN": token
+
+                        },
+                        method: 'put',
+                        body: JSON.stringify({
+                            quantite: this.value,
+                            //stock : stock
+                        })
+                    }
+                ).then((data)=>{
+                    console.log(data);
+                   location.reload();
+                }).catch((error)=>{
+                    console.log(error);
+                })
+            });
+        });
+    </script>
 </body>
 <script >
     $(document).ready(function () {
@@ -165,5 +197,12 @@
     setInterval(function() { $(".success").fadeOut(); }, 1000);
     }
     </script>
+
+
+
+
+
+
 <!--end::Body-->
+
 </html>

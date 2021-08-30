@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <a class="dropdown-item " href="/connexionA"><i class="fa fa-power-off m-r-5 m-l-5"></i> </a>
 										</div>
                                         <div>
-                                            <a href="{{url('/Admin')}}">
+                                            <a href="{{url('/Administrateur')}}">
                                             <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline" style="padding-left: ">
                                                 <font size="4pt">
                                                      ACCUEIL

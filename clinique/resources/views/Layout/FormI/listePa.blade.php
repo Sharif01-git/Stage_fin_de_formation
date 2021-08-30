@@ -19,6 +19,9 @@
 										<div class="card-title" style="padding-left: 40%;">
 											<h3 class="card-label">Liste des patients</h3>
 										</div>
+                                        <div style="padding-left: 20%;">
+                                            <a href="{{url('/Patient')}}"  class="btn btn-light-primary font-weight-bold btn-sm px-4 font-size-base ml-2">Enrégistrer nouveau patient</a>
+                                        </div>
 										<div class="card-toolbar">
 										</div>
 									</div>
@@ -50,6 +53,11 @@
 										<!--end::Search Form-->
 										<!--end: Search Form-->
 										<!--begin: Datatable-->
+                                        @if ($message = Session::get('success'))
+                                         <div class="alert alert-success">
+                                             <p>{{$message}}</p>
+                                         </div>
+                                        @endif
 										<table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
 											<thead>
 												<tr>
@@ -74,14 +82,14 @@
 													<td>{{$patient->tel}}</td>
 													<td>{{$patient->allergie}}</td>
 													<td>{{$patient->sexe}}</td>
-                                                    <td>{{$patient->created_at}}</td>
+                                                    <td>{{$patient->created_at->format('d-m-y/h:m')}}</td>
                                                     <td>
                                                 <form method="POST" action="{{route('ModifPa.destroy',$patient->id)}}">
                                                      <a class="fa fa-edit" href="{{ route('ModifPa.edit',$patient->id) }}"></a>
                                                      {{ csrf_field() }}
                                                      {{ method_field('DELETE')}}
                                                     <!-- <input type="submit" value="Delete">-->
-                                                    <a href="{{route('ModifPa.destroy',$patient->id)}}"> <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
+                                                    <a onclick="return confirm('Voulez-vous vraiment supprimer ce patient?')"  href="{{route('ModifPa.destroy',$patient->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
 
                                                     <a class="fa fa-eye" href=""  style="color:gray"></a>
                                                 </form>

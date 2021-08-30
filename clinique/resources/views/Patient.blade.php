@@ -169,6 +169,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<!--begin::Content-->
     <body>
+        <div id="app">
+
+            @include('flash-message')
+
+
+            @yield('content')
+
+        </div>
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
@@ -190,24 +198,26 @@ License: You must have a valid license purchased only from themeforest(the above
                     <form class="form" action="/Patient" method="POST">
                         @csrf
                         <div class="card-body" align="center" >
+
                             <!--begin: Code-->
-                            <h3 class="card-title" color="blue" align="center" style="color:green">Enrégistrement des informations de base</h3>
+                            <fieldset style=" padding: 3px 6px;  font: 1rem 'Fira Sans', sans-serif; margin: .4rem;  ">
+                           <legend> <h3 class="card-title"  style="color:green" >Enrégistrement des informations de base</h3></legend>
                             <!--end: Code-->
                         <div class="row"  >
                             <div class="col-xl-6">
-                            <div class="form-group ">
-                                <label class="col-lg-10 col-form-label text-left">Nom</label>
-                                <div class="col-lg-10">
-                                    <input type="" class="form-control " name="nomp" placeholder="Entrez le nom du patient ici" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                <div class="col-lg-9">
+                                    <input type="" class="form-control " name="nomp" placeholder="Entrez le nom du patient ici" required />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                           </div>
                           <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Prénom</label>
-                                <div class="col-lg-10">
-                                    <input type="" class="form-control " name="prenomp" placeholder="Entrez le prénom du patient ici" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                <div class="col-lg-9">
+                                    <input type="" class="form-control " name="prenomp" placeholder="Entrez le prénom du patient ici" required />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -215,39 +225,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Age</label>
-                                <div class="col-lg-10">
-                                    <input type="" class="form-control" name="age" placeholder="Entrez l'âge du patient ici" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Age</label>
+                                <div class="col-lg-9">
+                                    <input type="number" class="form-control" name="age" placeholder="Entrez l'âge du patient ici" required />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Profession</label>
-                                <div class="col-lg-10">
-                                    <input type="" class="form-control" name="profession" placeholder="Entrez la profession du patient ici" />
-                                    <span class="form-text text-muted"></span>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Nationalité</label>
-                                <div class="col-lg-10">
-                                    <input type="" class="form-control" name="nationalite" placeholder="Entrez la nationalité du patient ici" />
-                                    <span class="form-text text-muted"></span>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Adresse</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="adressep" placeholder="Entrez l'adresse du patient ici" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                <div class="col-lg-9">
+                                    <input type="" class="form-control" name="profession" placeholder="Entrez la profession du patient ici" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -255,24 +245,44 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Contact</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nationalité</label>
+                                <div class="col-lg-9">
+                                    <input type="" class="form-control" name="nationalite" placeholder="Entrez la nationalité du patient ici" required/>
+                                    <span class="form-text text-muted"></span>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-xl-6">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="adressep" placeholder="Entrez l'adresse du patient ici" required/>
+                                    <span class="form-text text-muted"></span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                <div class="col-lg-9">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
                                                 <i class="la la-chain"></i>
                                             </span>
                                         </div>
-                                        <input type="tel" name="tel" class="form-control" placeholder="Numéro de téléphone" />
+                                        <input type="tel" name="tel" pattern="[0-9]{8}" class="form-control" placeholder="Numéro de téléphone" required/>
                                     </div>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Email </label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Email </label>
+                                <div class="col-lg-9">
                                     <input type="email" name="Email" class="form-control" placeholder="Enter email" />
                                 </div>
                             </div>
@@ -294,23 +304,25 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                         </div>
                         </div>
-                            <div class="separator separator-dashed my-8"></div>
-                            <h3 class="card-title" align="center" style="color:green">Enrégistrement des constantes</h3>
+                         </fieldset>
+
+                         <fieldset>
+                       <h3 class="card-title"  style="color:green">Enrégistrement des constantes</h3>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Température</label>
-                                <div class="col-lg-10">
-                                    <input type="text" name="temperature" class="form-control" placeholder="" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Température</label>
+                                <div class="col-lg-9">
+                                    <input type="number" step="0.01" min="27" max="42" name="temperature" class="form-control" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Poids</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="poids" placeholder="" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Poids</label>
+                                <div class="col-lg-9">
+                                    <input type="number" step="0.01" min="3.50" max="150" class="form-control" name="poids" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -318,19 +330,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Tension</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="tension" placeholder="" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Tension</label>
+                                <div class="col-lg-9">
+                                    <input type="number" min="90" max="140" class="form-control" name="tension" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Pouls</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="pouls" placeholder="" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Pouls</label>
+                                <div class="col-lg-9">
+                                    <input type="number" min="50" max="140" class="form-control" name="pouls" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -338,18 +350,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Taille</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" name="taille" placeholder="" />
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Taille</label>
+                                <div class="col-lg-9">
+                                    <input type="number" step="0.01" min="0" max="2" class="form-control" name="taille" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Maladie particuliaire</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Maladie particuliaire</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="maladiepart" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -358,18 +370,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Allergie</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Allergie</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="allergie" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Groupage et Rhésus</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Groupage et Rhésus</label>
+                                <div class="col-lg-9">
                                     <select class="form-control" name="groupage">
                                         <option value="">Choisir</option>
                                         <option value="O+">O+</option>
@@ -386,10 +398,11 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             </div>
                         </div>
+                         </fieldset>
                     </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-10">  <button type="reset" class="btn font-weight-bold btn-secondary">Renitialiser</button></div>
+                                <div class="col-lg-10">  <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
                                 <div class="">
                                     <button type="submit" class="btn btn-primary">Soumettre</button>
                                 </div>

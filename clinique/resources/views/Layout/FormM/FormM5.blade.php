@@ -58,10 +58,11 @@
                                     <th title="Field #3">Prénom</th>
                                     <th title="Field #4">Age</th>
                                     <th title="Field #5">Telephone</th>
-                                    <th title="Field #6">Allergie</th>
                                     <th title="Field #7">Sexe</th>
                                     <th title="Field #8">Enrégistré le :</th>
-                                    <th title="Field #9">Détails</th>
+                                    <th title="Field #9">Consultation</th>
+                                    <th title="Field #9">Traitement</th>
+                                    <th title="Field #10">Ordonnance</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,11 +73,19 @@
                                     <td>{{$patient->prenomp}}</td>
                                     <td>{{$patient->age}}</td>
                                     <td>{{$patient->tel}}</td>
-                                    <td>{{$patient->allergie}}</td>
                                     <td>{{$patient->sexe}}</td>
                                     <td>{{$patient->created_at}}</td>
                                     <td>
-                                    <a class="fa fa-eye" href=""  style="color:gray"></a>
+                                        <a class="fa fa-link" href="{{route('consultation', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" href=""></a>
+                                    </td>
+                                    <td>
+                                        <a class="fa fa-link" href="{{route('traitement', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" href=""></a>
+                                    </td>
+                                    <td>
+                                        <a class="fa fa-list-alt" href="{{route('ordonnance', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" href=""></a>
                                     </td>
                                 </tr>
                                 @endforeach

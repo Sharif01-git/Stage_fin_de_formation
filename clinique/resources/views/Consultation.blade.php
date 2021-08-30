@@ -583,8 +583,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<ul class="menu-nav">
 
 
-											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/Consultation')}}" class="menu-link">
+										<!--	<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('Consultation')}}" class="menu-link">
 													<span class="menu-text">Consultation</span>
 													<span class="menu-desc">Enrégistrer nouvelle consultation</span>
 													<i class="menu-arrow"></i>
@@ -603,7 +603,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span class="menu-desc">Prescrire ordonnance</span>
 													<i class="menu-arrow"></i>
 												</a>
-											</li>
+											</li>-->
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
@@ -613,8 +613,22 @@ License: You must have a valid license purchased only from themeforest(the above
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
+													<span class="menu-text">Liste des patients</span>
+													<span class="menu-desc">Consulter la liste des patients et continuer</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('listeM')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
-													<span class="menu-desc">Créer/Consulter dossier patient</span>
+													<span class="menu-desc">Consulter le dossier des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
+													<span class="menu-text">Dossier patient</span>
+													<span class="menu-desc">Consulter le dossier des patients</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -654,12 +668,26 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!--begin::Form-->
-                    <form class="form" action="/Consultation" method="POST">
+                    <form class="form" action="Consultation" method="POST">
                         @csrf
                         <div class="card-body" align="center">
                             <!--begin: Code-->
 
                             <!--end: Code-->
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Nom du patient</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="nomp" value="{{$nomp}}" placeholder="" readonly/>
+                                    <span class="form-text text-muted"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prenom du patient</label>
+                                <div class="col-lg-9">
+                                    <input type="text" class="form-control" name="prenomp" value="{{$prenomp}}" placeholder="" readonly />
+                                    <span class="form-text text-muted"></span>
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Motif de consultation</label>
                                 <div class="col-lg-9">
@@ -677,21 +705,21 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Maladie particuliaire</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="maladiepart" placeholder="" />
+                                    <input type="text" class="form-control" name="maladiepart" value="{{$maladiepart}}" placeholder="" readonly/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Allergie</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="allergie" placeholder="" />
+                                    <input type="text" class="form-control" name="allergie" value="{{$allergie}}" placeholder="" readonly />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Habitude de mode de vie</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="modevie" placeholder="" />
+                                    <input type="text" class="form-control" name="modevie"  placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -720,13 +748,14 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-10"> <button type="" class="btn font-weight-bold btn-secondary">Retour</button></div>
+                                <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
 
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="form-control" name="patient_id" placeholder="" value="{{$id}}"/>
                     </form>
                     <!--end::Form-->
                 </div>

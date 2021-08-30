@@ -183,28 +183,28 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Libellé de facture</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="libellefac" placeholder="" />
+                                    <input type="text" class="form-control" name="libellefac" placeholder="" required />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Date</label>
                                 <div class="col-lg-9">
-                                    <input type="date" class="form-control" name="datefac" placeholder="" />
+                                    <input type="date" class="form-control" name="datefac" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Prix du bon de sonsultaion</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="prixbonconsul" placeholder="" />
+                                    <input type="text" class="form-control" name="prixbonconsul" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-lg-9 col-form-label text-left">Prix de carnet médical</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="prixcarnet" placeholder="" />
+                                    <input type="text" class="form-control" name="prixcarnet" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                                <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Retour</button></div>
+                                <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
                                 <div class="col-lg-2">
                                     <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
 

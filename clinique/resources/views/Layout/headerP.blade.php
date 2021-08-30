@@ -123,22 +123,16 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
 										<!--begin::Header Nav-->
 										<ul class="menu-nav">
+                                            @foreach (App\Categorie::all()  as $categorie)
 
 
 											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireP/FormulaireP1')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Liste des produits</span>
-													<span class="menu-desc" style="padding-left: 15%;">Consulter la liste des produits en stock</span>
+												<a href="{{route('Pharmacie.index', ['categorie'=>$categorie->slug])}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">{{$categorie->nom}}</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
-											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireP/FormulaireP2')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 18.25rem;">Vente de produits</span>
-													<span class="menu-desc" style="padding-left: 18.25rem;">Enrégistrer une nouvelle vente</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+                                            @endforeach
 										</ul>
 										<!--end::Header Nav-->
 									</div>

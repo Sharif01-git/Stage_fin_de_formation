@@ -15,6 +15,10 @@ class PatientController extends Controller
         $patients = Patient::all();
         return view('/FormulaireM/FormulaireM5',compact('patients','patients'));
     }
+    public function listeM(){
+        $patients = Patient::all();
+        return view('/FormulaireM/liste',compact('patients','patients'));
+    }
 
     public function formulaire(){
         return view('/Patient');
@@ -41,7 +45,7 @@ class PatientController extends Controller
             'groupage'=>$request->groupage,
 
         ]);
-        return view('/Infirmière')->with('success', 'Le patient a été enrégistré avec succès');
+        return redirect()->route('Patientlist.index')->with('success', 'Patient enrégistré avec succès');
     }
 
     public function edit(Patient $patient){
@@ -70,11 +74,12 @@ class PatientController extends Controller
             'taille'=>$request->taille,
             'groupage'=>$request->groupage,
         ]);
-        return view('/Infirmière')->with('success', 'Les informations du patient ont été modifiés avec succès');
+        return redirect()->route('Patientlist.index')->with('success', 'Patient Modifié avec succès');
     }
 
     public function destroy(Patient $patient){
         $patient->delete();
-        return view('/Infirmière')->with('success', 'Patient avec succès');
+        return redirect()->route('Patientlist.index')->with('success', 'Patient supprimé avec succès');
     }
+
 }

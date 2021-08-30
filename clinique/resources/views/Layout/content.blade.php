@@ -1,4 +1,12 @@
 <!--begin::Content-->
+<div id="app">
+
+    @include('flash-message')
+
+
+    @yield('content')
+
+</div>
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
@@ -54,19 +62,19 @@
                                 <div class="form-group row">
                                     <label class="col-xl-3 col-lg-3 col-form-label">Nom</label>
                                     <div class="col-lg-3 col-xl-6">
-                                        <input class="form-control form-control-lg form-control-solid" type="text" value="" />
+                                        <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->name}}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-xl-3 col-lg-3 col-form-label">Prénom</label>
                                     <div class="col-lg-9 col-xl-6">
-                                        <input class="form-control form-control-lg form-control-solid" type="text" value="" />
+                                        <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->prenom}}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-xl-3 col-lg-3 col-form-label">Adresse</label>
                                     <div class="col-lg-9 col-xl-6">
-                                        <input class="form-control form-control-lg form-control-solid" type="text" value="" />
+                                        <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->adresse}}" />
 
                                     </div>
                                 </div>
@@ -85,7 +93,7 @@
                                                     <i class="la la-phone"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control form-control-lg form-control-solid" value="" placeholder=""/>
+                                            <input type="text" class="form-control form-control-lg form-control-solid" value="{{auth()->user()->telephone}}" placeholder=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -98,15 +106,15 @@
                                                     <i class="la la-at"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" class="form-control form-control-lg form-control-solid" value="" placeholder="" />
+                                            <input type="email" class="form-control form-control-lg form-control-solid" value="{{auth()->user()->email}}" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Code postal</label>
+                                    <label class="col-xl-3 col-lg-3 col-form-label">Profil</label>
                                     <div class="col-lg-9 col-xl-6">
                                         <div class="input-group input-group-lg input-group-solid">
-                                            <input type="text" class="form-control form-control-lg form-control-solid" placeholder="" value="loop" />
+                                            <input type="text" class="form-control form-control-lg form-control-solid" placeholder="" value="{{auth()->user()->profil}}" />
                                            <!-- <div class="input-group-append">
                                                 <span class="input-group-text">.com</span>
                                             </div>-->

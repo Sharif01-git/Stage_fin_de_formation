@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'fr',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,6 +176,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         LaravelFullCalendar\FullCalendarServiceProvider::class,
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        Darryldecode\Cart\CartServiceProvider::class,
 
     ],
 
@@ -229,7 +231,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Calendar' => LaravelFullCalendar\Facades\Calendar::class,
-
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
 
     ],
 

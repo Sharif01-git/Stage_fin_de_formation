@@ -85,9 +85,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="Mot_passe_oublier" id="kt_login_forgot" class="text-muted text-hover-primary">Mot de passe oublié ?</a>
 									</div>
 									<div class="form-group d-flex flex-wrap justify-content-between align-items-center mt-2">
-										<div class="my-3 mr-2">
-											<span class="text-muted mr-2">Pas de compte?Veuillez contacter l'admininistarteur</span>
-										</div>
 										<button type="submit" class="btn btn-primary">Se connecter</button>
 									</div>
 								</form>

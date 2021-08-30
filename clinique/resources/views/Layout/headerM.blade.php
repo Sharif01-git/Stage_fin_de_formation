@@ -583,7 +583,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										<ul class="menu-nav">
 
 
-											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+											<!--<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('/Consultation')}}" class="menu-link">
 													<span class="menu-text">Consultation</span>
 													<span class="menu-desc">Enrégistrer nouvelle consultation</span>
@@ -603,7 +603,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<span class="menu-desc">Prescrire ordonnance</span>
 													<i class="menu-arrow"></i>
 												</a>
-											</li>
+											</li>-->
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
@@ -613,8 +613,15 @@ License: You must have a valid license purchased only from themeforest(the above
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
+													<span class="menu-text">Liste des patients</span>
+													<span class="menu-desc">Consulter la liste des patients et continuer</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
-													<span class="menu-desc">Créer/Consulter dossier patient</span>
+													<span class="menu-desc">Consulter le dossier des patients</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>

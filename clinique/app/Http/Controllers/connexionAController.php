@@ -26,7 +26,7 @@ class connexionAController extends Controller
         if ($resultat) {
             flash("Vous êtes  connecté.")->success();
 
-            return redirect('/Admin');
+            return redirect('/Administrateur');
         } else {
             return back()->withInput()->withErrors([
                 'email' => 'Vos identifiants sont incorrects.',

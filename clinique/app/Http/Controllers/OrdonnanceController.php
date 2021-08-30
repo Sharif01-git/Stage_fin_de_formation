@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ordonnance;
+use App\Patient;
 use Illuminate\Http\Request;
 
 class OrdonnanceController extends Controller
@@ -12,7 +13,14 @@ class OrdonnanceController extends Controller
         return view('/Ordonnance',compact('ordonnances','ordonnances'));
     }
 
-    public function formulaire(){
+    public function formulaire($id){
+        $patient = Patient::findOrFail($id);
+        return view('Ordonnance',[
+            'id'=> $id,
+            'nomp'=>$patient->nomp,
+            'prenomp'=>$patient->prenomp,
+            'age'=>$patient->age,
+        ]);
         return view('/Ordonnance');
     }
     public function traitement(Request $request){
