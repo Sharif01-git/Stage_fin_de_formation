@@ -40,10 +40,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     public function redirectTo(){
-       /* $medecin = User::where('profile','1')->get();
-        $infirmière = User::where('profile','2')->get();
-        $pharmacien = User::where('profile','3')->get();
-        $caissier = User::where('profile','4')->get();*/
         if(Auth::user()->profil ==('Medecin')){
             return  redirect()->view('/Medecin');
         }elseif(Auth::user()->profil ==('Infirmière')){

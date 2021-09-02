@@ -77,15 +77,15 @@
                                     <td>{{$patient->created_at}}</td>
                                     <td>
                                         <a class="fa fa-link" href="{{route('consultation', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href=""></a>
+                                        <a class="fa fa-edit" href="{{ route('Consultation.edit',$patient->id) }}"></a>
                                     </td>
                                     <td>
                                         <a class="fa fa-link" href="{{route('traitement', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href=""></a>
+                                        <a class="fa fa-edit" href="{{ route('Traitement.edit',$patient->id) }}"></a>
                                     </td>
                                     <td>
                                         <a class="fa fa-list-alt" href="{{route('ordonnance', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href=""></a>
+                                        <a class="fa fa-edit" href="{{ route('Ordonnance.edit',$patient->id) }}"></a>
                                     </td>
                                 </tr>
                                 @endforeach

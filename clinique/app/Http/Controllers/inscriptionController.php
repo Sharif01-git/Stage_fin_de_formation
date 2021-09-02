@@ -42,6 +42,6 @@ class inscriptionController extends Controller
         ]);
 
         flash ('Inscription reuissi')->success();
-        return redirect('/Admin');
+        return redirect('/Infirmière');
     }
 }

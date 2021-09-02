@@ -12,7 +12,7 @@ Purchase: https://1.envato.market/EA4JP
 Renew Support: https://1.envato.market/EA4JP
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-<html lang="en">
+<html lang="fr">
 	<!--begin::Head-->
 	<head><base href="../../">
 		<meta charset="utf-8" />
@@ -87,6 +87,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="topbar-item">
 										<div class="btn btn-icon btn-hover-transparent-white w-auto d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+
 											<div class="d-flex flex-column text-right pr-3">
                                                 <span class="text-white font-weight-bold font-size-sm d-none d-md-inline">{{auth()->user()->prenom}}</span>
 												<span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">{{auth()->user()->name}}</span>
@@ -96,9 +97,17 @@ License: You must have a valid license purchased only from themeforest(the above
 											</span>
                                             <a class="dropdown-item " href="/connexionP"><i class="fa fa-power-off m-r-5 m-l-5"></i> </a>
 										</div>
+                                        <div >
+                                            <a href="{{route('cart.index')}}">
+                                                <font size="4pt">
+                                               <span class="text-white font-weight-bolder ">Panier</span>
+                                                </font >
+                                                <span class="badge badge-pill badge-dark ">{{Cart::count()}}</span>
+                                             </a>
+										</div>
                                         <div>
-                                            <a href="{{url('/Pharmacien')}}">
-                                            <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline" style="padding-left: ">
+                                            <a href="{{url('/Pharmacie')}}">
+                                            <span class="text-white font-weight-bolder font-size-sm d-none d-md-inline" >
                                                 <font size="4pt">
                                                      ACCUEIL
                                                 </font>
@@ -114,15 +123,17 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<!--end::Top-->
 						<!--begin::Bottom-->
-						<div class="header-bottom">
-							<!--begin::Container-->
-							<div class="container">
-								<!--begin::Header Menu Wrapper-->
+					<div class="header-bottom">
+
+						<div class="container">
+
 								<div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
-									<!--begin::Header Menu-->
+
 									<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
-										<!--begin::Header Nav-->
+
 										<ul class="menu-nav">
+
+
                                             @foreach (App\Categorie::all()  as $categorie)
 
 
@@ -133,17 +144,16 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             @endforeach
+
 										</ul>
-										<!--end::Header Nav-->
+
 									</div>
-									<!--end::Header Menu-->
+
 								</div>
-								<!--end::Header Menu Wrapper-->
+
 							</div>
-							<!--end::Container-->
+
 						</div>
 						<!--end::Bottom-->
 					</div>
 					<!--end::Header-->
-
-

@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -178,6 +179,7 @@ return [
         LaravelFullCalendar\FullCalendarServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -233,6 +235,7 @@ return [
         'Calendar' => LaravelFullCalendar\Facades\Calendar::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
+        "PDF" => Barryvdh\DomPDF\Facade::class,
 
     ],
 

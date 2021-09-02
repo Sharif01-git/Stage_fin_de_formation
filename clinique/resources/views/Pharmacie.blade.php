@@ -180,22 +180,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
                         <div class="card-body pt-4">
 
-                            <form>
-
+                            <form action="/Pharmacie" method="POST">
+                                @csrf
                                 <div class="d-flex mb-8 justify-content-between">
 
-                                    <div class="symbol symbol-70 flex-shrink-0">
-                                        <a href="#" class="h-70px w-70px btn btn-light-primary d-flex flex-column flex-center font-weight-bolder p-0">
-                                        <span class="svg-icon svg-icon-lg m-0">
+                                    <div class="custom-file">
 
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <polygon points="0 0 24 0 24 24 0 24" />
-                                                    <path d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z" fill="#000000" />
-                                                </g>
-                                            </svg>
 
-                                        </span>Insérer</a>
+
+                                            <input type="file" id="image" name="image" value="">
                                     </div>
 
                                 </div>
@@ -205,37 +198,34 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                     <div class="form-group mb-8">
                                         <label class="font-weight-bolder">Nom</label>
-                                        <input type="text" class="form-control form-control-solid form-control-lg" placeholder="" />
+                                        <input type="text" name="nomprod" class="form-control form-control-solid form-control-lg" placeholder="" />
+                                    </div>
+                                    <div class="form-group mb-8">
+                                        <label class="font-weight-bolder">Sous-nom</label>
+                                        <input type="text" name="slug" class="form-control form-control-solid form-control-lg" placeholder="" />
                                     </div>
                                     <div class="form-group mb-8">
                                         <label class="font-weight-bolder">Catégorie</label>
-                                        <select class="form-control form-control-solid form-control-lg">
-                                            <option></option>
-                                            <option>Mens</option>
-                                            <option>Womens</option>
-                                            <option>Accessories</option>
-                                            <option>Technology</option>
-                                            <option>Appliances</option>
+                                        <select name="nom" class="form-control form-control-solid form-control-lg">
+                                            <option value="Analgésiques">Analgésiques</option>
+                                            <option value="Anti-inflamatoires">Anti-inflamatoires</option>
+                                            <option value="Antibiotiques">Antibiotiques</option>
+                                            <option value="Antibactériens">Antibactériens</option>
+                                            <option value="Antimicosiques">Antimicosiques</option>
+                                            <option value="Antiviraux">Antiviraux</option>
                                         </select>
                                     </div>
                                     <div class="form-group mb-8">
                                         <label class="font-weight-bolder">Quantité</label>
-                                        <select class="form-control form-control-solid form-control-lg">
-                                            <option></option>
-                                            <option>XS</option>
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XL</option>
-                                        </select>
+                                        <input type="number" class="form-control form-control-solid form-control-lg" placeholder="" />
                                     </div>
                                     <div class="form-group mb-8">
                                         <label for="exampleTextarea" class="font-weight-bolder">Description</label>
-                                        <textarea class="form-control form-control-solid form-control-lg" rows="3"></textarea>
+                                        <textarea name="description" class="form-control form-control-solid form-control-lg" rows="3"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label class="font-weight-bolder">Prix (FCFA)</label>
-                                        <input type="text" class="form-control form-control-solid form-control-lg" placeholder="" />
+                                        <input type="text" name="prix" class="form-control form-control-solid form-control-lg" placeholder="" />
                                     </div>
 
 
@@ -378,20 +368,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <h1 class="font-weight-bolder text-dark">Chercher un produit</h1>
                                         <div class="font-size-h4 mb-8">Trouver rapidemant un produit</div>
                                         <!--begin::Form-->
-                                        <form class="d-flex flex-center py-2 px-6 bg-white rounded">
+                                        <form class="d-flex flex-center py-2 px-6 bg-white rounded" action="{{route('Pharmacie.search')}}" method="POST">
+                                            @csrf
                                             <span class="svg-icon svg-icon-lg svg-icon-primary">
                                                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/Search.svg-->
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
-                                                        <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                        <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
-                                                    </g>
-                                                </svg>
                                                 <!--end::Svg Icon-->
                                             </span>
-                                            <input type="text" class="form-control border-0 font-weight-bold pl-2" placeholder="Rechercher" />
+                                            <input type="text" name="q" class="form-control border-0 font-weight-bold pl-2" placeholder="" value="{{ request()->q ?? '' }}" />
+                                            <button type="submit" class="btn btn-info"><i class="fa fa-seaech " aria-hidden="true"></i></button>
                                         </form>
+                                        @if (request()->input())
+                                            <h6>{{$produits->total()}} résultat(s) pour la rcherche "{{ request()->q }}"</h6>
+
+                                        @endif
                                         <!--end::Form-->
                                     </div>
                                     <div class="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover" style="background-image: url(assets/media/svg/illustrations/progress.svg);"></div>
@@ -422,15 +411,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <!--begin::Image-->
                                             <div class="overlay">
                                                 <div class="overlay-wrapper rounded bg-light text-center">
-                                                    <img src="assets/media/products/index.jpg" alt="" class="mw-100 w-200px" />
+                                                    <img src="{{$produit->image}}" alt="" class="mw-100 w-200px" />
                                                 </div>
                                                 <div class="overlay-layer">
                                                     <a href="{{route('Pharmacie.show', $produit->slug)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Détails</a>
-                                                    <form action="{{route('cart.store')}}" method="POST">
+
+                                                 <form action="{{route('cart.store')}}" method="POST">
                                                         @csrf
                                                         <input type="hidden" name="produit_id" value="{{$produit->id}}">
                                                     <button type="submit" class="btn font-weight-bolder btn-sm btn-light-primary">Ajout panier</button>
-                                                    </form>
+                                                 </form>
                                                 </div>
                                             </div>
                                             <!--end::Image-->

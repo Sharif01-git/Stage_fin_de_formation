@@ -35,4 +35,22 @@ class TraitementController extends Controller
         ]);
         return view('/Medecin')->with('success', 'Traitement enrégistré avec succès');
     }
+    public function edit(Traitement $traitement){
+        //$patients = Patient::findOrFail($patient);
+        return view('TraitementModif')->with('traitement',$traitement);
+    }
+
+    public function update(Request $request,Traitement $traitement){
+        $traitement->update([
+            'libelletrait' => $request->libelletrait,
+            'nomp'=> $request->nomp,
+            'prenomp'=> $request->prenomp,
+            'date_trait' =>$request->date_trait,
+            'auteur' =>$request->auteur,
+            'patient_id'=>$request->patient_id,
+
+
+        ]);
+        return redirect()->route('listeM1')->with('success', 'Patient Modifié avec succès');
+    }
 }

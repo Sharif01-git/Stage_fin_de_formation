@@ -87,7 +87,7 @@
         Array.from(selects).forEach((element)=>{
             element.addEventListener('change', function(){
                 var rowId = this.getAttribute('data-id');
-               // var stock = element.getAttribute('data-stock');
+                var stock = element.getAttribute('data-stock');
                 var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
                 fetch(
                     `/panier/${rowId}`,
@@ -102,10 +102,16 @@
                         method: 'put',
                         body: JSON.stringify({
                             quantite: this.value,
-                            //stock : stock
+                            stock : stock
                         })
                     }
                 ).then((data)=>{
+                    if(data.status===400){
+                        var redirect ='/Pharmacie';
+                    }else{
+                        var redirect ='/Merci';
+                    }
+
                     console.log(data);
                    location.reload();
                 }).catch((error)=>{

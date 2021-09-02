@@ -1,6 +1,9 @@
 <?php
 
+use Darryldecode\Cart\Cart;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,20 +48,27 @@ Route::get('ModifPa/{patient}', 'PatientController@edit')->name('ModifPa.edit');
 Route::post('ModifPa/{patient}', 'PatientController@update')->name('ModifPa.update');
 Route::get('patients/{patient}','PatientController@destroy' )->name('ModifPa.destroy');
 
+
 Route::get('/Consultation{id}', 'ConsultationController@formulaire')->name('consultation');
+Route::get('ModifCon/{consultation}', 'ConsultationController@edit')->name('Consultation.edit');
+Route::post('ModifCon/{consultation}', 'ConsultationController@update')->name('Consultation.update');
 Route::post('Consultation', 'ConsultationController@traitement');
 
 Route::get('/Traitement{id}', 'TraitementController@formulaire')->name('traitement');
+Route::get('Modiftrait/{traitement}', 'TraitementController@edit')->name('Traitement.edit');
+Route::post('Modiftrait/{traitement}', 'TraitementController@update')->name('Traitement.update');
 Route::post('Traitement', 'TraitementController@traitement');
 
 Route::get('/Ordonnance{id}', 'OrdonnanceController@formulaire')->name('ordonnance');
+Route::get('ModifOrd/{ordonnance}', 'OrdonnanceController@edit')->name('Ordonnance.edit');
+Route::post('ModifOrd/{ordonnance}', 'OrdonnanceController@update')->name('Ordonnance.update');
 Route::post('Ordonnance', 'OrdonnanceController@traitement');
 
 Route::get('/Caisse', 'CaisseController@formulaire');
 Route::post('Caisse', 'CaisseController@traitement');
 
 Route::get('/FormulaireI/FormulaireI3','PatientController@index')->name('Patientlist.index');
-Route::get('/FormulaireM/FormulaireM5','PatientController@liste');
+Route::get('/FormulaireM/FormulaireM5','PatientController@liste')->name('listeM1');
 Route::get('/FormulaireM/liste','PatientController@listeM')->name('listeM');
 Route::get('/FormulaireA/FormulaireA2','HomeController@liste');
 
@@ -132,7 +142,9 @@ Route::get('/Mot_passe_oublier', function () {
     return view('Mot_passe_oublier');
 });
 
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 Auth::routes();
 
@@ -142,8 +154,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Pharmacie
 Route::get('/Pharmacie', 'ProduitController@index')->name('Pharmacie.index');
 Route::get('/Pharmacie/{slug}', 'ProduitController@show')->name('Pharmacie.show');
+Route::post('Pharmacie', 'ProduitController@create')->name('Pharmacie.create');
+Route::post('/search', 'ProduitController@search')->name('Pharmacie.search');
+
 
 Route::post('/panier/ajouter', 'CartController@store')->name('cart.store');
+Route::post('/panier', 'CartController@valider')->name('cart.valider');
 Route::put('/panier/{rowId}', 'CartController@update')->name('cart.update');
 Route::get('/panier', 'CartController@index' )->name('cart.index');
 Route::get('/Recu', 'CartController@recu' )->name('cart.recu');
@@ -155,6 +171,4 @@ Route::get('/videpanier', function () {
 
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+

@@ -202,14 +202,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
 													</div>
 												</div>
-                                                @if (session('success'))
+                                                @if ($message = Session::get('success'))
                                                 <div class="alert alert-success">
-                                                    {{session('success')}}
+                                                    <p>{{$message}}</p>
                                                 </div>
                                                 @endif
-                                                @if (session('danger'))
+
+                                                @if ($message = Session::get('danger'))
                                                 <div class="alert alert-danger">
-                                                    {{session('success')}}
+                                                    <p>{{$message}}</p>
                                                 </div>
                                                 @endif
 												<!-- end: Invoice header-->
@@ -233,12 +234,12 @@ License: You must have a valid license purchased only from themeforest(the above
 																		<td class="border-0 pl-0 pt-7 d-flex align-items-center">
 																		<!--begin::Symbol-->
 																		<div class="symbol symbol-40 flex-shrink-0 mr-4 bg-light">
-																			<div class="symbol-label" style="background-image: url('assets/media/products/index.jpg')"></div>
+																			<div class="symbol-label" style="background-image: url('{{$produit->model->image}}')"></div>
 																		</div>
 																		<!--end::Symbol-->
 																		{{$produit->model->nomprod}}</td>
 																		<td class="text-right pt-7 align-middle">
-                                                                            <select name="quantite" id="quantite" data-id="{{$produit->rowId}}" class="custom-select">
+                                                                            <select name="quantite" id="quantite" data-id="{{$produit->rowId}}" data-stock="{{$produit->model->stock}}" class="custom-select">
                                                                                 @for ($i = 1; $i <= 6; $i++)
                                                                                  <option value="{{$i}}" {{ $i == $produit->quantite? 'selected' : '' }}>{{$i}}</option>
                                                                                 @endfor
@@ -287,8 +288,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Entry-->
 					</div>
                     @else
-                    <div class="col-md-12">
-                    <p>Votre panier est vide.</p>
+                    <div class="card-body">
+                    <h1>Votre panier est vide.</h1>
                     </div>
                     @endif
 					<!--end::Content-->

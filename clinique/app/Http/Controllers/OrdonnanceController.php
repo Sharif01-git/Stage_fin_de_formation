@@ -35,4 +35,22 @@ class OrdonnanceController extends Controller
         ]);
         return view('/Medecin')->with('success', 'Ordonnance prescrit avec succès');
     }
+
+    public function edit(Ordonnance $ordonnance){
+        //$patients = Patient::findOrFail($patient);
+        return view('OrdonnanceModif')->with('ordonnance',$ordonnance);
+    }
+
+    public function update(Request $request, Ordonnance $ordonnance){
+        $ordonnance->update([
+            'nomp' => $request->nomp,
+            'prenomp' =>$request->prenomp,
+            'age' =>$request->age,
+            'sexe' =>$request->sexe,
+            'produits' =>$request->produits,
+            'patient_id'=>$request->patient_id,
+
+        ]);
+        return redirect()->route('listeM1')->with('success', 'Ordonnance modifiée avec succès');
+    }
 }

@@ -24,14 +24,14 @@ class connexionCController extends Controller
 
         ]);
         if ($resultat) {
-           // flash("Vous êtes  connecté.")->success();
+           flash("Vous êtes  connecté.")->success();
 
             return redirect('/Caissier');
         } else {
             return back()->withInput()->withErrors([
                 'email' => 'Vos identifiants sont incorrects.',
             ]);
-            //flash('identifiants incorrects')->error();
+            flash('identifiants incorrects')->error();
             return redirect('/Page_connexionC');
         }
     }

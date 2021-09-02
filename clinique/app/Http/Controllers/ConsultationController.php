@@ -46,6 +46,30 @@ class ConsultationController extends Controller
         ]);
         return view('/Medecin')->with('success', 'Consultation enrégistré avec succès');
     }
+    public function edit(Consultation $consultation){
+        //$patients = Patient::findOrFail($patient);
+        return view('ConsultationModif')->with('consultation',$consultation);
+    }
+
+    public function update(Request $request, Consultation $consultation){
+        $consultation->update([
+            'nomp'=> $request->nomp,
+            'prenomp'=> $request->prenomp,
+            'motifconsul' => $request->motifconsul,
+            'dateconsult'=>$request->dateconsult,
+            'maladiepart' =>$request->maladiepart,
+            'allergie' =>$request->allergie,
+            'sexe' =>$request->sexe,
+            'modevie' =>$request->modevie,
+            'histoire' =>$request->histoire,
+            'diagnostic' =>$request->diagnostic,
+            'conduite' =>$request->conduite,
+            'patient_id'=>$request->patient_id,
+
+        ]);
+        return redirect()->route('listeM1')->with('success', 'Consultation Modifié avec succès');
+    }
+
 
   /*  public function details(){
         $patient_consult = DB::table('patients')

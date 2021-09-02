@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-       // 'namespace' => 'App\\Models\\',
+        //'namespace' => 'App\\',
     ],
 
     /*
@@ -55,7 +55,7 @@ return [
     */
 
     'storage' => [
-        'disk' => 'public',
+        'disk' => env('FILESYSTEM_DRIVER', 'public'),
     ],
 
     /*
@@ -104,13 +104,13 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'fr',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'fr',
             //'pt',
         ],
     ],
@@ -133,7 +133,7 @@ return [
                 'icon_class' => 'voyager-person',
             ],
             'voyager::generic.home' => [
-                'route'        => '/',
+                'route'        => '/dashboard',
                 'icon_class'   => 'voyager-home',
                 'target_blank' => true,
             ],
@@ -223,7 +223,8 @@ return [
 
     'media' => [
         // The allowed mimetypes to be uploaded through the media-manager.
-        // 'allowed_mimetypes' => '*', //All types can be uploaded
+        'allowed_mimetypes' => '*', //All types can be uploaded
+        /*
         'allowed_mimetypes' => [
           'image/jpeg',
           'image/png',
@@ -231,6 +232,7 @@ return [
           'image/bmp',
           'video/mp4',
         ],
+        */
         //Path for media-manager. Relative to the filesystem.
         'path'                => '/',
         'show_folders'        => true,
