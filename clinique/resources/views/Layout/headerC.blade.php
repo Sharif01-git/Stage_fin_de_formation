@@ -125,15 +125,15 @@ License: You must have a valid license purchased only from themeforest(the above
 										<ul class="menu-nav">
 
 
-											<li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/Caisse')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Caisse</span>
-													<span class="menu-desc" style="padding-left: 15%;">Facturation</span>
+                                            <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('/FormulaireC/FormulaireC3')}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">Liste des patients</span>
+													<span class="menu-desc" style="padding-left: 15%;">Consulter la liste des patients</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireC/FormulaireC2')}}" class="menu-link">
+												<a href="{{route('listeC')}}" class="menu-link">
 													<span class="menu-text" style="padding-left: 18.25rem;">Liste des factures</span>
 													<span class="menu-desc" style="padding-left: 18.25rem;">Consulter la liste des factures</span>
 													<i class="menu-arrow"></i>

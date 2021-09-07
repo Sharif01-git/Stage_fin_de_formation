@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     @enderror
 									</div>
 									<div class="form-group py-3 border-top m-0">
-										<input id="password" type="password" class="form-control h-auto border-0 px-0 placeholder-dark-75 @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password" />
+										<input id="password" type="password" class="form-control h-auto border-0 px-0 placeholder-dark-75 @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Mot de passe" />
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

@@ -605,16 +605,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>-->
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
-													<span class="menu-text">Rendez-vous</span>
-													<span class="menu-desc">Consulter la liste des rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
 													<span class="menu-text">Liste des patients</span>
-													<span class="menu-desc">Consulter la liste des patients et continuer</span>
+													<span class="menu-desc">Remplir les infos après consultaton ou traitement<br>Prescrire une ordonnance<br>Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -625,6 +618,16 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
+
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
+													<span class="menu-text">Rendez-vous</span>
+													<span class="menu-desc">Consulter la liste des rendez-vous</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+
+
 										</ul>
 										<!--end::Header Nav-->
 									</div>

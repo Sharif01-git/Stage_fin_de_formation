@@ -604,24 +604,11 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>-->
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
-													<span class="menu-text">Rendez-vous</span>
-													<span class="menu-desc">Consulter la liste des rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
 													<span class="menu-text">Liste des patients</span>
-													<span class="menu-desc">Consulter la liste des patients et continuer</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('listeM')}}"  class="menu-link">
-													<span class="menu-text">Dossier patient</span>
-													<span class="menu-desc">Consulter le dossier des patients</span>
+													<span class="menu-desc">Remplir les infos après consultaton ou traitement<br>Prescrire une ordonnance<br>Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -629,6 +616,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
 													<span class="menu-desc">Consulter le dossier des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
+													<span class="menu-text">Rendez-vous</span>
+													<span class="menu-desc">Consulter la liste des rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -674,72 +668,72 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!--begin: Code-->
 
                             <!--end: Code-->
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Nom du patient</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nom du patient</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="nomp" value="{{$nomp}}" placeholder="" readonly/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Prenom du patient</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Prenom du patient</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="prenomp" value="{{$prenomp}}" placeholder="" readonly />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Motif de consultation</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Motif de consultation</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="motifconsul" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Date de cosultation</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Date de cosultation</label>
+                                <div class="col-lg-8">
                                     <input type="date" class="form-control" name="dateconsult" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Maladie particuliaire</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Maladie particuliaire</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="maladiepart" value="{{$maladiepart}}" placeholder="" readonly/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Allergie</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Allergie</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="allergie" value="{{$allergie}}" placeholder="" readonly />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Habitude de mode de vie</label>
-                                <div class="col-lg-9">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Habitude de mode de vie</label>
+                                <div class="col-lg-8">
                                     <input type="text" class="form-control" name="modevie"  placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Histoire</label>
-                                <div class="col-lg-9 col-md-9 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Histoire</label>
+                                <div class="col-lg-8 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="histoire" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Hypothèse Diagnostique</label>
-                                <div class="col-lg-9 col-md-9 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Hypothèse Diagnostique</label>
+                                <div class="col-lg-8 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="diagnostic" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Conduite à tenir</label>
-                                <div class="col-lg-9 col-md-9 col-sm-12">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Conduite à tenir</label>
+                                <div class="col-lg-8 col-md-9 col-sm-12">
                                     <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="conduite" placeholder="" rows="6"></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>

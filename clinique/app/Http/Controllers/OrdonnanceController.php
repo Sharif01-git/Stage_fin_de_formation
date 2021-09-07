@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ordonnance;
 use App\Patient;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 
 class OrdonnanceController extends Controller
@@ -52,5 +53,10 @@ class OrdonnanceController extends Controller
 
         ]);
         return redirect()->route('listeM1')->with('success', 'Ordonnance modifiée avec succès');
+    }
+    public function details($id){
+        $ordonnance = Ordonnance::find($id);
+        $pdf = PDF::loadView('DetailsOrd', ['ordonnance'=>$ordonnance]) ->setPaper('a4', 'landscape');
+        return $pdf->stream();
     }
 }

@@ -43,6 +43,10 @@ Route::post('/inscription', 'inscriptionController@traitement');
 
 Route::get('/Patient', 'PatientController@formulaire')->name('Patient.form');
 Route::post('Patient', 'PatientController@traitement');
+Route::get('Patient/{patient}', 'PatientController@rendezvousM')->name('Medecin.rendezvous');
+Route::get('Patient/{patient}', 'PatientController@detailsPa')->name('Patient.details');
+//Route::get('/Patient', 'PatientController@rendezvousI')->name('Infirmiere.rendezvous');
+
 
 Route::get('ModifPa/{patient}', 'PatientController@edit')->name('ModifPa.edit');
 Route::post('ModifPa/{patient}', 'PatientController@update')->name('ModifPa.update');
@@ -64,13 +68,19 @@ Route::get('ModifOrd/{ordonnance}', 'OrdonnanceController@edit')->name('Ordonnan
 Route::post('ModifOrd/{ordonnance}', 'OrdonnanceController@update')->name('Ordonnance.update');
 Route::post('Ordonnance', 'OrdonnanceController@traitement');
 
-Route::get('/Caisse', 'CaisseController@formulaire');
-Route::post('Caisse', 'CaisseController@traitement');
+Route::get('/Caisse{id}', 'CaisseController@formulaire')->name('caisse.create');
+Route::get('{facture}/ModifCaisse', 'CaisseController@edit')->name('caisse.edit');
+Route::post('ModifCaisse/{facture}', 'CaisseController@update')->name('caisse.update');
+Route::get('ModifCaisse/{facture}','CaisseController@destroy' )->name('caisse.destroy');
+Route::post('Caisse', 'CaisseController@traitement')->name('caisse.traitement');
+Route::get('/FormulaireC/FormulaireC2','CaisseController@listeC')->name('listeC');
+Route::get('/FormulaireC/FormulaireC3','CaisseController@listeP')->name('listeP');
 
 Route::get('/FormulaireI/FormulaireI3','PatientController@index')->name('Patientlist.index');
 Route::get('/FormulaireM/FormulaireM5','PatientController@liste')->name('listeM1');
 Route::get('/FormulaireM/liste','PatientController@listeM')->name('listeM');
 Route::get('/FormulaireA/FormulaireA2','HomeController@liste');
+
 
 Route::get('/Pharmacie','PharmacieController@index')->name('Pharmacie.index');
 
@@ -102,9 +112,13 @@ Route::get('/Administrateur', function () {
     return view('Administrateur');
 });
 
-Route::get('/Rendezvous', function () {
+/*Route::get('/Rendezvous', function () {
     return view('/Rendezvous');
-});
+});*/
+
+/*Route::get('/DetailsOrd', function () {
+    return view('/DetailsOrd');
+});*/
 
 
 //Vues pour infirmière
@@ -128,9 +142,9 @@ Route::get('/FormulaireP/FormulaireP2', function () {
 });
 
 //Vues pour Caissier
-Route::get('/FormulaireC/FormulaireC2', function () {
+/*Route::get('/FormulaireC/FormulaireC2', function () {
     return view('formulaireC/FormulaireC2');
-});
+});*/
 
 
 //Vues pour administrateur
@@ -164,6 +178,9 @@ Route::put('/panier/{rowId}', 'CartController@update')->name('cart.update');
 Route::get('/panier', 'CartController@index' )->name('cart.index');
 Route::get('/Recu', 'CartController@recu' )->name('cart.recu');
 Route::delete('/panier/{rowId}', 'CartController@destroy')->name('cart.destroy');
+
+Route::get('{facture}/Facture', 'CaisseController@facture' )->name('caisse.facture');
+Route::get('/Ordonnance/{ordonnance}', 'OrdonnanceController@details')->name('Ordonnance.details');
 
 Route::get('/videpanier', function () {
     Cart::destroy();

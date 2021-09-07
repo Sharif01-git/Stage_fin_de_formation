@@ -85,13 +85,13 @@
                                                     <td>{{$patient->created_at->format('d-m-y/h:m')}}</td>
                                                     <td>
                                                 <form method="POST" action="{{route('ModifPa.destroy',$patient->id)}}">
-                                                     <a class="fa fa-edit" href="{{ route('ModifPa.edit',$patient->id) }}"></a>
+                                                     <a class="fa fa-edit" title="Modifier" href="{{ route('ModifPa.edit',$patient->id) }}"></a>
                                                      {{ csrf_field() }}
                                                      {{ method_field('DELETE')}}
                                                     <!-- <input type="submit" value="Delete">-->
-                                                    <a onclick="return confirm('Voulez-vous vraiment supprimer ce patient?')"  href="{{route('ModifPa.destroy',$patient->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
+                                                    <a  data-toggle="tooltip" title="Supprimer" onclick="return confirm('Voulez-vous vraiment supprimer ce patient?')"  href="{{route('ModifPa.destroy',$patient->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
 
-                                                    <a class="fa fa-eye" href=""  style="color:gray"></a>
+                                                    <a class="fa fa-eye" data-toggle="tooltip" title="Consulter" href="{{ route('Patient.details',$patient->id) }}"  style="color:gray"></a>
                                                 </form>
                                                     </td>
 												</tr>

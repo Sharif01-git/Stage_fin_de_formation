@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Patient;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class PatientController extends Controller
 {
@@ -80,6 +81,33 @@ class PatientController extends Controller
     public function destroy(Patient $patient){
         $patient->delete();
         return redirect()->route('Patientlist.index')->with('success', 'Patient supprimé avec succès');
+    }
+
+    public function rendezvousM($id){
+        $patient = Patient::findOrFail($id);
+        return view('RendezvousM',[
+            'id'=> $id,
+            'nomp'=>$patient->nomp,
+            'prenomp'=>$patient->prenomp,
+            'age'=>$patient->age,
+            'sexe' =>$patient->sexe,
+            'profession' =>$patient->profession,
+            'tel' =>$patient->tel,
+            'nationalite' =>$patient->nationalite,
+            'adressep' =>$patient->adressep,
+            'Email'=>$patient->Email,
+        ]);
+        return view('RendezvousM');
+    }
+
+   /* public function rendezvousl(){
+        return view('Rendezvous');
+    }*/
+
+    public function detailsPa($id){
+        $detailspa =Patient::findOrFail($id);
+        $pdf = PDF::loadView('FormulaireI/DetailsPa', ['patient'=>$detailspa]) ->setPaper('a4', 'landscape');
+        return $pdf->stream();
     }
 
 }

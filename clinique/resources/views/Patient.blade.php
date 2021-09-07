@@ -137,17 +137,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/Rendezvous')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
-													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireI/FormulaireI3')}}" class="menu-link">
 													<span class="menu-text">Liste des patients enrégistrés</span>
 													<span class="menu-desc">Consulter la liste des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('/Rendezvous')}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
+													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -192,16 +193,17 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header">
-                        <h3 class="card-title">Formulaire d'enrégistrement patients</h3>
+                        <h3 class="card-title" style="padding-left: 35%;">Formulaire d'enrégistrement patients</h3>
                     </div>
                     <!--begin::Form-->
                     <form class="form" action="/Patient" method="POST">
                         @csrf
+
                         <div class="card-body" align="center" >
 
                             <!--begin: Code-->
-                            <fieldset style=" padding: 3px 6px;  font: 1rem 'Fira Sans', sans-serif; margin: .4rem;  ">
-                           <legend> <h3 class="card-title"  style="color:green" >Enrégistrement des informations de base</h3></legend>
+                            <fieldset >
+                           <legend> <h3 class="card-title"  style="color:green" >Informations de base</h3></legend>
                             <!--end: Code-->
                         <div class="row"  >
                             <div class="col-xl-6">
@@ -307,7 +309,7 @@ License: You must have a valid license purchased only from themeforest(the above
                          </fieldset>
 
                          <fieldset>
-                       <h3 class="card-title"  style="color:green">Enrégistrement des constantes</h3>
+                       <h3 class="card-title"  style="color:green">Constantes</h3>
                         <div class="row">
                             <div class="col-xl-6">
                             <div class="form-group row">

@@ -550,7 +550,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="text-white font-weight-bolder font-size-sm d-none d-md-inline">{{auth()->user()->name}}</span>
 											</div>
 											<span class="symbol symbol-35">
-												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">S</span>
+												<span class="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30"><img alt="Logo" src="assets/media/logos/clinique1.png" class="max-h-35px" /></span>
 											</span>
                                             <a class="dropdown-item " href="/connexionM"><i class="fa fa-power-off m-r-5 m-l-5"></i> </a>
 										</div>
@@ -604,7 +604,6 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>-->
-
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
 													<span class="menu-text">Liste des patients</span>
@@ -619,6 +618,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
+
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
@@ -626,6 +626,8 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
+
+
 										</ul>
 										<!--end::Header Nav-->
 									</div>
@@ -639,7 +641,11 @@ License: You must have a valid license purchased only from themeforest(the above
 					</div>
 					<!--end::Header-->
 
-    <!--begin::Content-->
+
+
+
+
+	<!--begin::Content-->
     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
@@ -654,76 +660,172 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--end::Notice-->
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
-                    <div class="card-header">
-                        <h3 class="card-title" style="padding-left: 45%;">Ordonnance</h3>
+                    <div class="card-header" >
+                        <h3 class="card-title" style="padding-left: 35%;">Programmation de rendez-vous</h3>
                         <div class="card-toolbar">
                         </div>
                     </div>
                     <!--begin::Form-->
-                    <form class="form" action="/Ordonnance" method="POST">
-                        @csrf
                         <div class="card-body" align="center">
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Nom</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="nomp" value="{{$nomp}}" placeholder="" readonly/>
+                            <form class="form" action="" method="">
+                                @csrf
+                                <div class="card-body" align="center" >
+                                <div class="row"  >
+                                    <div class="col-xl-6">
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control " name="nomp" value="{{$nomp}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control " name="prenomp" value="{{$prenomp}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prénom</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="prenomp" value="{{$prenomp}}" placeholder="" readonly/>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Age</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="age" value="{{$age}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="profession" value="{{$profession}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Age</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="age" value="{{$age}}" placeholder="" readonly/>
-                                    <span class="form-text text-muted"></span>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Nationalité</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="nationalite" value="{{$nationalite}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                                        <div class="col-lg-9">
+                                            <input type="text" class="form-control" name="adressep" value="{{$adressep}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row align-items-center">
-                                <label class="col-lg-2 col-form-label text-right">Sexe</label>
-                                <div class="radio-inline">
-                                    <label class="radio">
-                                    <input type="radio" name="sexe" value="Masculin" />
-                                    <span></span>Masculin</label>
-                                    <label class="radio">
-                                    <input type="radio" name="sexe" value="Féminin"/>
-                                    <span></span>Féminin</label>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                        <div class="col-lg-9">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="la la-chain"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="tel" name="tel" class="form-control" value="{{$tel}}" placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Email</label>
+                                        <div class="col-lg-9">
+                                            <input type="email" name="Email" class="form-control" value="{{$Email}}" placeholder="" />
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Produits & Dosage</label>
-                                <div class="col-lg-9 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" maxlength="500" placeholder="" rows="6"></textarea>
-                                    <span class="form-text text-muted"></span>
-                                </div>
-                            </div>
-                            <div class="separator separator-dashed my-8"></div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col-lg-10"><button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
-                                <div class="col-lg-2">
-                                    <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
 
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row align-items-center">
+                                        <label class="col-lg-2 col-form-label text-right">Sexe</label>
+                                        <div class="radio-inline">
+                                            <label class="radio">
+                                            <input type="radio" name="sexe" value="Masculin" />
+                                            <span></span>Masculin</label>
+                                            <label class="radio">
+                                            <input type="radio" name="sexe" value="Féminin"/>
+                                            <span></span>Féminin</label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+
+                                            <div class="form-group row">
+                                                <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="time" value="" id="example-time-input" />
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
+                                        <div class="col-lg-9">
+                                            <input type="date" class="form-control" name="dateconsult" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" type="time" value="" id="example-time-input" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="" placeholder="" rows="6"></textarea>
+                                        <span class="form-text text-muted"></span>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                            </form>
+
                         </div>
-                        <input type="hidden" class="form-control" name="patient_id" placeholder="" value="{{$id}}"/>
-                    </form>
                     <!--end::Form-->
                 </div>
+            </div>
                 <!--end::Card-->
                 <!--begin::Card-->
 
                 <!--end::Card-->
             </div>
+        </div>
             <!--end::Container-->
         </div>
         <!--end::Entry-->
     </div>
 
-
-@extends('Layout.footer')
+    @extends('Layout.footer')

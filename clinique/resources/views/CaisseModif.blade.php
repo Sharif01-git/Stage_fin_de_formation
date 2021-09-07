@@ -174,65 +174,65 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                     </div>
                     <!--begin::Form-->
-                    <form class="form" action="/Caisse" method="POST">
+                    <form class="form" action="{{ route('caisse.update',$facture->id)}}" method="POST">
                         @csrf
                         <div class="card-body" align="center">
                             <!--begin: Code-->
 
                             <!--end: Code-->
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Nom du patient</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Nom du patient</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="nomp" value="{{$nomp}}" placeholder="" required readonly />
+                                    <input type="text" class="form-control" name="nomp" value="{{$facture->nomp}}" placeholder="" required readonly />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prénom du patient</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prénom du patient</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="prenomp" value="{{$prenomp}}" placeholder="" required readonly/>
+                                    <input type="text" class="form-control" name="prenomp" value="{{$facture->prenomp}}" placeholder="" required readonly/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Date</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Date</label>
                                 <div class="col-lg-9">
-                                    <input type="date" class="form-control" name="datefac" value="Copyright © {{ date('Y') }}" placeholder="" required/>
+                                    <input type="date" class="form-control" name="datefac" value="{{$facture->datefac}}" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prix du bon de consultaion</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix du bon de sonsultaion</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixbonconsul" value="5000" readonly placeholder="" required/>
+                                    <input type="text" class="form-control" name="prixbonconsul" value="{{$facture->prixbonconsul}}" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prix de carnet médical</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix de carnet médical</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixcarnet" value="3500" readonly placeholder="" required/>
+                                    <input type="text" class="form-control" name="prixcarnet" value="{{$facture->prixcarnet}}" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prix de traitement</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix de traitement</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixtrait" placeholder="" />
+                                    <input type="text" class="form-control" name="prixtrait" value="{{$facture->prixtrait}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prix total de produits</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix total de produits</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixprod" placeholder="" />
+                                    <input type="text" class="form-control" name="prixprod" value="{{$facture->prixprod}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prix total à payer</label>
+                            <div class="form-group">
+                                <label class="col-lg-9 col-form-label text-left">Prix total à payer</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixtotal" value="" placeholder="" />
+                                    <input type="text" class="form-control" name="prixtotal" value="{{$facture->prixtotal}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -247,7 +247,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" class="form-control" name="patient_id" placeholder="" value="{{$id}}"/>
+                        <input type="hidden" class="form-control" name="patient_id" placeholder="" value="{{$facture->patient_id}}"/>
                     </form>
                     <!--end::Form-->
                 </div>

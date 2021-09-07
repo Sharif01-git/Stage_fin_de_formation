@@ -121,6 +121,11 @@
         });
     </script>
 </body>
+<script>
+    $(function () {
+      $('a').tooltip()
+    })
+  </script>
 <script >
     $(document).ready(function () {
     var SITEURL = "{{url('/')}}";

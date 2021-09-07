@@ -138,17 +138,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/Rendezvous')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
-													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireI/FormulaireI3')}}" class="menu-link">
 													<span class="menu-text">Liste des patients enrégistrés</span>
 													<span class="menu-desc">Consulter la liste des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('/Rendezvous')}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
+													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>

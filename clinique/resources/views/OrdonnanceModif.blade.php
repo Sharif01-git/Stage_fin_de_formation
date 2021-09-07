@@ -604,17 +604,11 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>-->
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
-													<span class="menu-text">Rendez-vous</span>
-													<span class="menu-desc">Consulter la liste des rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireM/FormulaireM5')}}"  class="menu-link">
 													<span class="menu-text">Liste des patients</span>
-													<span class="menu-desc">Consulter la liste des patients et continuer</span>
+													<span class="menu-desc">Remplir les infos après consultaton ou traitement<br>Prescrire une ordonnance<br>Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -622,6 +616,13 @@ License: You must have a valid license purchased only from themeforest(the above
 												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
 													<span class="menu-desc">Consulter le dossier des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
+													<span class="menu-text">Rendez-vous</span>
+													<span class="menu-desc">Consulter la liste des rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -662,20 +663,20 @@ License: You must have a valid license purchased only from themeforest(the above
                     <form class="form" action="{{route('Ordonnance.update', $ordonnance->id)}}" method="POST">
                         @csrf
                         <div class="card-body" align="center">
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Nom</label>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nom</label>
                                 <div class="col-lg-9">
                                     <input type="text" class="form-control" name="nomp" value="{{$ordonnance->nomp}}" placeholder="" readonly/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Prénom</label>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Prénom</label>
                                 <div class="col-lg-9">
                                     <input type="text" class="form-control" name="prenomp" value="{{$ordonnance->prenomp}}" placeholder="" readonly/>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Age</label>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Age</label>
                                 <div class="col-lg-9">
                                     <input type="text" class="form-control" name="age" value="{{$ordonnance->age}}" placeholder="" readonly/>
                                     <span class="form-text text-muted"></span>
@@ -692,10 +693,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span></span>Féminin</label>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Produits & Dosage</label>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Produits & Dosage</label>
                                 <div class="col-lg-9 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" value="{{$ordonnance->produits}}" maxlength="500" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" value="" maxlength="500" placeholder="" rows="6">{{$ordonnance->produits}}</textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

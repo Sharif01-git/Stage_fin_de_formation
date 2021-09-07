@@ -138,17 +138,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('/Rendezvous')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
-													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireI/FormulaireI3')}}" class="menu-link">
 													<span class="menu-text">Liste des patients enrégistrés</span>
 													<span class="menu-desc">Consulter la liste des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('/Rendezvous')}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
+													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -193,18 +194,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="card-body" align="center" >
                                 <div class="row"  >
                                     <div class="col-xl-6">
-                                    <div class="form-group ">
-                                        <label class="col-lg-10 col-form-label text-left">Nom du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                        <div class="col-lg-9">
                                             <input type="" class="form-control " name="nomp" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                   </div>
                                   <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Prénom du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                        <div class="col-lg-9">
                                             <input type="" class="form-control " name="prenomp" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
@@ -213,18 +214,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Age du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Age</label>
+                                        <div class="col-lg-9">
                                             <input type="" class="form-control" name="age" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                     </div>
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Profession du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                        <div class="col-lg-9">
                                             <input type="" class="form-control" name="profession" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
@@ -233,18 +234,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Nationalité du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Nationalité</label>
+                                        <div class="col-lg-9">
                                             <input type="" class="form-control" name="nationalite" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                     </div>
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Adresse du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                                        <div class="col-lg-9">
                                             <input type="text" class="form-control" name="adressep" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
@@ -253,9 +254,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="row">
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Contact du demandeur</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                        <div class="col-lg-9">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
@@ -268,9 +269,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </div>
                                     </div>
                                     <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Email du demandeur </label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Email</label>
+                                        <div class="col-lg-9">
                                             <input type="email" name="Email" class="form-control" placeholder="" />
                                         </div>
                                     </div>
@@ -295,18 +296,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="row">
                                     <div class="col-xl-6">
 
-                                            <div class="form-group">
-                                                <label for="example-time-input" class="col-lg-10 col-form-label text-left">Heure début</label>
-                                                <div class="col-lg-10">
+                                            <div class="form-group row">
+                                                <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
+                                                <div class="col-lg-9">
                                                     <input class="form-control" type="time" value="" id="example-time-input" />
                                                 </div>
                                             </div>
 
                                     </div>
                                     <div class="col-xl-6">
-                                        <div class="form-group">
-                                        <label class="col-lg-10 col-form-label text-left">Date de rendez-vous</label>
-                                        <div class="col-lg-10">
+                                        <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
+                                        <div class="col-lg-9">
                                             <input type="date" class="form-control" name="dateconsult" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
@@ -315,17 +316,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="row">
                                 <div class="col-xl-6">
-                                    <div class="form-group">
-                                        <label for="example-time-input" class="col-lg-10 col-form-label text-left">Heure fin</label>
-                                        <div class="col-lg-10">
+                                    <div class="form-group row">
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
+                                        <div class="col-lg-9">
                                             <input class="form-control" type="time" value="" id="example-time-input" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
-                                <div class="form-group">
-                                    <label class="col-lg-10 col-form-label text-left">Motif de rendez-vous</label>
-                                    <div class="col-lg-10 col-md-9 col-sm-12">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
                                         <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="" placeholder="" rows="6"></textarea>
                                         <span class="form-text text-muted"></span>
                                     </div>

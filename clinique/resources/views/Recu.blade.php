@@ -137,7 +137,7 @@ caption {
   padding: 10px;
 }
   </style>
-  <title></title>
+  <title>Reçu</title>
 </head>
 <body>
 
@@ -149,6 +149,7 @@ caption {
 
 <br>
 <div style="float: left;">
+<img src="assets/media/logos/clinique6.jpg" height="5%" width="5%" ><br>
 Clinique GES-CLIN <br> T&eacute;l : +228 93-07-21-73/ 70-35-15-84<br>
  E-mail : gesclin@gmail.tg<br>
 Etre en bonne santé c'est le plus important
@@ -206,13 +207,6 @@ Etre en bonne santé c'est le plus important
 
 
         <td>{{getprix(Cart::subtotal())}}</td>
-
-      </tr>
-      <tr>
-        <td colspan="4">Taxe</td>
-
-
-        <td>{{getprix(Cart::tax())}}</td>
 
       </tr>
     </tfoot>

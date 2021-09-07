@@ -137,17 +137,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
-                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('FormulaireI/FormulaireI4')}}" class="menu-link">
-													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
-													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
-													<i class="menu-arrow"></i>
-												</a>
-											</li>
+
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
 												<a href="{{url('FormulaireI/FormulaireI3')}}" class="menu-link">
 													<span class="menu-text">Liste des patients enrégistrés</span>
 													<span class="menu-desc">Consulter la liste des patients</span>
+													<i class="menu-arrow"></i>
+												</a>
+											</li>
+                                            <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
+												<a href="{{url('FormulaireI/FormulaireI4')}}" class="menu-link">
+													<span class="menu-text" style="padding-left: 15%;">Rendez-vous</span>
+													<span class="menu-desc" style="padding-left: 15%;">Programmer un rendez-vous</span>
 													<i class="menu-arrow"></i>
 												</a>
 											</li>
@@ -193,22 +194,22 @@ License: You must have a valid license purchased only from themeforest(the above
                         @csrf
                         <div class="card-body" align="center" >
                             <!--begin: Code-->
-                            <h3 class="card-title" color="blue" align="center" style="color:green">Enrégistrement des informations de base</h3>
+                            <h3 class="card-title" color="blue" align="center" style="color:green">Informations de base</h3>
                             <!--end: Code-->
                         <div class="row"  >
                             <div class="col-xl-6">
-                            <div class="form-group ">
-                                <label class="col-lg-10 col-form-label text-left">Nom</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                <div class="col-lg-9">
                                     <input type="" class="form-control " name="nomp" value="{{$patient->nomp}}" placeholder="Entrez le nom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                           </div>
                           <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Prénom</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                <div class="col-lg-9">
                                     <input type="" class="form-control " name="prenomp" value="{{$patient->prenomp}}" placeholder="Entrez le prénom du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -217,18 +218,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Age</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Age</label>
+                                <div class="col-lg-9">
                                     <input type="" class="form-control" name="age"  value="{{$patient->age}}" placeholder="Entrez l'âge du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Profession</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                <div class="col-lg-9">
                                     <input type="" class="form-control" name="profession" value="{{$patient->profession}}" placeholder="Entrez la profession du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -237,18 +238,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Nationalité</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Nationalité</label>
+                                <div class="col-lg-9">
                                     <input type="" class="form-control" name="nationalite" value="{{$patient->nationalite}}" placeholder="Entrez la nationalité du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Adresse</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="adressep" value="{{$patient->adressep}}" placeholder="Entrez l'adresse du patient ici" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -257,9 +258,9 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Contact</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                <div class="col-lg-9">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">
@@ -272,9 +273,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Email </label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Email </label>
+                                <div class="col-lg-9">
                                     <input type="email" name="Email" value="{{$patient->Email}}" class="form-control" placeholder="Enter email" />
                                 </div>
                             </div>
@@ -297,21 +298,21 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         </div>
                             <div class="separator separator-dashed my-8"></div>
-                            <h3 class="card-title" align="center" style="color:green">Enrégistrement des constantes</h3>
+                            <h3 class="card-title" align="center" style="color:green">Constantes</h3>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Température</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Température</label>
+                                <div class="col-lg-9">
                                     <input type="text" name="temperature" value="{{$patient->temperature}}" class="form-control" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Poids</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Poids</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="poids"  value="{{$patient->poids}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -320,18 +321,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Tension</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Tension</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="tension" value="{{$patient->tension}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Pouls</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Pouls</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="pouls" value="{{$patient->pouls}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -340,18 +341,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Taille</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Taille</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="taille" value="{{$patient->taille}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Maladie particuliaire</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Maladie particuliaire</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="maladiepart" value="{{$patient->maladiepart}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
@@ -360,18 +361,18 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Allergie</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Allergie</label>
+                                <div class="col-lg-9">
                                     <input type="text" class="form-control" name="allergie" value="{{$patient->allergie}}" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             </div>
                             <div class="col-xl-6">
-                            <div class="form-group">
-                                <label class="col-lg-10 col-form-label text-left">Groupage et Rhésus</label>
-                                <div class="col-lg-10">
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Groupage et Rhésus</label>
+                                <div class="col-lg-9">
                                     <select class="form-control" name="groupage" value="{{$patient->groupage}}">
                                         <option value="{{$patient->groupage}}">Choisir</option>
                                         <option value="O+">O+</option>

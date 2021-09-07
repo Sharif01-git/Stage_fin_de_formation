@@ -824,7 +824,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 
 "use strict";
 
-// Component Definition 
+// Component Definition
 var KTDialog = function(options) {
     // Main object
     var the = this;
@@ -1219,7 +1219,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 
 "use strict";
 
-// Component Definition 
+// Component Definition
 var KTImageInput = function(elementId, options) {
     // Main object
     var the = this;
@@ -6941,7 +6941,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 						// page info update
 						$(pg.pager).find('.' + pfx + 'datatable-pager-info').find('.' + pfx + 'datatable-pager-detail').html(Plugin.dataPlaceholder(
 							Plugin.getOption('translate.toolbar.pagination.items.info'), {
-								// set start page 0 if the is no records. eg. Showing 0 - 0 of 0
+								// set start page 0 if the is no records. eg. Numéro 0 - 0 of 0
 								start: pg.meta.total === 0 ? 0 : start,
 								end: pg.meta.perpage === -1 ? pg.meta.total : end,
 								pageSize: pg.meta.perpage === -1 ||
@@ -8829,7 +8829,7 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 							select: 'Select page size',
 							all: 'all',
 						},
-						info: 'Showing {{start}} - {{end}} of {{total}}',
+						info: 'Numéro {{start}} - {{end}} of {{total}}',
 					},
 				},
 			},
@@ -9409,7 +9409,7 @@ var KTLayoutContent = function() {
 
         if (_element) {
             height = height - parseInt(KTUtil.css(_element, 'paddingTop')) - parseInt(KTUtil.css(_element, 'paddingBottom'));
-        }        
+        }
 
         height = height - KTLayoutHeader.getHeight();
         height = height - KTLayoutSubheader.getHeight();
