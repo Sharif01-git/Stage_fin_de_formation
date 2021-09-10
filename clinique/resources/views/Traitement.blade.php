@@ -698,7 +698,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Auteur</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" placeholder="" name="auteur" />
+                                    <input type="text" class="form-control" placeholder="" value="{{auth()->user()->name}} {{auth()->user()->prenom}}" name="auteur" readonly />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

@@ -667,7 +667,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!--begin::Form-->
                         <div class="card-body" align="center">
-                            <form class="form" action="" method="">
+                            <form class="form" action="RendezvousM" method="POST">
                                 @csrf
                                 <div class="card-body" align="center" >
                                 <div class="row"  >
@@ -675,7 +675,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row ">
                                         <label class="col-lg-3 col-form-label text-right">Nom</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="nomp" value="{{$nomp}}" placeholder="" />
+                                            <input type="" class="form-control " name="nomd" value="{{$nomp}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -684,7 +684,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Prénom</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="prenomp" value="{{$prenomp}}" placeholder="" />
+                                            <input type="" class="form-control " name="prenomd" value="{{$prenomp}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -695,7 +695,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Age</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="age" value="{{$age}}" placeholder="" />
+                                            <input type="" class="form-control" name="aged" value="{{$age}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -704,7 +704,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Profession</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="profession" value="{{$profession}}" placeholder="" />
+                                            <input type="" class="form-control" name="professiond" value="{{$profession}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -715,7 +715,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Nationalité</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="nationalite" value="{{$nationalite}}" placeholder="" />
+                                            <input type="" class="form-control" name="nationalited" value="{{$nationalite}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -724,7 +724,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Adresse</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control" name="adressep" value="{{$adressep}}" placeholder="" />
+                                            <input type="text" class="form-control" name="adresse" value="{{$adressep}}" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -741,7 +741,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <i class="la la-chain"></i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" name="tel" class="form-control" value="{{$tel}}" placeholder="" />
+                                                <input type="tel" name="contact" class="form-control" value="{{$tel}}" placeholder="" />
                                             </div>
                                         </div>
                                     </div>
@@ -750,7 +750,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Email</label>
                                         <div class="col-lg-9">
-                                            <input type="email" name="Email" class="form-control" value="{{$Email}}" placeholder="" />
+                                            <input type="email" name="emaild" class="form-control" value="{{$Email}}" placeholder="" />
                                         </div>
                                     </div>
                                     </div>
@@ -762,10 +762,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                         <div class="radio-inline">
                                             <label class="radio">
-                                            <input type="radio" name="sexe" value="Masculin" />
+                                            <input type="radio" name="sexed" value="Masculin" />
                                             <span></span>Masculin</label>
                                             <label class="radio">
-                                            <input type="radio" name="sexe" value="Féminin"/>
+                                            <input type="radio" name="sexed" value="Féminin"/>
                                             <span></span>Féminin</label>
                                         </div>
                                     </div>
@@ -777,7 +777,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="form-group row">
                                                 <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
                                                 <div class="col-lg-9">
-                                                    <input class="form-control" type="time" value="" id="example-time-input" />
+                                                    <input class="form-control" type="time" name="heured" value="" id="example-time-input" />
                                                 </div>
                                             </div>
 
@@ -786,7 +786,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
                                         <div class="col-lg-9">
-                                            <input type="date" class="form-control" name="dateconsult" placeholder="" />
+                                            <input type="date" class="form-control" name="dater" placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                         </div>
@@ -797,7 +797,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" type="time" value="" id="example-time-input" />
+                                            <input class="form-control" type="time" name="heuref" value="" id="example-time-input" />
                                         </div>
                                     </div>
                                 </div>
@@ -805,11 +805,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
                                     <div class="col-lg-9 col-md-9 col-sm-12">
-                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="" placeholder="" rows="6"></textarea>
+                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="motifr" placeholder="" rows="6"></textarea>
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
                                 </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
+                                        <div class="col-lg-2">
+                                            <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
 

@@ -191,30 +191,29 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Card-->
                 <div class="card card-custom gutter-b example example-compact">
                     <div class="card-header" >
-                        <h3 class="card-title" style="padding-left: 35%;">Programmation de rendez-vous</h3>
+                        <h3 class="card-title" style="padding-left: 35%;">Détails de rendez-vous</h3>
                         <div class="card-toolbar">
                         </div>
                     </div>
                     <!--begin::Form-->
                         <div class="card-body" align="center">
-                            <form class="form" action="RendezvousI" method="POST">
-                                @csrf
+
                                 <div class="card-body" align="center" >
                                 <div class="row"  >
                                     <div class="col-xl-6">
                                     <div class="form-group row ">
-                                        <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                        <label class="col-lg-3 col-form-label text-right">Nom : </label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="nomd" value="" placeholder="" />
+                                            <h3>{{$detailsRend->nomd}}</h3>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                   </div>
                                   <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                        <label class="col-lg-3 col-form-label text-right">Prénom : </label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="prenomd" value="" placeholder="" />
+                                            <h3>{{$detailsRend->prenomd}}</h3>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -223,38 +222,18 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="row">
                                     <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Age</label>
+                                        <label class="col-lg-3 col-form-label text-right">Age : </label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="aged" value="" placeholder="" />
+                                            <h3>{{$detailsRend->aged}}</h3>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                     </div>
                                     <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                        <label class="col-lg-3 col-form-label text-right">Profession : </label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="professiond" value="" placeholder="" />
-                                            <span class="form-text text-muted"></span>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Nationalité</label>
-                                        <div class="col-lg-9">
-                                            <input type="" class="form-control" name="nationalited" value="" placeholder="" />
-                                            <span class="form-text text-muted"></span>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Adresse</label>
-                                        <div class="col-lg-9">
-                                            <input type="text" class="form-control" name="adresse" value="" placeholder="" />
+                                            <h3>{{$detailsRend->professiond}}</h3>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -263,24 +242,37 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="row">
                                     <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                        <label class="col-lg-3 col-form-label text-right">Nationalité : </label>
                                         <div class="col-lg-9">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="la la-chain"></i>
-                                                    </span>
-                                                </div>
-                                                <input type="tel" name="contact" class="form-control" value="" placeholder="" />
-                                            </div>
+                                            <h3>{{$detailsRend->nationalited}}</h3>
+                                            <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
                                     </div>
                                     <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Email</label>
+                                        <label class="col-lg-3 col-form-label text-right">Adresse : </label>
                                         <div class="col-lg-9">
-                                            <input type="email" name="emaild" class="form-control" value="" placeholder="" />
+                                            <h3>{{$detailsRend->adresse}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Contact : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRend->contact}}</h3>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Email : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRend->emaild}}</h3>
                                         </div>
                                     </div>
                                     </div>
@@ -288,15 +280,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                 <div class="row">
                                     <div class="col-xl-6">
-                                    <div class="form-group row align-items-center">
-                                        <label class="col-lg-2 col-form-label text-right">Sexe</label>
-                                        <div class="radio-inline">
-                                            <label class="radio">
-                                            <input type="radio" name="sexed" value="Masculin" />
-                                            <span></span>Masculin</label>
-                                            <label class="radio">
-                                            <input type="radio" name="sexed" value="Féminin"/>
-                                            <span></span>Féminin</label>
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Sexe : {{$detailsRend->sexed}}</label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRend->sexed}}</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -304,19 +291,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="row">
                                     <div class="col-xl-6">
 
-                                            <div class="form-group row">
-                                                <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
-                                                <div class="col-lg-9">
-                                                    <input class="form-control" type="time" name="heured" value="" id="example-time-input" />
-                                                </div>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRend->heured}}</h3>
+                                        </div>
+                                    </div>
 
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
+                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous : </label>
                                         <div class="col-lg-9">
-                                            <input type="date" class="form-control" name="dater" placeholder="" />
+                                            <h3>{{$detailsRend->dater}}</h3>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                         </div>
@@ -325,17 +312,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group row">
-                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin : </label>
                                         <div class="col-lg-9">
-                                            <input class="form-control" type="time" name="heuref" value="" id="example-time-input" />
+                                            <h3>{{$detailsRend->heuref}}</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                 <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
+                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous : </label>
                                     <div class="col-lg-9 col-md-9 col-sm-12">
-                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="motifr" placeholder="" rows="6"></textarea>
+                                        <h3>{{$detailsRend->motifr}}</h3>
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
@@ -343,14 +330,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
-                                        <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
+
                                         <div class="col-lg-2">
-                                            <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
+                                            <button type="submit" class="btn font-weight-bold btn-success mr-2">Imprimer</button>
 
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+
 
                         </div>
                     <!--end::Form-->

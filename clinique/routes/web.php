@@ -43,20 +43,36 @@ Route::post('/inscription', 'inscriptionController@traitement');
 
 Route::get('/Patient', 'PatientController@formulaire')->name('Patient.form');
 Route::post('Patient', 'PatientController@traitement');
-Route::get('Patient/{patient}', 'PatientController@rendezvousM')->name('Medecin.rendezvous');
+Route::get('{patient}/Patient', 'PatientController@rendezvousM')->name('Medecin.rendezvous');
+Route::post('RendezvousM', 'PatientController@traitementr')->name('rendezvoust');
 Route::get('Patient/{patient}', 'PatientController@detailsPa')->name('Patient.details');
-//Route::get('/Patient', 'PatientController@rendezvousI')->name('Infirmiere.rendezvous');
+Route::get('RendezvousI', 'PatientController@rendezvousi')->name('Infirmiere.rendezvous');
+Route::post('RendezvousI', 'PatientController@traitementir')->name('rendezvousit');
+Route::get('Rendezvous','PatientController@listeRM')->name('listeRM');
+Route::get('Rendezvou','PatientController@listeRI')->name('listeRI');
 
+Route::get('RendezvousI/{rendezvou}', 'PatientController@editrend')->name('Modifrend.edit');
+Route::post('RendezvousI/{rendezvou}', 'PatientController@updaterend')->name('Modifrend.update');
+
+Route::get('Rendezvous/{rendezvous}', 'PatientController@editrendM')->name('ModifrendM.edit');
+Route::post('Rendezvous/{rendezvous}', 'PatientController@updaterendM')->name('ModifrendM.update');
+
+
+Route::get('Rendezvou/{detailsRend}', 'PatientController@detailsRend')->name('Rendezvous.details');
+Route::get('{detailsRendM}/Rendezvous', 'PatientController@detailsRendM')->name('RendezvousM.details');
 
 Route::get('ModifPa/{patient}', 'PatientController@edit')->name('ModifPa.edit');
 Route::post('ModifPa/{patient}', 'PatientController@update')->name('ModifPa.update');
 Route::get('patients/{patient}','PatientController@destroy' )->name('ModifPa.destroy');
 
 
+
 Route::get('/Consultation{id}', 'ConsultationController@formulaire')->name('consultation');
 Route::get('ModifCon/{consultation}', 'ConsultationController@edit')->name('Consultation.edit');
 Route::post('ModifCon/{consultation}', 'ConsultationController@update')->name('Consultation.update');
 Route::post('Consultation', 'ConsultationController@traitement');
+Route::get('{id}/Consult', 'ConsultationController@doss')->name('Patient.dossier');
+
 
 Route::get('/Traitement{id}', 'TraitementController@formulaire')->name('traitement');
 Route::get('Modiftrait/{traitement}', 'TraitementController@edit')->name('Traitement.edit');

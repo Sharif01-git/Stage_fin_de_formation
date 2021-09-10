@@ -612,7 +612,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{route('listeM')}}"  class="menu-link">
+												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
 													<span class="menu-desc">Consulter le dossier des patients</span>
 													<i class="menu-arrow"></i>
@@ -620,7 +620,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</li>
 
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('Rendezvous')}}" class="menu-link">
+												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
 													<span class="menu-desc">Consulter la liste des rendez-vous</span>
 													<i class="menu-arrow"></i>
@@ -642,3 +642,199 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Header-->
 
 
+
+
+
+	<!--begin::Content-->
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Subheader-->
+        <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
+
+        <!--end::Subheader-->
+        <!--begin::Entry-->
+        <div class="d-flex flex-column-fluid">
+            <!--begin::Container-->
+            <div class="container">
+                <!--begin::Notice-->
+
+                <!--end::Notice-->
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b example example-compact">
+                    <div class="card-header" >
+                        <h3 class="card-title" style="padding-left: 35%;">Modification du rendez-vous</h3>
+                        <div class="card-toolbar">
+                        </div>
+                    </div>
+                    <!--begin::Form-->
+                        <div class="card-body" align="center">
+                            <form class="form" action="{{ route('ModifrendM.update',$rendezvous->id)}}" method="POST">
+                                @csrf
+                                <div class="card-body" align="center" >
+                                <div class="row"  >
+                                    <div class="col-xl-6">
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Nom</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control " name="nomd" value="{{$rendezvous->nomd}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control " name="prenomd" value="{{$rendezvous->prenomd}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Age</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="aged" value="{{$rendezvous->aged}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Profession</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="professiond" value="{{$rendezvous->professiond}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Nationalité</label>
+                                        <div class="col-lg-9">
+                                            <input type="" class="form-control" name="nationalited" value="{{$rendezvous->nationalited}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                                        <div class="col-lg-9">
+                                            <input type="text" class="form-control" name="adresse" value="{{$rendezvous->adresse}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Contact</label>
+                                        <div class="col-lg-9">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="la la-chain"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="tel" name="contact" class="form-control" value="{{$rendezvous->contact}}" placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Email</label>
+                                        <div class="col-lg-9">
+                                            <input type="email" name="emaild" class="form-control" value="{{$rendezvous->emaild}}" placeholder="" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row align-items-center">
+                                        <label class="col-lg-2 col-form-label text-right">Sexe</label>
+                                        <div class="radio-inline">
+                                            <label class="radio">
+                                            <input type="radio" name="sexed" value="Masculin" />
+                                            <span></span>Masculin</label>
+                                            <label class="radio">
+                                            <input type="radio" name="sexed" value="Féminin"/>
+                                            <span></span>Féminin</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+
+                                            <div class="form-group row">
+                                                <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
+                                                <div class="col-lg-9">
+                                                    <input class="form-control" type="time" name="heured" value="{{$rendezvous->heured}}" id="example-time-input" />
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
+                                        <div class="col-lg-9">
+                                            <input type="date" class="form-control" name="dater" value="{{$rendezvous->dater}}" placeholder="" />
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
+                                        <div class="col-lg-9">
+                                            <input class="form-control" type="time" name="heuref" value="{{$rendezvous->heuref}}" id="example-time-input" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="motifr" placeholder="" rows="6">{{$rendezvous->motifr}}</textarea>
+                                        <span class="form-text text-muted"></span>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
+                                        <div class="col-lg-2">
+                                            <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    <!--end::Form-->
+                </div>
+            </div>
+                <!--end::Card-->
+                <!--begin::Card-->
+
+                <!--end::Card-->
+            </div>
+        </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Entry-->
+    </div>
+
+    @extends('Layout.footer')

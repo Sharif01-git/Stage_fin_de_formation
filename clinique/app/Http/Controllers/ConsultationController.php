@@ -6,6 +6,7 @@ use App\Consultation;
 use App\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class ConsultationController extends Controller
 {
@@ -70,16 +71,24 @@ class ConsultationController extends Controller
         return redirect()->route('listeM1')->with('success', 'Consultation Modifié avec succès');
     }
 
+    public function doss($id){
 
-  /*  public function details(){
-        $patient_consult = DB::table('patients')
+        $patient_id = '$patient_id';
+        //$patient =Patient::findOrFail($id);
+        $patient_consult_trait = DB::table('patients')
         ->join('consultations', 'patients.id', '=', 'consultations.id')
-        ->select('patients.nom','patients.prenom','patients.sexe','patients.profession','patients.tel','patients.nationalite','patients.maladiepart'
-,'patients.adressep','patients.allergie','patients.Email','patients.temperature','patients.poids','patients.tension','patients.pouls','patients.taille','patients.groupage','consultations.motifconsul'
-,'consultations.dateconsult','consultations.modevie','consultations.diagnostic','consultations.conduite')
-->where('patients.id', '=', $patient_id)
-->get();
-    }*/
+        ->join('traitements','patients.id', '=', 'traitements.id')
+        ->select('patients.nomp','patients.prenomp','patients.sexe','patients.profession','patients.tel','patients.nationalite','patients.maladiepart'
+        ,'patients.adressep','patients.allergie','patients.Email','patients.temperature','patients.poids','patients.tension','patients.pouls','patients.taille','patients.groupage','consultations.motifconsul'
+        ,'consultations.dateconsult','consultations.modevie','consultations.diagnostic','consultations.conduite','traitements.libelletrait','traitements.date_trait','traitements.auteur')
+        ->where('patients.id', '=' ,$patient_id)
+        ->get();
+        //$patient =Patient::findOrFail($id);
+        dd( $patient_consult_trait);
+       // $pdf = PDF::loadView('Dossier', ['patient'=>$patient_consult_trait]) ->setPaper('a4', 'landscape');
+        //return $pdf->stream();
+}
+
 
 
 }

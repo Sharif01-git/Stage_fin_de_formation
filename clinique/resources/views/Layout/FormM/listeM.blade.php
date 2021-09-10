@@ -76,7 +76,7 @@
                                     <td>{{$patient->sexe}}</td>
                                     <td>{{$patient->created_at}}</td>
                                     <td>
-                                    <a class="fa fa-eye" href=""  style="color:gray"></a>
+                                    <a class="fa fa-eye" href="{{ route('Patient.dossier',$patient->id)}}"  style="color:gray"></a>
                                     </td>
                                 </tr>
                                 @endforeach

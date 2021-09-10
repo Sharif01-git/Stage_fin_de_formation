@@ -612,7 +612,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{route('listeM')}}"  class="menu-link">
+												<a href="{{url('FormulaireM/liste')}}"  class="menu-link">
 													<span class="menu-text">Dossier patient</span>
 													<span class="menu-desc">Consulter le dossier des patients</span>
 													<i class="menu-arrow"></i>
@@ -620,7 +620,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</li>
 
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="{{url('Rendezvous')}}" class="menu-link">
+												<a href="{{url('FormulaireM/FormulaireM4')}}" class="menu-link">
 													<span class="menu-text">Rendez-vous</span>
 													<span class="menu-desc">Consulter la liste des rendez-vous</span>
 													<i class="menu-arrow"></i>
@@ -642,3 +642,184 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Header-->
 
 
+
+
+
+	<!--begin::Content-->
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Subheader-->
+        <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
+
+        <!--end::Subheader-->
+        <!--begin::Entry-->
+        <div class="d-flex flex-column-fluid">
+            <!--begin::Container-->
+            <div class="container">
+                <!--begin::Notice-->
+
+                <!--end::Notice-->
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b example example-compact">
+                    <div class="card-header" >
+                        <h3 class="card-title" style="padding-left: 35%;">Détails de rendez-vous</h3>
+                        <div class="card-toolbar">
+                        </div>
+                    </div>
+                    <!--begin::Form-->
+                        <div class="card-body" align="center">
+
+                                <div class="card-body" align="center" >
+                                <div class="row"  >
+                                    <div class="col-xl-6">
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Nom : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->nomd}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Prénom : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->prenomd}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Age : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->aged}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Profession : "</label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->professiond}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Nationalité : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->nationalited}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Adresse : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->adresse}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Contact : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->contact}}</h3>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Email : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->emaild}}</h3>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row ">
+                                        <label class="col-lg-3 col-form-label text-right">Sexe : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->sexed}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+
+                                            <div class="form-group row">
+                                                <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début : </label>
+                                                <div class="col-lg-9">
+                                                    <h3>{{$detailsRendM->heured}}</h3>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Date de rendez-vous : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->dater}}</h3>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                        </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin : </label>
+                                        <div class="col-lg-9">
+                                            <h3>{{$detailsRendM->heuref}}</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous : </label>
+                                    <div class="col-lg-9 col-md-9 col-sm-12">
+                                         <h3>{{$detailsRendM->motifr}}</h3>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-lg-17">
+                                            <button type="submit" class="btn font-weight-bold btn-success mr-2">Imprimer</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        </div>
+                    <!--end::Form-->
+                </div>
+            </div>
+                <!--end::Card-->
+                <!--begin::Card-->
+
+                <!--end::Card-->
+            </div>
+        </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Entry-->
+    </div>
+
+    @extends('Layout.footer')
