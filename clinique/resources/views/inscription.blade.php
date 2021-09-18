@@ -86,8 +86,8 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 									<div class="form-group d-flex flex-wrap justify-content-between align-items-center mt-2">
 										<div class="my-3 mr-2">
-											<span class="text-muted mr-2">Pas de compte?</span>
-											<a href="javascript:;" id="kt_login_signup" class="font-weight-bold">Veuillez vous enrégistrer!!!</a>
+											<span class="text-muted mr-2"></span>
+											<a href="javascript:;" id="kt_login_signup" class="font-weight-bold">Enrégistrer un nouveau utilisateur!!!</a>
 										</div>
 										<button id="kt_login_signin_submit" type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3">Se connecter</button>
 									</div>
@@ -98,8 +98,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<!--begin::Signup-->
 							<div class="login-form login-signup">
 								<div class="text-center mb-10 mb-lg-20">
-									<h3 class="">Créer compte</h3>
-									<p class="text-muted font-weight-bold">Enter vos informations pour la création de votre compte.</p>
+									<h3 class="">Ajouter utilisateur</h3>
+									<p class="text-muted font-weight-bold">Enter les informaions de l'utilisateur.</p>
 								</div>
 								<!--begin::Form-->
 								<form class="form" method="POST" action="{{ route('register') }}" novalidate="novalidate" id="">
@@ -150,14 +150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="form-group py-3 border-top m-0">
 										<input id="password-confirm" type="password" class="form-control placeholder-dark-75" name="password_confirmation" required autocomplete="new-password" placeholder="Confirmer le mot de passe"  />
 									</div>
-									<div class="form-group mt-5">
-										<div class="checkbox-inline">
-											<label class="checkbox checkbox-outline">
-											<input type="checkbox" name="agree" />
-											<span></span>J'accepte
-											<a href="#" class="ml-1">les termes et conditions</a>.</label>
-										</div>
-									</div>
+
 									<div class="form-group d-flex flex-wrap flex-center">
 										<button id="kt_login_signup_submit" type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Soumettre</button>
 										<button id="kt_login_signup_cancel" class="btn btn-outline-primary font-weight-bold px-9 py-4 my-3 mx-2">Retour</button>

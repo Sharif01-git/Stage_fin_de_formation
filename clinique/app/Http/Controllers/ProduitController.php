@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ProduitController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         if(request()->categorie){
             $produits = Produit::with('categories')->whereHas('categories', function ($query){
                 $query->where('slug', request()->categorie);
@@ -16,7 +16,8 @@ class ProduitController extends Controller
         }else{
             $produits = Produit::with('categories')->paginate(6);
         }
-
+        //$produit = Produit::find($request->produit_id);
+        //$stock = $produit->stock === 0 ? 'Indisponible' : 'Disponible';
 
           return view('/Pharmacie')->with('produits', $produits);
     }

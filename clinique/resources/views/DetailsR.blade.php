@@ -204,7 +204,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row ">
                                         <label class="col-lg-3 col-form-label text-right">Nom : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->nomd}}</h3>
+                                            <h4>{{$detailsRend->nomd}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -213,7 +213,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Prénom : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->prenomd}}</h3>
+                                            <h4>{{$detailsRend->prenomd}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Age : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->aged}}</h3>
+                                            <h4>{{$detailsRend->aged}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -233,7 +233,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Profession : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->professiond}}</h3>
+                                            <h4>{{$detailsRend->professiond}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Nationalité : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->nationalited}}</h3>
+                                            <h4>{{$detailsRend->nationalited}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -253,7 +253,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Adresse : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->adresse}}</h3>
+                                            <h4>{{$detailsRend->adresse}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -264,7 +264,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Contact : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->contact}}</h3>
+                                            <h4>{{$detailsRend->contact}}</h4>
                                         </div>
                                     </div>
                                     </div>
@@ -272,7 +272,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Email : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->emaild}}</h3>
+                                            <h4>{{$detailsRend->emaild}}</h4>
                                         </div>
                                     </div>
                                     </div>
@@ -283,7 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row ">
                                         <label class="col-lg-3 col-form-label text-right">Sexe : {{$detailsRend->sexed}}</label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->sexed}}</h3>
+                                            <h4>{{$detailsRend->sexed}}</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -294,7 +294,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->heured}}</h3>
+                                            <h4>{{$detailsRend->heured}}</h4>
                                         </div>
                                     </div>
 
@@ -303,7 +303,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Date de rendez-vous : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->dater}}</h3>
+                                            <h4>{{$detailsRend->dater}}</h4>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                         </div>
@@ -314,7 +314,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin : </label>
                                         <div class="col-lg-9">
-                                            <h3>{{$detailsRend->heuref}}</h3>
+                                            <h4>{{$detailsRend->heuref}}</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -322,7 +322,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous : </label>
                                     <div class="col-lg-9 col-md-9 col-sm-12">
-                                        <h3>{{$detailsRend->motifr}}</h3>
+                                        <h4>{{$detailsRend->motifr}}</h4>
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>

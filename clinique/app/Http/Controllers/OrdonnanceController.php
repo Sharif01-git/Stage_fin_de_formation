@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ordonnance;
 use App\Patient;
+use App\Produit;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,15 @@ class OrdonnanceController extends Controller
         ]);
         return view('/Ordonnance');
     }
-    public function traitement(Request $request){
+    public function traitement(Request $request, Produit $produits){
+        $produits = Produit::find('nomprod');
+      /*  foreach($request->get('nomprod') as $produits)
+        {
+        $request=new Produit;
+        $request->produits=$request->get('produits');
+        $request->nomprod=$produits;
+        $request->save();
+    }*/
         Ordonnance::create([
             'nomp' => $request->nomp,
             'prenomp' =>$request->prenomp,
@@ -34,7 +43,7 @@ class OrdonnanceController extends Controller
             'patient_id'=>$request->patient_id,
 
         ]);
-        return view('/Medecin')->with('success', 'Ordonnance prescrit avec succès');
+        return redirect()->route('listeM1',compact('produits'))->with('success', 'Ordonnance prescrit avec succès');
     }
 
     public function edit(Ordonnance $ordonnance){

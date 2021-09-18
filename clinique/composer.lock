@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e890bd8dce477f13fbeb720771cb0d5f",
+    "content-hash": "3865f601e2de420dcc86b90a7a6982ed",
     "packages": [
+        {
+            "name": "arielmejiadev/larapex-charts",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ArielMejiaDev/larapex-charts.git",
+                "reference": "821f9a99c47e51f7306d04c2eeb7c6c3ee9f1e1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ArielMejiaDev/larapex-charts/zipball/821f9a99c47e51f7306d04c2eeb7c6c3ee9f1e1b",
+                "reference": "821f9a99c47e51f7306d04c2eeb7c6c3ee9f1e1b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ArielMejiaDev\\LarapexCharts\\LarapexChartsServiceProvider"
+                    ],
+                    "aliases": {
+                        "LarapexChart": "ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ArielMejiaDev\\LarapexCharts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ArielMejiaDev",
+                    "email": "arielmejiadev@gmail.com"
+                }
+            ],
+            "description": "Package to provide easy api to build apex charts on Laravel",
+            "support": {
+                "issues": "https://github.com/ArielMejiaDev/larapex-charts/issues",
+                "source": "https://github.com/ArielMejiaDev/larapex-charts/tree/2.1.1"
+            },
+            "time": "2021-06-24T16:16:54+00:00"
+        },
         {
             "name": "arrilot/laravel-widgets",
             "version": "3.13.1",
@@ -2621,6 +2674,78 @@
                 "source": "https://github.com/laravel/ui/tree/v2.4.0"
             },
             "time": "2020-09-11T15:31:52+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/ae15b9c4bf918ec3a78f092b8555551dd693fde3",
+                "reference": "ae15b9c4bf918ec3a78f092b8555551dd693fde3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0",
+                "illuminate/session": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "illuminate/view": "^6.0|^7.0|^8.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "time": "2020-12-15T20:20:05+00:00"
         },
         {
             "name": "league/commonmark",

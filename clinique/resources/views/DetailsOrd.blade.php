@@ -153,19 +153,19 @@ caption {
      Votre santé c'est notre priorité!!!
 
 
-    </div><br> <br> <br> <br>
+    </div><br> <br>
 
 
-    <center></center> <br> <br>
+    <center></center> <br><br>
 
 
 
 
 
-    <h4 align="right">Dr {{auth()->user()->name}} {{auth()->user()->prenom}} </h4>
-    <h4 align="right">Médecin Général</h4>
-    <h4 align="right">Téléphone: 93072173</h4>
-    <h4 align="right">Email: {{auth()->user()->email}} </h4>
+    <p align="right">Dr {{auth()->user()->name}} {{auth()->user()->prenom}}<br>
+    Médecin Général<br>
+    Téléphone: 93072173<br>
+    Email: {{auth()->user()->email}} </p>
     <hr color="blue" size="4"> <br>
     <!--
     <h4>Nom du Pharmacien : </h4>
@@ -175,7 +175,7 @@ caption {
 
         <h2 align="center"><u>Ordonnance médicale</u></h2>
         <h4 align="right">Ordonnance N°: {{$ordonnance->id}}</h4>
-        <h4 align="right">Fait à: Lomé/ Le: {{$ordonnance->created_at->format('d/m/y')}}</h4>
+        <h4 align="right">Fait à Lomé, le: {{$ordonnance->created_at->format('d/m/y')}}</h4>
         <p>{{$ordonnance->produits}}</p>
 
 

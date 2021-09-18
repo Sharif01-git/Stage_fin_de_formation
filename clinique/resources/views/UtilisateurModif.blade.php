@@ -170,3 +170,126 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--end::Header-->
 
 
+ <!--begin::Content-->
+ <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-6 subheader-transparent" id="kt_subheader">
+
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Notice-->
+
+            <!--end::Notice-->
+            <!--begin::Card-->
+            <div class="card card-custom gutter-b example example-compact">
+                <div class="card-header">
+                    <h3 class="card-title" style="padding-left: 40%;">Modification des informations de l'utilisateur</h3>
+                    <div class="card-toolbar">
+
+                    </div>
+                </div>
+                <!--begin::Form-->
+                <form class="form" action="{{route('User.update',$user->id)}}" method="POST">
+                    @csrf
+                    <div class="card-body" align="center">
+                        <!--begin: Code-->
+
+                        <!--end: Code-->
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Nom</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" name="name" value="{{$user->name}}" placeholder="" required  />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Prénom</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" name="prenom" value="{{$user->prenom}}" placeholder="" required />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Téléphone</label>
+                            <div class="col-lg-9">
+                                <input type="texte" class="form-control" name="telephone" value="{{$user->telephone}}" placeholder="" required/>
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Adresse</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" name="adresse" value="{{$user->adresse}}"  placeholder="" required/>
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Fonction</label>
+                            <div class="col-lg-9">
+                                <select name="profil" value="{{$user->profil}}" class="form-control " >
+                                    <option value="Adminstrateur"></option>
+                                    <option value="Adminstrateur">Adminstrateur</option>
+                                    <option value="Infirmière">Infirmière</option>
+                                    <option value="Médecin">Médecin</option>
+                                    <option value="Pharmacien">Pharmacien</option>
+                                    <option value="Caissier">Caissier</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Email</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" name="email" value="{{$user->email}}" placeholder="" />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Mot de passe</label>
+                            <div class="col-lg-9">
+                                <input type="password" class="form-control" name="password" value="" placeholder="" />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Confirmer mot de passe</label>
+                            <div class="col-lg-9">
+                                <input  type="password" class="form-control placeholder-dark-75" name="password_confirmation" required autocomplete="new-password"   />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>
+                     <!--   <div class="form-group row">
+                            <label class="col-lg-3 col-form-label text-right">Prix total à payer</label>
+                            <div class="col-lg-9">
+                                <input type="number" class="form-control" name="prixtotal" value="" placeholder="" />
+                                <span class="form-text text-muted"></span>
+                            </div>
+                        </div>-->
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>
+                            <div class="col-lg-2">
+                                <button type="submit" class="btn font-weight-bold btn-success mr-2">Soumettre</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--end::Form-->
+            </div>
+            <!--end::Card-->
+            <!--begin::Card-->
+
+            <!--end::Card-->
+        </div>
+    </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+
+@extends('Layout.footer')

@@ -61,7 +61,7 @@
 
                                     <th title="Field #7">Sexe</th>
                                     <th title="Field #8">Enrégistré le :</th>
-                                    <th title="Field #9">Consulter</th>
+                                    <th title="Field #9">Dossier</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,7 +76,7 @@
                                     <td>{{$patient->sexe}}</td>
                                     <td>{{$patient->created_at}}</td>
                                     <td>
-                                    <a class="fa fa-eye" href="{{ route('Patient.dossier',$patient->id)}}"  style="color:gray"></a>
+                                    <a class="fa fa-eye" href="{{ route('Patient.dossier',$patient->id)}}"  style="color:green">Consulter</a>
                                     </td>
                                 </tr>
                                 @endforeach

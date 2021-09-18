@@ -45,7 +45,7 @@ class ConsultationController extends Controller
             'conduite' =>$request->conduite,
             'patient_id'=>$request->patient_id,
         ]);
-        return view('/Medecin')->with('success', 'Consultation enrégistré avec succès');
+        return redirect()->route('listeM1')->with('success', 'Consultation enrégistré avec succès');
     }
     public function edit(Consultation $consultation){
         //$patients = Patient::findOrFail($patient);
@@ -71,23 +71,7 @@ class ConsultationController extends Controller
         return redirect()->route('listeM1')->with('success', 'Consultation Modifié avec succès');
     }
 
-    public function doss($id){
 
-        $patient_id = '$patient_id';
-        //$patient =Patient::findOrFail($id);
-        $patient_consult_trait = DB::table('patients')
-        ->join('consultations', 'patients.id', '=', 'consultations.id')
-        ->join('traitements','patients.id', '=', 'traitements.id')
-        ->select('patients.nomp','patients.prenomp','patients.sexe','patients.profession','patients.tel','patients.nationalite','patients.maladiepart'
-        ,'patients.adressep','patients.allergie','patients.Email','patients.temperature','patients.poids','patients.tension','patients.pouls','patients.taille','patients.groupage','consultations.motifconsul'
-        ,'consultations.dateconsult','consultations.modevie','consultations.diagnostic','consultations.conduite','traitements.libelletrait','traitements.date_trait','traitements.auteur')
-        ->where('patients.id', '=' ,$patient_id)
-        ->get();
-        //$patient =Patient::findOrFail($id);
-        dd( $patient_consult_trait);
-       // $pdf = PDF::loadView('Dossier', ['patient'=>$patient_consult_trait]) ->setPaper('a4', 'landscape');
-        //return $pdf->stream();
-}
 
 
 

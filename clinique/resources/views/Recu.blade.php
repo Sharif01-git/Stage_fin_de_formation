@@ -94,7 +94,7 @@
 
     tbody {
       font-size: 90%;
-      font-style: italic;
+      font-style: bold;
     }
 
     tfoot {
@@ -154,16 +154,16 @@ Clinique GES-CLIN <br> T&eacute;l : +228 93-07-21-73/ 70-35-15-84<br>
  E-mail : gesclin@gmail.tg<br>
 Etre en bonne santé c'est le plus important
 
-</div><br> <br> <br> <br>
+</div><br> <br> <br>
 
 
-<center></center> <br> <br>
+<center></center> <br>
 
 
 
 
 
-<h3 align="right">Reçu  N°:2</h3><br>
+<h4 align="right">Reçu  N°:2</h3><br>
 <h4 align="right">Date : 01 Sept 2021</h4>
 <hr color="blue" size="4"> <br>
 <!--

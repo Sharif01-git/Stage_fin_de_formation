@@ -229,13 +229,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="col-lg-9 col-form-label text-left">Prix total à payer</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="prixtotal" value="{{$facture->prixtotal}}" placeholder="" />
-                                    <span class="form-text text-muted"></span>
-                                </div>
-                            </div>
+
 
                         </div>
                         <div class="card-footer">

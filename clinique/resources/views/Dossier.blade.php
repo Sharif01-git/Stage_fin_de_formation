@@ -163,10 +163,10 @@ caption {
 
 
 
-    <h4 align="right">Entretenu par M./Mme.   </h4>
+    <h4 align="right">Entretenu par M./Mme. {{auth()->user()->name}} {{auth()->user()->prenom}}   </h4>
     <h4 align="right">Médecin général</h4>
-    <h4 align="right">Téléphone: </h4>
-    <h4 align="right">Email:   </h4>
+    <h4 align="right">Téléphone: {{auth()->user()->telephone}}</h4>
+    <h4 align="right">Email: {{auth()->user()->email}}</h4>
     <hr color="blue" size="4"> <br>
     <!--
     <h4>Nom du Pharmacien : </h4>
@@ -174,58 +174,57 @@ caption {
     <h4>E-mail : sharifboukari68@gmail.com </h4>
     <h4>Adresse :Agoè Koffi-Panou</h4>-->
 
-    <h2 align="center"><u>Dossier du patient N°</u></h2>
-
-    <fieldset>
-    <legend>Informations de base</legend>
-    <div><span style="padding-left: 20%">Nom : <strong></strong></span>
-         <span style="padding-left: 30%">Prénom : <strong></strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Age : <strong> ans</span>
-         <span style="padding-left: 33%">Profession: <strong></strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Nationalité : <strong></strong></span>
-         <span style="padding-left: 25.5%">Adresse : <strong></strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Contact : <strong></strong></span>
-         <span style="padding-left: 28%">Email : <strong></strong></span>
-    </div><br>
-   <div><span style="padding-left: 20%">Sexe: <strong></strong></span></div><br>
+    <h2 align="center"><u>Dossier du patient N°{{$patient->id}}</u></h2>
+    <fieldset><br>
+        <legend>Informations de base</legend>
+        <div><span style="padding-left: 20%">Nom : <strong>{{$patient->nomp}}</strong></span>
+            <span style="padding-left: 30%">Prénom : <strong>{{$patient->prenomp}}</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Age : <strong>{{$patient->age}} ans</span>
+            <span style="padding-left: 33%">Profession: <strong>{{$patient->profession}}</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Nationalité : <strong>{{$patient->nationalite}}</strong></span>
+            <span style="padding-left: 25.5%">Adresse : <strong>{{$patient->adressep}}</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Contact : <strong>{{$patient->tel}}</strong></span>
+            <span style="padding-left: 28%">Email : <strong>{{$patient->Email}}</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Sexe: <strong>{{$patient->sexe}}</strong></span></div>
     </fieldset>
 
     <fieldset><br>
-    <legend>Constantes</legend>
-    <div><span style="padding-left: 20%">Température : <strong> °C</strong></span>
-         <span style="padding-left: 30%">Poids : <strong> Kg</strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Tension : <strong> mmHg</strong></span>
-         <span style="padding-left: 29.5%">Pouls: <strong> bpm</strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Taille : <strong> m</strong></span>
-         <span style="padding-left: 34.5%">Maladie particulière : <strong></strong></span>
-    </div><br>
-    <div><span style="padding-left: 20%">Allergie : <strong></strong></span>
-         <span style="padding-left: 33.5%">Groupage et rhésus : <strong></strong></span>
-    </div><br>
+        <legend>Constantes</legend>
+        <div><span style="padding-left: 20%">Température : <strong>{{$patient->temperature}} °C</strong></span>
+            <span style="padding-left: 30%">Poids : <strong>{{$patient->poids}} Kg</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Tension : <strong>{{$patient->tension}} mmHg</strong></span>
+            <span style="padding-left: 29.5%">Pouls: <strong>{{$patient->pouls}} bpm</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Taille : <strong>{{$patient->taille}} m</strong></span>
+            <span style="padding-left: 34.5%">Maladie particulière : <strong>{{$patient->maladiepart}}</strong></span>
+        </div><br>
+        <div><span style="padding-left: 20%">Allergie : <strong>{{$patient->allergie}}</strong></span>
+            <span style="padding-left: 33.5%">Groupage et rhésus : <strong>{{$patient->groupage}}</strong></span>
+        </div><br>
     </fieldset>
     <fieldset><br>
-        <legend>Consultation</legend>
-        <div><span style="padding-left: 20%">Motif de consultation : <strong></strong></span>
-            <span style="padding-left: 30%">Date de consultation: <strong></strong></span>
+        <legend>Infos consultation</legend>
+        <div><span style="padding-left: 20%">Motif de consultation : <strong>{{$consultation->motifconsul}}</strong></span>
+            <span style="padding-left: 30%">Date de consultation: <strong>{{$consultation->dateconsult}}</strong></span>
        </div><br>
-       <div><span style="padding-left: 20%">Habitude de mode de vie : <strong> </strong></span>
-            <span style="padding-left: 33%">Histoire: <strong></strong></span>
+       <div><span style="padding-left: 20%">Habitude de mode de vie : <strong> {{$consultation->modevie}}</strong></span>
+            <span style="padding-left: 33%">Histoire: <strong>{{$consultation->histoire}}</strong></span>
        </div><br>
-       <div><span style="padding-left: 20%">Hypothèse diagnostic : <strong></strong></span>
-            <span style="padding-left: 25.5%">Conduite à tenir : <strong></strong></span>
+       <div><span style="padding-left: 20%">Hypothèse diagnostic : <strong>{{$consultation->diagnostic}}</strong></span>
+            <span style="padding-left: 25.5%">Conduite à tenir : <strong>{{$consultation->conduite}}</strong></span>
        </div><br>
     </fieldset>
     <fieldset><br>
-        <legend>Traitement</legend>
-        <div><span style="padding-left: 20%">Libellé traitement : <strong></strong></span>
-            <span style="padding-left: 30%">Date traitement : <strong></strong></span>
+        <legend>Infos traitement</legend>
+        <div><span style="padding-left: 20%">Libellé traitement : <strong>{{$traitement->libelletrait}}</strong></span>
+            <span style="padding-left: 30%">Date traitement : <strong>{{$traitement->date_trait}}</strong></span>
        </div><br>
-       <div><span style="padding-left: 20%">Auteur : <strong> </strong></span>
+       <div><span style="padding-left: 20%">Auteur : <strong>{{$traitement->auteur}} </strong></span>
             <span style="padding-left: 33%"> <strong></strong></span>
        </div><br>
     </fieldset>

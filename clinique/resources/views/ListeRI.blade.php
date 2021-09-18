@@ -155,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</a>
 											</li>
                                             <li class="menu-item menu-item-submenu" data-menu-toggle="hover" aria-haspopup="true">
-												<a href="" class="menu-link">
+												<a href="{{url('Rendezvou')}}" class="menu-link">
 													<span class="menu-text" style="padding-left: 15%;">Liste des rendez-vous</span>
 													<span class="menu-desc" style="padding-left: 15%;">Visualiser la liste des rendez-vous</span>
 													<i class="menu-arrow"></i>

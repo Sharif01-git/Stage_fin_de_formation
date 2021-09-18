@@ -81,7 +81,7 @@
                                 <div class="row">
                                     <label class="col-xl-3"></label>
                                     <div class="col-lg-9 col-xl-6">
-                                        <h5 class="font-weight-bold mt-10 mb-6">Contacte</h5>
+                                        <h5 class="font-weight-bold mt-10 mb-6">Contact</h5>
                                     </div>
                                 </div>
                                 <div class="form-group row">

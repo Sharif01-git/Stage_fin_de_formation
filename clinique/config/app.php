@@ -180,6 +180,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Darryldecode\Cart\CartServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -236,6 +237,8 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         "PDF" => Barryvdh\DomPDF\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

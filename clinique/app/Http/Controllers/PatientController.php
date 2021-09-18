@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Consultation;
+use App\Ordonnance;
 use App\Patient;
 use App\Rendezvous;
+use App\Traitement;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\DB;
@@ -31,6 +34,21 @@ class PatientController extends Controller
         return view('ListeRI',compact('rendezvou'));
     }
 
+    public function listebord(){
+        $listebords = Patient::all();
+        return view('Medecin',compact('listebords'));
+    }
+    public function voir()
+    {
+       $traitement = Traitement::all('id')->count();
+       $consultation = Consultation::all('id')->count();
+       $ordonnance = Ordonnance::all('id')->count();
+        return view('Medecin',
+        ['traitement'=>$traitement,
+        'consultation'=>$consultation,
+        'ordonnance'=> $ordonnance]);
+
+     }
     public function formulaire(){
         return view('/Patient');
     }
@@ -120,12 +138,11 @@ class PatientController extends Controller
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
-        'heuref'=>$request->heuref,
         'dater'=>$request->dater,
         'motifr'=>$request->motifr,
 
         ]);
-        return view('Medecin')->with('success', 'Rendez-vous enrégistré avec succès');
+        return redirect()->route('listeRM')->with('success', 'Rendez-vous enrégistré avec succès');
     }
 
     public function rendezvousi(){
@@ -143,12 +160,11 @@ class PatientController extends Controller
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
-        'heuref'=>$request->heuref,
         'dater'=>$request->dater,
         'motifr'=>$request->motifr,
 
         ]);
-        return view('Infirmière')->with('success', 'Rendez-vous enrégistré avec succès');
+        return redirect()->route('listeRI')->with('success', 'Rendez-vous enrégistré avec succès');
     }
 
     public function editrend(Rendezvous $rendezvou){
@@ -167,7 +183,6 @@ class PatientController extends Controller
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
-        'heuref'=>$request->heuref,
         'dater'=>$request->dater,
         'motifr'=>$request->motifr,
         ]);
@@ -190,7 +205,6 @@ class PatientController extends Controller
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
-        'heuref'=>$request->heuref,
         'dater'=>$request->dater,
         'motifr'=>$request->motifr,
         ]);
@@ -213,6 +227,24 @@ class PatientController extends Controller
 
     }
 
-
+    public function doss($id){
+       // $id = request('id');
+       // $patient_id = $id;
+        $patient =Patient::findOrFail($id);
+        $consultation = Consultation::findOrFail($id);
+        $traitement = Traitement::findOrFail($id);
+       /* $patient_consult_trait = DB::table('patients')
+        ->join('consultations', 'patients.id', '=', 'consultations.id')
+        ->join('traitements','patients.id', '=', 'traitements.id')
+        ->select('patients.nomp','patients.prenomp','patients.age','patients.sexe','patients.profession','patients.tel','patients.nationalite','patients.maladiepart'
+        ,'patients.adressep','patients.allergie','patients.Email','patients.temperature','patients.poids','patients.tension','patients.pouls','patients.taille','patients.groupage','consultations.motifconsul'
+        ,'consultations.dateconsult','consultations.modevie','consultations.diagnostic','consultations.conduite','traitements.libelletrait','traitements.date_trait','traitements.auteur')
+        ->where('patients.id', '=' ,$patient_id)
+        ->get();*/
+        //dd( $patient_consult_trait);
+        $pdf = PDF::loadView('Dossier', ['patient'=>$patient,'consultation'=>$consultation,'traitement'=>$traitement]) ->setPaper('a4', 'landscape');
+        return $pdf->stream();
+       // return view('Dossier',compact('patient','consultation','traitement'));
+}
 
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Darryldecode\Cart\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +51,8 @@ Route::get('RendezvousI', 'PatientController@rendezvousi')->name('Infirmiere.ren
 Route::post('RendezvousI', 'PatientController@traitementir')->name('rendezvousit');
 Route::get('Rendezvous','PatientController@listeRM')->name('listeRM');
 Route::get('Rendezvou','PatientController@listeRI')->name('listeRI');
+Route::get('Medecin','PatientController@listebord')->name('Medecin.bord');
+Route::get('Voir','PatientController@voir')->name('voir');
 
 Route::get('RendezvousI/{rendezvou}', 'PatientController@editrend')->name('Modifrend.edit');
 Route::post('RendezvousI/{rendezvou}', 'PatientController@updaterend')->name('Modifrend.update');
@@ -65,13 +68,18 @@ Route::get('ModifPa/{patient}', 'PatientController@edit')->name('ModifPa.edit');
 Route::post('ModifPa/{patient}', 'PatientController@update')->name('ModifPa.update');
 Route::get('patients/{patient}','PatientController@destroy' )->name('ModifPa.destroy');
 
-
+Route::get('Statistique', 'UserController@chart')->name('User.Statistiqe');
+Route::get('Useradd', 'UserController@createUser')->name('User.add');
+Route::post('Useradd', 'UserController@Usertraitement')->name('User.addtrait');
+Route::get('Usermodif/{user}', 'UserController@Useredit')->name('User.modif');
+Route::post('Usermodif/{user}', 'UserController@Userupdate')->name('User.update');
+Route::get('Userdetails/{users}', 'UserController@DetailsU')->name('User.details');
 
 Route::get('/Consultation{id}', 'ConsultationController@formulaire')->name('consultation');
 Route::get('ModifCon/{consultation}', 'ConsultationController@edit')->name('Consultation.edit');
 Route::post('ModifCon/{consultation}', 'ConsultationController@update')->name('Consultation.update');
 Route::post('Consultation', 'ConsultationController@traitement');
-Route::get('{id}/Consult', 'ConsultationController@doss')->name('Patient.dossier');
+Route::get('Dossier{id}', 'PatientController@doss')->name('Patient.dossier');
 
 
 Route::get('/Traitement{id}', 'TraitementController@formulaire')->name('traitement');
@@ -95,7 +103,7 @@ Route::get('/FormulaireC/FormulaireC3','CaisseController@listeP')->name('listeP'
 Route::get('/FormulaireI/FormulaireI3','PatientController@index')->name('Patientlist.index');
 Route::get('/FormulaireM/FormulaireM5','PatientController@liste')->name('listeM1');
 Route::get('/FormulaireM/liste','PatientController@listeM')->name('listeM');
-Route::get('/FormulaireA/FormulaireA2','HomeController@liste');
+Route::get('/FormulaireA/FormulaireA2','HomeController@liste')->name('listeA');
 
 
 Route::get('/Pharmacie','PharmacieController@index')->name('Pharmacie.index');
@@ -113,9 +121,9 @@ Route::get('/Infirmière', function () {
     return view('Infirmière');
 });
 
-Route::get('/Medecin', function () {
+/*Route::get('/Medecin', function () {
     return view('Medecin');
-});
+});*/
 
 /*Route::get('/Pharmacien', function () {
     return view('Pharmacien');
@@ -177,6 +185,10 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Auth::routes();
+
+/*Route::group(['middleware' => 'isUser'], function () {
+    Route::get('Infirmière', 'connexionIController@formulaire')->name('Infirmière');
+});*/
 
 Route::get('/home', 'HomeController@index')->name('home');
 

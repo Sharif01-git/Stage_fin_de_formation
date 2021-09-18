@@ -82,7 +82,7 @@
                                     <td>{{$facture->prixcarnet}}</td>
                                     <td>{{$facture->prixtrait}}</td>
                                     <td>{{$facture->prixprod}}</td>
-                                    <td>{{$facture->prixtotal}}</td>
+                                    <td>{{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}}</td>
                                    <!-- <td>{{$facture->created_at->format('d-m-y/h:m')}}</td>-->
                                     <td>
 
@@ -90,7 +90,7 @@
                                      {{ csrf_field() }}
                                      {{ method_field('DELETE')}}
                                     <!-- <input type="submit" value="Delete">-->
-                                    <a onclick="return confirm('Voulez-vous vraiment supprimer cette facture?')"  href="{{route('caisse.destroy',$facture->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>
+                                  <!--  <a onclick="return confirm('Voulez-vous vraiment supprimer cette facture?')"  href="{{route('caisse.destroy',$facture->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>-->
 
                                     <a class="fa fa-eye" href="{{route('caisse.facture',$facture->id)}}"  style="color:gray"></a>
                                     </td>

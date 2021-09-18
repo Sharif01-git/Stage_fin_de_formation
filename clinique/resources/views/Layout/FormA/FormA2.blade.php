@@ -22,6 +22,11 @@
 									<div class="card-body">
 										<!--begin: Search Form-->
 										<!--begin::Search Form-->
+                                        @if ($message = Session::get('suscess'))
+                                        <div class="alert alert-succes">
+                                            <p>{{message}}</p>
+                                        </div>
+                                        @endif
 										<div class="mb-7">
 											<div class="row align-items-center">
 												<div class="col-lg-9 col-xl-8">
@@ -56,7 +61,7 @@
 													<th title="Field #7">Email</th>
 													<th title="Field #8">Date de création</th>
                                                     <th title="Field #9">Statut</th>
-                                                    <th title="Field #9">Action</th>
+                                                    <th title="Field #10">Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -71,11 +76,21 @@
 													<td>{{$user['adresse']}}</td>
                                                     <td>{{$user['profil']}}</td>
                                                     <td>{{$user['email']}}</td>
-													<td>{{$user['created_at']}}</td>
-                                                    <td></td>
+													<td>{{$user['created_at']->format('d-m-y/h:m')}}</td>
                                                     <td>
-                                                        <a class="fa fa-toggle-on" href="" ></a>
-                                                       <a class="fa fa-eye" href="" style="color:gray"></a>
+                                                        @if($user->statu=='0')
+                                                        <label style="color: green" class="fa fa-toggle-on" ></label>
+                                                      <!--  <a class="fa fa-toggle-on" href="" ></a>-->
+                                                        @elseif($user->statu=='1')
+                                                        <label style="color: red" class="fa fa-toggle-off" ></label>
+                                                       <!--  <a class="fa fa-toggle-off" href="" ></a>-->
+                                                        @endif()
+                                                    </td>
+                                                    <td>
+                                                        <a class="fa fa-edit" title="Modifier" href="{{route('User.modif',$user->id)}}"></a>
+
+
+                                                       <a class="fa fa-eye" href="{{route('User.details',$user->id)}}" style="color:gray"></a>
                                                        </td>
 												</tr>
                                                 @endforeach

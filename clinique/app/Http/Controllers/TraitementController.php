@@ -33,7 +33,7 @@ class TraitementController extends Controller
 
 
         ]);
-        return view('/Medecin')->with('success', 'Traitement enrégistré avec succès');
+        return redirect()->route('listeM1')->with('success', 'Traitement enrégistré avec succès');
     }
     public function edit(Traitement $traitement){
         //$patients = Patient::findOrFail($patient);

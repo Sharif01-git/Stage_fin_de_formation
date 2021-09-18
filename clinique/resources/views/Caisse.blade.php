@@ -229,13 +229,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                         <!--   <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Prix total à payer</label>
                                 <div class="col-lg-9">
                                     <input type="number" class="form-control" name="prixtotal" value="" placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
-                            </div>
+                            </div>-->
 
                         </div>
                         <div class="card-footer">

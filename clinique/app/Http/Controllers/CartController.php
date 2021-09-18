@@ -84,6 +84,7 @@ class CartController extends Controller
 
 
         return redirect()->route('Pharmacie.index', ['stock'=>$stock])->with('success', 'Le produit a bien été ajouté.');
+
     }
 
     /**

@@ -794,14 +794,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="row">
                                 <div class="col-xl-6">
-                                    <div class="form-group row">
-                                        <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure fin</label>
-                                        <div class="col-lg-9">
-                                            <input class="form-control" type="time" name="heuref" value="" id="example-time-input" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
                                     <div class="col-lg-9 col-md-9 col-sm-12">

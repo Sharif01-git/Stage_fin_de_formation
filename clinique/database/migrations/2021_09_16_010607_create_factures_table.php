@@ -15,7 +15,6 @@ class CreateFacturesTable extends Migration
     {
         Schema::create('factures', function (Blueprint $table) {
             $table->id();
-            $table->string('libellefac');
             $table->string('nomp');
             $table->string('prenomp');
             $table->date('datefac');
@@ -23,7 +22,7 @@ class CreateFacturesTable extends Migration
             $table->double('prixcarnet')->nullable();
             $table->double('prixtrait')->nullable();
             $table->double('prixprod');
-            $table->double('prixtotal');
+            $table->double('prixtotal')->nullable();
             $table->Integer('caissier_id')->nullable();
             $table->Integer('patient_id')->nullable();
             $table->timestamps();

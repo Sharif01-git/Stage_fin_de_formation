@@ -401,50 +401,55 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <!--end::Heading-->
                                 <!--begin::Products-->
-                                <div class="col-md-12">
-                                    <!--begin::Product-->
-                                    <div class="row">
-                                        <!--begin::Card-->
-                                       @foreach ($produits as $produit)
-                                       <div class="card card-custom card-shadowless">
-                                        <div class="card-body p-2">
-                                            <!--begin::Image-->
-                                            <div class="overlay">
-                                                <div class="overlay-wrapper rounded bg-light text-center">
-                                                    <img src="{{$produit->image}}" alt="" class="mw-100 w-200px" />
-                                                </div>
-                                                <div class="overlay-layer">
-                                                    <a href="{{route('Pharmacie.show', $produit->slug)}}" class="btn font-weight-bolder btn-sm btn-primary mr-2">Détails</a>
+                                <div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
+                                    <div class="col-md-10">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="pl-0 font-weight-bold text-muted text-uppercase">Nom</th>
+                                                        <th class="text-right font-weight-bold text-muted text-uppercase">Prix</th>
+                                                        <th class="text-right font-weight-bold text-muted text-uppercase">Catégorie </th>
+                                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Panier</th>
+                                                        <th class="text-right pr-0 font-weight-bold text-muted text-uppercase">Détails</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($produits as $produit)
+                                                    <tr class="font-weight-boldest">
+                                                        <td class="border-0 pl-0 pt-7 d-flex align-items-center">
+                                                        <!--begin::Symbol-->
+                                                        <div class="symbol symbol-40 flex-shrink-0 mr-4 bg-light">
+                                                            <div class="symbol-label" style="background-image: url('{{$produit->image}}')"></div>
+                                                        </div>
+                                                        <!--end::Symbol-->
+                                                        {{$produit->nomprod}}</td>
+                                                        <td class="text-right pt-7 align-middle">
+                                                            {{$produit->getprix()}}
+                                                        </td>
+                                                        <td class="text-right pt-7 align-middle">
+                                                            @foreach ($produit->categories as $categorie)
+                                                            {{ $categorie->nom }}
+                                                            @endforeach</td>
+                                                        <td class="text-primary pr-0 pt-7 text-right align-middle">
+                                                            <form action="{{route('cart.store')}}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="produit_id" value="{{$produit->id}}">
+                                                                <button type="submit" class="btn font-weight-bolder  btn-light-primary">Ajouter</button>
+                                                            </form>
+                                                        </td>
+                                                        <td class="text-right pt-7 align-middle">
 
-                                                 <form action="{{route('cart.store')}}" method="POST">
-                                                        @csrf
-                                                        <input type="hidden" name="produit_id" value="{{$produit->id}}">
-                                                    <button type="submit" class="btn font-weight-bolder btn-sm btn-light-primary">Ajout panier</button>
-                                                 </form>
-                                                </div>
-                                            </div>
-                                            <!--end::Image-->
-                                            <!--begin::Details-->
-                                            <div class="text-center mt-5 mb-md-0 mb-lg-5 mb-md-0 mb-lg-5 mb-lg-0 mb-5 d-flex flex-column">
-                                                <!--<a href="#" class="font-size-h5 font-weight-bolder text-dark-75 text-hover-primary mb-1"></a>-->
-                                                <h5 class="mb-0">{{$produit->nomprod}}</h5>
-                                                <Strong class="font-size-lg">{{$produit->getprix()}}</Strong>
-                                                <span class="font-size-lg">
-                                                    @foreach ($produit->categories as $categorie)
-                                                       {{ $categorie->nom }}
+                                                        <a class="fa fa-eye" title="" href="{{route('Pharmacie.show', $produit->slug)}}"></a>
+                                                        </td>
+                                                    </tr>
                                                     @endforeach
-                                                </span>
-                                            </div>
-                                            <!--end::Details-->
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                       @endforeach
-
-                                        <!--end::Card-->
-                                    </div>
-                                    <!--end::Product-->
                                 </div>
-                                {{$produits->appends(request()->input())->links()}}
+
                                 <!--end::Products-->
                             </div>
                             <!--end::Section-->

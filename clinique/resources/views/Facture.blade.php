@@ -94,7 +94,7 @@
 
     tbody {
       font-size: 90%;
-      font-style: italic;
+      font-style: bold;
     }
 
     tfoot {
@@ -109,7 +109,7 @@ table {
   border-collapse: collapse;
   border: 2px solid rgb(200,200,200);
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 td, th {
@@ -137,35 +137,29 @@ caption {
   padding: 10px;
 }
   </style>
-  <title>Ordonnance</title>
+  <title></title>
 </head>
 <body>
 
 
 
-    &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;   &nbsp;   &nbsp;  &nbsp;
+    &nbsp;  &nbsp; &nbsp; &nbsp;
 
     <br>
     <div style="float: left;">
     <img src="assets/media/logos/clinique6.jpg" height="2%" width="2%" ><br>
     <strong>GES-CLIN</strong> <br> T&eacute;l : +228 93-07-21-73/ 70-35-15-84<br>
-     E-mail : gesclin@gmail.tg<br>
-     Votre santé c'est notre priorité!!!
+    Facture  N°: {{$facture->id}}<br>Date : {{$facture->created_at->format('d/m/y')}} <br>
 
-
-    </div><br> <br> <br> <br>
+    </div><br><br>
 
 
     <center></center> <br> <br>
-
-
-
-
-
-    <h4 align="right">Facture  N°: {{$facture->id}}</h4>
-    <h4 align="right">Date : {{$facture->created_at->format('d/m/y')}}</h4>
-    <h4 align="right">A M./Mme. : {{$facture->nomp}} {{$facture->prenomp}}</h4>
+    <div style="float: right;" align="right">
+        A M./Mme. : {{$facture->nomp}} {{$facture->prenomp}}<br></div><br>
     <hr color="blue" size="4"> <br>
+
+
     <!--
     <h4>Nom du Pharmacien : </h4>
     <h4>Téléphone : +228 70 35 15 84 </h4>
@@ -180,8 +174,6 @@ caption {
         <tr>
           <th><h3>Description</h3></th>
           <th><h3>Prix</h3></th>
-
-
         </tr>
       </thead>
 
@@ -210,7 +202,7 @@ caption {
             <td ><h2>Total à payer:</h2></td>
 
 
-            <td><h2>{{$facture->prixtotal}} FCFA</h2></td>
+            <td><h2>{{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}} FCFA</h2></td>
 
           </tr>
         </tfoot>
@@ -220,7 +212,7 @@ caption {
     </table> <br>
     <div style="float: left;;" style="position: absolute; bottom: 0;width: 100%; padding-top: 50px; height: 50px;">
 
-           <b>Arrêtée la présente facture à la somme de : {{$facture->prixtotal}} FCFA (Franc CFA)</b> <br>
+           <b>Arrêtée la présente facture à la somme de : {{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}} FCFA (Franc CFA)</b> <br>
 
            <h4 align="left"></h4>
 
@@ -234,9 +226,9 @@ caption {
         <footer style="position: absolute; bottom: 0;width: 100%; padding-top: 50px; height: 50px;">
           <hr color="blue" size="4" align="center">
           <div style="float: left;;">
-
+            E-mail : gesclin@gmail.tg
           </div>
-          <div style="float: right;;">
+          <div style="float: right;">
             Tél : +228 93 07 21 73
           </div>
 

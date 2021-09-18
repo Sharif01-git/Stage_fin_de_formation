@@ -54,7 +54,8 @@ class CaisseController extends Controller
         return view('CaisseModif')->with('facture',$facture);
     }
 
-    public function update(Request $request, Facture $facture){
+    public function update(Request $request, Facture $facture ){
+        
         $facture->update([
             'nomp'=> $request->nomp,
             'prenomp'=> $request->prenomp,
@@ -63,10 +64,9 @@ class CaisseController extends Controller
             'prixcarnet' =>$request->prixcarnet,
             'prixtrait' =>$request->prixtrait,
             'prixprod' =>$request->prixprod,
-            'prixtotal' =>$request->prixtotal,
             'patient_id'=>$request->patient_id,
         ]);
-        return redirect()->route('listeC')->with('success', 'Facture Modifié avec succès');
+        return redirect()->route('listeC',compact('prixtotal'))->with('success', 'Facture Modifié avec succès');
     }
     public function destroy(Facture $facture){
         $facture->delete();
