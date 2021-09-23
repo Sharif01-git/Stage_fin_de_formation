@@ -61,13 +61,13 @@
                                    <!-- <th title="Field #1">Libelle</th>-->
                                     <th title="Field #2">Nom</th>
                                     <th title="Field #3">Prénom</th>
-                                    <th title="Field #4">Date</th>
                                     <th title="Field #5">Prix consultation</th>
                                     <th title="Field #6">Prix carnet</th>
                                     <th title="Field #6">Prix traitement</th>
                                     <th title="Field #7">Prix produit</th>
                                     <th title="Field #8">Prix total</th>
-                                    <th title="Field #9">Action</th>
+                                    <th title="Field #8">Statut</th>
+                                    <th title="Field #10">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,22 +77,22 @@
                                    <!-- <td>{{$facture->libellefac}}</td>-->
                                     <td>{{$facture->nomp}}</td>
                                     <td>{{$facture->prenomp}}</td>
-                                    <td>{{$facture->datefac}}</td>
                                     <td>{{$facture->prixbonconsul}}</td>
                                     <td>{{$facture->prixcarnet}}</td>
                                     <td>{{$facture->prixtrait}}</td>
                                     <td>{{$facture->prixprod}}</td>
                                     <td>{{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}}</td>
+                                    <td>{{$facture->statu}}</td>
                                    <!-- <td>{{$facture->created_at->format('d-m-y/h:m')}}</td>-->
                                     <td>
 
-                                     <a class="fa fa-edit" href="{{route('caisse.edit',$facture->id)}}"></a>
+                                     <a class="fa fa-edit" title="Modifier" href="{{route('caisse.edit',$facture->id)}}"></a>
                                      {{ csrf_field() }}
                                      {{ method_field('DELETE')}}
                                     <!-- <input type="submit" value="Delete">-->
                                   <!--  <a onclick="return confirm('Voulez-vous vraiment supprimer cette facture?')"  href="{{route('caisse.destroy',$facture->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>-->
 
-                                    <a class="fa fa-eye" href="{{route('caisse.facture',$facture->id)}}"  style="color:gray"></a>
+                                    <a class="fa fa-eye" title="Voir détails" href="{{route('caisse.facture',$facture->id)}}"  style="color:gray"></a>
                                     </td>
                                 </tr>
                                 @endforeach

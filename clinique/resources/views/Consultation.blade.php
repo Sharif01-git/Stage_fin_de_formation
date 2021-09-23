@@ -692,7 +692,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Date de cosultation</label>
                                 <div class="col-lg-8">
-                                    <input type="date" class="form-control" name="dateconsult" placeholder="" />
+                                    <input type="date" class="form-control" name="dateconsult" value="{{now()->toDateString('d-m-y')}}" readonly placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Patient;
+use App\Rendezvous;
 use App\User;
 use ArielMejiaDev\LarapexCharts\Facades\LarapexChart;
 use Illuminate\Http\Request;
@@ -16,25 +18,27 @@ class UserController extends Controller
      */
     public function index()
     {
-
+        $listerends = Rendezvous::all();
+        return view('Medecin',compact('listerends'));
     }
 
     public function chart(){
         $chart = LarapexChart::setType('line')
                                     ->setTitle('Nombre d\'utilisateur total par mois')
-                                    ->setSubtitle('De janvier à Décembre')
+                                    ->setSubtitle('De Juillet à Septembre')
                                     ->setXAxis([
-                                        'Jan', 'Feb', 'Mar'
+                                        'Juillet', 'Août', 'Septembre'
                                     ])
                                     ->setDataset([
                                             [
                                             'name'  =>  'Utilisateurs actifs',
-                                            'data'  =>  [250, 700, 1200]
+                                            'data'  =>  [5, 8, 10]
                                             ]
                                             ]);
                                     return view('Stat',compact('chart'));
 
     }
+
     /**
      * Show the form for creating a new resource.
      *

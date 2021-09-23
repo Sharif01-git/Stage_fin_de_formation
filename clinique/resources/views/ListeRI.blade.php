@@ -238,7 +238,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <th title="Field #7">Sexe</th>
                                     <th title="Field #8">Date</th>
                                     <th title="Field #9">Heure</th>
-                                    <th title="Field #10">Consulter</th>
+                                    <th title="Field #10">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -254,7 +254,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <td>{{ $rendezvo->heured}}</td>
                                     <td>
                                     <a class="fa fa-edit" title="Modifier" href="{{ route('Modifrend.edit',$rendezvo->id) }}"></a>
-                                    <a class="fa fa-eye" href="{{ route('Rendezvous.details',$rendezvo->id) }}"  style="color:gray"></a>
+                                    <a class="fa fa-eye" title="Visualiser détails" href="{{ route('Rendezvous.details',$rendezvo->id) }}"  style="color:gray"></a>
                                     </td>
                                 </tr>
                                 @endforeach

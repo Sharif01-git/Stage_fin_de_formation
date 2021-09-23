@@ -21,12 +21,13 @@ class CreateRendezvousesTable extends Migration
             $table->string('professiond');
             $table->string('nationalited');
             $table->string('adresse');
-            $table->integer('contact');
+            $table->string('phone_number');
             $table->string('emaild')->unique();
             $table->string('sexed');
             $table->time('heured');
             $table->date('dater');
             $table->text('motifr');
+            $table->text('message');
             $table->timestamps();
         });
     }

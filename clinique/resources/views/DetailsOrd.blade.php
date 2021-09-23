@@ -176,7 +176,7 @@ caption {
         <h2 align="center"><u>Ordonnance médicale</u></h2>
         <h4 align="right">Ordonnance N°: {{$ordonnance->id}}</h4>
         <h4 align="right">Fait à Lomé, le: {{$ordonnance->created_at->format('d/m/y')}}</h4>
-        <p>{{$ordonnance->produits}}</p>
+        <p>{!! nl2br(e($ordonnance->produits)) !!}</p>
 
 
       <div>

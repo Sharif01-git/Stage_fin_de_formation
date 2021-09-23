@@ -43,6 +43,7 @@ class CaisseController extends Controller
             'prixcarnet' =>$request->prixcarnet,
             'prixtrait' =>$request->prixtrait,
             'prixprod' =>$request->prixprod,
+            'statu'=>$request->statu,
             'prixtotal' =>$request->prixtotal,
             'patient_id'=>$request->patient_id,
 
@@ -64,9 +65,10 @@ class CaisseController extends Controller
             'prixcarnet' =>$request->prixcarnet,
             'prixtrait' =>$request->prixtrait,
             'prixprod' =>$request->prixprod,
+            'statu'=>$request->statu,
             'patient_id'=>$request->patient_id,
         ]);
-        return redirect()->route('listeC',compact('prixtotal'))->with('success', 'Facture Modifié avec succès');
+        return redirect()->route('listeC')->with('success', 'Facture Modifié avec succès');
     }
     public function destroy(Facture $facture){
         $facture->delete();

@@ -197,7 +197,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Date</label>
                                 <div class="col-lg-9">
-                                    <input type="date" class="form-control" name="datefac" value="Copyright © {{ date('Y') }}" placeholder="" required/>
+                                    <input type="date" class="form-control" name="datefac" value="{{now()->toDateString('d-m-y')}}" placeholder="" readonly required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -226,6 +226,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <label class="col-lg-3 col-form-label text-right">Prix total de produits</label>
                                 <div class="col-lg-9">
                                     <input type="number" class="form-control" name="prixprod" placeholder="" />
+                                    <span class="form-text text-muted"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-3 col-form-label text-right">Statut</label>
+                                <div class="col-lg-9">
+                                    <select class="form-control" name="statu">
+                                        <option value="">Choisir</option>
+                                        <option value="Payé">Payé</option>
+                                        <option value="Impayé">Impayé</option>
+                                    </select>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

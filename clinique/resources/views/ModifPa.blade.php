@@ -358,7 +358,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                             <div class="col-xl-6">
                             <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Maladie particuliaire</label>
+                                <label class="col-lg-3 col-form-label text-right">Maladie particulière</label>
                                 <div class="col-lg-9">
                                     <input type="text" class="form-control" name="maladiepart" value="{{$patient->maladiepart}}" placeholder="" />
                                     <span class="form-text text-muted"></span>

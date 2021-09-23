@@ -73,17 +73,17 @@
                                     <td>{{$patient->age}}</td>
                                     <td>{{$patient->sexe}}</td>
                                     <td>
-                                        <a class="fa fa-link" href="{{route('consultation', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href="{{ route('Consultation.edit',$patient->id) }}"></a>
+                                        <a class="fa fa-link" alt="text" title="Ajouter consultation" href="{{route('consultation', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" alt="text" title="Modifier consultation" href="{{ route('Consultation.edit',$patient->id) }}"></a>
                                     </td>
                                     <td>
-                                        <a class="fa fa-link" href="{{route('traitement', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href="{{ route('Traitement.edit',$patient->id) }}"></a>
+                                        <a class="fa fa-link" alt="text" title="Ajouter traitement" href="{{route('traitement', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" alt="text" title="Modifier traitement" href="{{ route('Traitement.edit',$patient->id) }}"></a>
                                     </td>
                                     <td>
-                                        <a class="fa fa-list-alt" href="{{route('ordonnance', $patient->id)}}"></a>
-                                        <a class="fa fa-edit" href="{{ route('Ordonnance.edit',$patient->id) }}"></a>
-                                        <a class="fa fa-eye" href="{{ route('Ordonnance.details',$patient->id) }}"  style="color:gray"></a>
+                                        <a class="fa fa-list-alt" alt="text" title="Prescrire ordonnance" href="{{route('ordonnance', $patient->id)}}"></a>
+                                        <a class="fa fa-edit" alt="text" title="Modifier ordonnance" href="{{ route('Ordonnance.edit',$patient->id) }}"></a>
+                                        <a class="fa fa-eye" alt="text" title="Voir détails" href="{{ route('Ordonnance.details',$patient->id) }}"  style="color:gray"></a>
                                     </td>
                                     <td>
                                         <a class="fa fa-calendar" href="{{ route('Medecin.rendezvous',$patient->id) }}">Programmer</a>

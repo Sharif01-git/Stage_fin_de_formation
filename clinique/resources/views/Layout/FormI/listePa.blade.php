@@ -91,7 +91,7 @@
                                                     <!-- <input type="submit" value="Delete">-->
                                                   <!--  <a  data-toggle="tooltip" title="Supprimer" onclick="return confirm('Voulez-vous vraiment supprimer ce patient?')"  href="{{route('ModifPa.destroy',$patient->id)}}" > <i class="fa fa-trash"  style="color:red" type="submit"></i></a>-->
 
-                                                    <a class="fa fa-eye" data-toggle="tooltip" title="Consulter" href="{{ route('Patient.details',$patient->id) }}"  style="color:gray"></a>
+                                                    <a class="fa fa-eye"  title="Visualiser détails" href="{{ route('Patient.details',$patient->id) }}"  style="color:gray"></a>
                                                 </form>
                                                     </td>
 												</tr>

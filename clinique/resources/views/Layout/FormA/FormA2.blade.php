@@ -79,10 +79,10 @@
 													<td>{{$user['created_at']->format('d-m-y/h:m')}}</td>
                                                     <td>
                                                         @if($user->statu=='0')
-                                                        <label style="color: green" class="fa fa-toggle-on" ></label>
+                                                        <label style="color: green" title="Activer" class="fa fa-toggle-on" ></label>
                                                       <!--  <a class="fa fa-toggle-on" href="" ></a>-->
                                                         @elseif($user->statu=='1')
-                                                        <label style="color: red" class="fa fa-toggle-off" ></label>
+                                                        <label style="color: red" title="Désactiver" class="fa fa-toggle-off" ></label>
                                                        <!--  <a class="fa fa-toggle-off" href="" ></a>-->
                                                         @endif()
                                                     </td>
@@ -90,7 +90,7 @@
                                                         <a class="fa fa-edit" title="Modifier" href="{{route('User.modif',$user->id)}}"></a>
 
 
-                                                       <a class="fa fa-eye" href="{{route('User.details',$user->id)}}" style="color:gray"></a>
+                                                       <a class="fa fa-eye" title="Voir détails" href="{{route('User.details',$user->id)}}" style="color:gray"></a>
                                                        </td>
 												</tr>
                                                 @endforeach

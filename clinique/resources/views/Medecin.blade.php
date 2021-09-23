@@ -35,6 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/logos/clinique6.jpg" />
 	</head>
+
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
@@ -702,7 +703,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total de consultation</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">4
+                                        <span class="font-size-h1 font-weight-boldest text-dark">5
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
                                         <!--end::Mobile Pricing Table-->
@@ -727,7 +728,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total de traitement</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">6
+                                        <span class="font-size-h1 font-weight-boldest text-dark">5
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
                                         <!--end::Mobile Pricing Table-->
@@ -753,7 +754,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total d'ordonnance</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">5
+                                        <span class="font-size-h1 font-weight-boldest text-dark">4
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
 
@@ -768,6 +769,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="row justify-content-center mx-0 mb-15 d-none d-lg-flex">
                         <div class="col-11">
                             <!-- begin: Bottom Table-->
+							<label align="center" class="col-lg-7 col-form-label text-right"><strong>Liste des patients</strong></label>
                             <div class="row bg-gray-100 py-5 font-weight-bold text-center">
                                 <div class="col-3 text-left px-5 font-weight-boldest">Nom</div>
                                 <div class="col-3 text-left px-5 font-weight-boldest">Prénom</div>
@@ -776,11 +778,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
                             </div>
                             <div class="row bg-white py-5 font-weight-bold text-center">
-                                @foreach ($listebords as $listebord )
-                                <div class="col-3 text-left px-5">{{$listebord->nomp}}</div>
-                                <div class="col-3 text-left px-5">{{$listebord->prenomp}}</div>
-                                <div class="col-3 text-left px-5">{{$listebord->age}}</div>
-                                <div class="col-3 text-left px-5">{{$listebord->sexe}}</div>
+                                @foreach ($listerends as $listerend )
+                                <div class="col-3 text-left px-5">{{$listerend->nomd}}</div>
+                                <div class="col-3 text-left px-5">{{$listerend->prenomd}}</div>
+                                <div class="col-3 text-left px-5">{{$listerend->heured}}</div>
+                                <div class="col-3 text-left px-5">{{$listerend->dater}}</div>
                                 @endforeach
                             </div>
                             <!-- end: Bottom Table-->

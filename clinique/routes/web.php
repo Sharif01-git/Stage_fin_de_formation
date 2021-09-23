@@ -51,8 +51,8 @@ Route::get('RendezvousI', 'PatientController@rendezvousi')->name('Infirmiere.ren
 Route::post('RendezvousI', 'PatientController@traitementir')->name('rendezvousit');
 Route::get('Rendezvous','PatientController@listeRM')->name('listeRM');
 Route::get('Rendezvou','PatientController@listeRI')->name('listeRI');
-Route::get('Medecin','PatientController@listebord')->name('Medecin.bord');
-Route::get('Voir','PatientController@voir')->name('voir');
+Route::get('Medecin','UserController@index')->name('Medecin.bord');
+Route::get('Medecins','PatientController@voir')->name('voir');
 
 Route::get('RendezvousI/{rendezvou}', 'PatientController@editrend')->name('Modifrend.edit');
 Route::post('RendezvousI/{rendezvou}', 'PatientController@updaterend')->name('Modifrend.update');

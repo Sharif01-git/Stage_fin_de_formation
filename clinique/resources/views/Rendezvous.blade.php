@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <i class="la la-chain"></i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" name="contact" class="form-control" value="" placeholder="" />
+                                                <input type="text" name="phone_number" class="form-control" value="002893072173" placeholder="" />
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +316,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
                                         <div class="col-lg-9">
-                                            <input type="date" class="form-control" name="dater" placeholder="" />
+                                            <input type="date" class="form-control" name="dater"  placeholder="" />
                                             <span class="form-text text-muted"></span>
                                         </div>
                                         </div>
@@ -333,6 +333,17 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                    <div class="form-group row">
+                                        <label class="col-lg-3 col-form-label text-right">Message</label>
+                                        <div class="col-lg-9 col-md-9 col-sm-12">
+                                            <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="message" placeholder="" rows="6"></textarea>
+                                            <span class="form-text text-muted"></span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>

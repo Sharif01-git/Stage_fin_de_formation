@@ -691,7 +691,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Date du traitement</label>
                                 <div class="col-lg-9">
-                                    <input type="date" class="form-control" name="date_trait" placeholder="" />
+                                    <input type="date" class="form-control" name="date_trait" value="{{now()->toDateString('d-m-y')}}" readonly placeholder="" />
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
