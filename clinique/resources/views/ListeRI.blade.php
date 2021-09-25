@@ -226,6 +226,11 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!--end::Search Form-->
                         <!--end: Search Form-->
                         <!--begin: Datatable-->
+                        @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{$message}}</p>
+                        </div>
+                       @endif
                         <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                             <thead>
                                 <tr>
@@ -244,11 +249,10 @@ License: You must have a valid license purchased only from themeforest(the above
                             <tbody>
                                 @foreach ($rendezvou as $rendezvo)
                                 <tr>
-
                                     <td>{{ $rendezvo->nomd}}</td>
                                     <td>{{ $rendezvo->prenomd}}</td>
                                     <td>{{ $rendezvo->aged}}</td>
-                                    <td>{{ $rendezvo->contact}}</td>
+                                    <td>{{ $rendezvo->phone_number}}</td>
                                     <td>{{ $rendezvo->sexed}}</td>
                                     <td>{{ $rendezvo->dater}}</td>
                                     <td>{{ $rendezvo->heured}}</td>

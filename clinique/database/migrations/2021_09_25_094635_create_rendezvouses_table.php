@@ -25,9 +25,9 @@ class CreateRendezvousesTable extends Migration
             $table->string('emaild')->unique();
             $table->string('sexed');
             $table->time('heured');
-            $table->date('dater');
+            $table->date('dater')->date_format('d/m/Y');
             $table->text('motifr');
-            $table->text('message');
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											<input class="form-check-input custom-control-user" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} />
 											<span></span>Se souvenir de moi</label>
 										</div>
-										<a href="Mot_passe_oublier" id="kt_login_forgot" class="text-muted text-hover-primary">Mot de passe oublié ?</a>
+										
 									</div>
 									<div class="form-group d-flex flex-wrap justify-content-between align-items-center mt-2">
 										<button type="submit" class="btn btn-primary">Se connecter</button>

@@ -241,14 +241,14 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label text-right">Email</label>
                             <div class="col-lg-9">
-                                <input type="email" class="form-control" name="email" placeholder="" />
+                                <input type="email" class="form-control" name="email" placeholder="" required/>
                                 <span class="form-text text-muted"></span>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-lg-3 col-form-label text-right">Mot de passe</label>
                             <div class="col-lg-9">
-                                <input type="password" class="form-control" name="password" placeholder="" />
+                                <input type="password" class="form-control" name="password" placeholder="" required/>
                                 <span class="form-text text-muted"></span>
                             </div>
                         </div>

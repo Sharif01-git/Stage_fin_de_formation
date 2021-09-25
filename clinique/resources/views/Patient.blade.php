@@ -283,7 +283,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <i class="la la-chain"></i>
                                             </span>
                                         </div>
-                                        <input type="tel" name="tel" pattern="[0-9]{8}" class="form-control" placeholder="Numéro de téléphone" required/>
+                                        <input type="tel" name="tel"  class="form-control" placeholder="Numéro de téléphone" required/>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +292,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Email </label>
                                 <div class="col-lg-9">
-                                    <input type="email" name="Email" class="form-control" placeholder="Enter email" />
+                                    <input type="email" name="Email" class="form-control" placeholder="Enter email" required/>
                                 </div>
                             </div>
                             </div>
@@ -304,10 +304,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                 <div class="radio-inline">
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="Masculin" />
+                                    <input type="radio" name="sexe" value="Masculin" required/>
                                     <span></span>Masculin</label>
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="Féminin"/>
+                                    <input type="radio" name="sexe" value="Féminin" required/>
                                     <span></span>Féminin</label>
                                 </div>
                             </div>
@@ -322,7 +322,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Température</label>
                                 <div class="col-lg-9">
-                                    <input type="number" step="0.01" min="27" max="42" name="temperature" class="form-control" placeholder="" />
+                                    <input type="number" step="0.01" min="27" max="42" name="temperature" class="form-control" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -331,7 +331,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Poids</label>
                                 <div class="col-lg-9">
-                                    <input type="number" step="0.01" min="3.50" max="150" class="form-control" name="poids" placeholder="" />
+                                    <input type="number" step="0.01" min="3.50" max="150" class="form-control" name="poids" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Tension</label>
                                 <div class="col-lg-9">
-                                    <input type="number" min="90" max="140" class="form-control" name="tension" placeholder="" />
+                                    <input type="number" min="90" max="140" class="form-control" name="tension" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -351,7 +351,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Pouls</label>
                                 <div class="col-lg-9">
-                                    <input type="number" min="50" max="140" class="form-control" name="pouls" placeholder="" />
+                                    <input type="number" min="50" max="140" class="form-control" name="pouls" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Taille</label>
                                 <div class="col-lg-9">
-                                    <input type="number" step="0.01" min="0" max="2" class="form-control" name="taille" placeholder="" />
+                                    <input type="number" step="0.01" min="0" max="2" class="form-control" name="taille" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -371,7 +371,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Maladie particulière</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="maladiepart" placeholder="" />
+                                    <input type="text" class="form-control" name="maladiepart" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -382,7 +382,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Allergie</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="allergie" placeholder="" />
+                                    <input type="text" class="form-control" name="allergie" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -391,7 +391,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Groupage et Rhésus</label>
                                 <div class="col-lg-9">
-                                    <select class="form-control" name="groupage">
+                                    <select class="form-control" name="groupage" required>
                                         <option value="">Choisir</option>
                                         <option value="O+">O+</option>
                                         <option value="O-">O-</option>

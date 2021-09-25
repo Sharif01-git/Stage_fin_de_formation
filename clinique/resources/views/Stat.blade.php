@@ -197,259 +197,88 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <!--end::Subheader-->
         <!--begin::Entry-->
-        <div class="d-flex flex-column-fluid">
-            <!--begin::Container-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <!--begin::Header-->
-                            <div class="card-header h-auto">
-                                <!--begin::Title-->
-                                <div class="card-title py-5">
-                                    <h3 class="card-label">Utilisateurs</h3>
-                                </div>
-                                <!--end::Title-->
-                            </div>
-                            <!--end::Header-->
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <!--<div id="chart_1"></div>-->
-                                {{ $chart->container() }}
-                                <!--end::Chart-->
-                            </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b">
+                    <!--begin::Header-->
+                    <div class="card-header h-auto">
+                        <!--begin::Title-->
+                        <div class="card-title py-5">
+                            <h3 class="card-label">Utilisateurs</h3>
                         </div>
-                        <!--end::Card-->
+                        <!--end::Title-->
                     </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Area Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_2"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
+                    <!--end::Header-->
+                    <div class="card-body">
+                        <!--begin::Chart-->
+                        {{$chart->container()}}
+                        <!--end::Chart-->
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Column Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_3"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Area Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_4"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Mixed Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_5"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Timeline Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_6"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Candlestick Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_7"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Bubble Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_8"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Scatter Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_9"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Heatmap Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_10"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Donut Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_11" class="d-flex justify-content-center"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Pie Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_12" class="d-flex justify-content-center"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Radial Bar Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_13"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                    <div class="col-lg-6">
-                        <!--begin::Card-->
-                        <div class="card card-custom gutter-b">
-                            <div class="card-header">
-                                <div class="card-title">
-                                    <h3 class="card-label">Radar Chart</h3>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!--begin::Chart-->
-                                <div id="chart_14"></div>
-                                <!--end::Chart-->
-                            </div>
-                        </div>
-                        <!--end::Card-->
-                    </div>
-                </div>
+                <!--end::Card-->
             </div>
-            <!--end::Container-->
+            <div class="col-lg-6">
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Patients</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--begin::Chart-->
+                        {{$chart1->container()}}
+                        <!--end::Chart-->
+                    </div>
+                </div>
+                <!--end::Card-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Produits</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--begin::Chart-->
+                        {{$chart2->container()}}
+                        <!--end::Chart-->
+                    </div>
+                </div>
+                <!--end::Card-->
+            </div>
+            <div class="col-lg-6">
+                <!--begin::Card-->
+                <div class="card card-custom gutter-b">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h3 class="card-label">Consultations</h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--begin::Chart-->
+                        {{$chart3->container()}}
+                        <!--end::Chart-->
+                    </div>
+                </div>
+                <!--end::Card-->
+            </div>
         </div>
         <!--end::Entry-->
     </div>
     <!--end::Content-->
     <script src="{{ $chart->cdn() }}"></script>
-    {{ $chart->script() }}
+    {{ $chart->script(), }}
+    <script src="{{ $chart1->cdn() }}"></script>
+    {{ $chart1->script(), }}
+    <script src="{{ $chart2->cdn() }}"></script>
+    {{ $chart2->script(), }}
+    <script src="{{ $chart3->cdn() }}"></script>
+    {{ $chart3->script(), }}
 
     @extends('Layout.footer')

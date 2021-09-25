@@ -18,7 +18,7 @@ class CreateOrdonnancesTable extends Migration
             $table->string('nomp');
             $table->string('prenomp');
             $table->Integer('age');
-            $table->string('sexe');
+            $table->string('sexe')->nullable();
             $table->text('produits');
             $table->integer('patient_id')->nullable();
            // $table->foreign('medecin_id')->references('id')->on('medecins');

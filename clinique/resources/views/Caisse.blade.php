@@ -225,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Prix total de produits</label>
                                 <div class="col-lg-9">
-                                    <input type="number" class="form-control" name="prixprod" placeholder="" />
+                                    <input type="number" class="form-control" name="prixprod" value="11000"placeholder="" readonly/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

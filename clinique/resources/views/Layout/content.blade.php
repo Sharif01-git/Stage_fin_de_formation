@@ -47,7 +47,7 @@
                             <!--begin::Body-->
                             <div class="card-body" align="center">
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Photo de profil</label>
+                                    <label class="col-xl-3 col-lg-3 col-form-label"></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <div class="image-input image-input-outline" id="kt_profile_avatar" style="background-image: url(assets/media/users/blank.png)">
                                             <div class="image-input-wrapper" style="background-image: url(assets/media/users/clinique1.png)"></div>
@@ -60,19 +60,19 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Nom</label>
-                                    <div class="col-lg-3 col-xl-6">
+                                    <label class="col-lg-3 col-form-label text-right" ><h4>Nom</h4></label>
+                                    <div class="col-lg-9 col-xl-6">
                                         <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->name}}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Prénom</label>
+                                    <label class="text-right col-lg-3 col-form-label"><h4>Prénom</h4></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->prenom}}" />
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Adresse</label>
+                                    <label class="text-right col-lg-3 col-form-label"><h4>Adresse</h4></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <input class="form-control form-control-lg form-control-solid" type="text" value="{{auth()->user()->adresse}}" />
 
@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Téléphone</label>
+                                    <label class="text-right col-lg-3 col-form-label"><h4>Téléphone</h4></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <div class="input-group input-group-lg input-group-solid">
                                             <div class="input-group-prepend">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Email</label>
+                                    <label class="text-right col-lg-3 col-form-label"><h4>Email</h4></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <div class="input-group input-group-lg input-group-solid">
                                             <div class="input-group-prepend">
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-xl-3 col-lg-3 col-form-label">Profil</label>
+                                    <label class="text-right col-lg-3 col-form-label"><h4>Profil</h4></label>
                                     <div class="col-lg-9 col-xl-6">
                                         <div class="input-group input-group-lg input-group-solid">
                                             <input type="text" class="form-control form-control-lg form-control-solid" placeholder="" value="{{auth()->user()->profil}}" />

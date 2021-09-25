@@ -205,7 +205,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row ">
                                         <label class="col-lg-3 col-form-label text-right">Nom</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="nomd" value="" placeholder="" />
+                                            <input type="" class="form-control " name="nomd" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Prénom</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control " name="prenomd" value="" placeholder="" />
+                                            <input type="" class="form-control " name="prenomd" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -225,7 +225,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Age</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="aged" value="" placeholder="" />
+                                            <input type="" class="form-control" name="aged" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -234,7 +234,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Profession</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="professiond" value="" placeholder="" />
+                                            <input type="" class="form-control" name="professiond" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -245,7 +245,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Nationalité</label>
                                         <div class="col-lg-9">
-                                            <input type="" class="form-control" name="nationalited" value="" placeholder="" />
+                                            <input type="" class="form-control" name="nationalited" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Adresse</label>
                                         <div class="col-lg-9">
-                                            <input type="text" class="form-control" name="adresse" value="" placeholder="" />
+                                            <input type="text" class="form-control" name="adresse" value="" placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                     </div>
@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <i class="la la-chain"></i>
                                                     </span>
                                                 </div>
-                                                <input type="text" name="phone_number" class="form-control" value="002893072173" placeholder="" />
+                                                <input type="text" name="phone_number" class="form-control" value="22893072173" placeholder="" readonly/>
                                             </div>
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Email</label>
                                         <div class="col-lg-9">
-                                            <input type="email" name="emaild" class="form-control" value="" placeholder="" />
+                                            <input type="email" name="emaild" class="form-control" value="" placeholder="" required/>
                                         </div>
                                     </div>
                                     </div>
@@ -292,10 +292,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                         <div class="radio-inline">
                                             <label class="radio">
-                                            <input type="radio" name="sexed" value="Masculin" />
+                                            <input type="radio" name="sexed" value="Masculin" required/>
                                             <span></span>Masculin</label>
                                             <label class="radio">
-                                            <input type="radio" name="sexed" value="Féminin"/>
+                                            <input type="radio" name="sexed" value="Féminin" required/>
                                             <span></span>Féminin</label>
                                         </div>
                                     </div>
@@ -307,7 +307,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <div class="form-group row">
                                                 <label for="example-time-input" class="col-lg-3 col-form-label text-right">Heure début</label>
                                                 <div class="col-lg-9">
-                                                    <input class="form-control" type="time" name="heured" value="" id="example-time-input" />
+                                                    <input class="form-control" type="time" name="heured" value="" id="example-time-input" required/>
                                                 </div>
                                             </div>
 
@@ -316,7 +316,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="form-group row">
                                         <label class="col-lg-3 col-form-label text-right">Date de rendez-vous</label>
                                         <div class="col-lg-9">
-                                            <input type="date" class="form-control" name="dater"  placeholder="" />
+                                            <input type="date" class="form-control" name="dater"  placeholder="" required/>
                                             <span class="form-text text-muted"></span>
                                         </div>
                                         </div>
@@ -327,23 +327,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label text-right">Motif de rendez-vous</label>
                                     <div class="col-lg-9 col-md-9 col-sm-12">
-                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="motifr" placeholder="" rows="6"></textarea>
+                                        <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="motifr" placeholder="" rows="6" required></textarea>
                                         <span class="form-text text-muted"></span>
                                     </div>
                                 </div>
                                 </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label text-right">Message</label>
-                                        <div class="col-lg-9 col-md-9 col-sm-12">
-                                            <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="message" placeholder="" rows="6"></textarea>
-                                            <span class="form-text text-muted"></span>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-10"> <button type="reset" class="btn font-weight-bold btn-secondary">Réinitialiser</button></div>

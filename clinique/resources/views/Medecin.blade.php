@@ -703,7 +703,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total de consultation</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">5
+                                        <span class="font-size-h1 font-weight-boldest text-dark">{{$consult->count()}}
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
                                         <!--end::Mobile Pricing Table-->
@@ -728,7 +728,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total de traitement</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">5
+                                        <span class="font-size-h1 font-weight-boldest text-dark">{{$trait->count()}}
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
                                         <!--end::Mobile Pricing Table-->
@@ -754,7 +754,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <span>Le nombre total d'ordonnance</span>
                                             <span>s'élève à : </span>
                                         </div>
-                                        <span class="font-size-h1 font-weight-boldest text-dark">4
+                                        <span class="font-size-h1 font-weight-boldest text-dark">{{$ord->count()}}
                                         <sup class="font-size-h3 font-weight-normal pl-1"></sup></span>
                                         <!--begin::Mobile Pricing Table-->
 
@@ -769,12 +769,12 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="row justify-content-center mx-0 mb-15 d-none d-lg-flex">
                         <div class="col-11">
                             <!-- begin: Bottom Table-->
-							<label align="center" class="col-lg-7 col-form-label text-right"><strong>Liste des patients</strong></label>
+							<label align="center" class="col-lg-7 col-form-label text-right"><strong>Liste des rendez-vous</strong></label>
                             <div class="row bg-gray-100 py-5 font-weight-bold text-center">
                                 <div class="col-3 text-left px-5 font-weight-boldest">Nom</div>
                                 <div class="col-3 text-left px-5 font-weight-boldest">Prénom</div>
-                                <div class="col-3 text-left px-5 font-weight-boldest">Age</div>
-                                <div class="col-3 text-left px-5 font-weight-boldest">Sexe</div>
+                                <div class="col-3 text-left px-5 font-weight-boldest">Heure</div>
+                                <div class="col-3 text-left px-5 font-weight-boldest">Date</div>
 
                             </div>
                             <div class="row bg-white py-5 font-weight-bold text-center">

@@ -60,7 +60,7 @@
 													<th title="Field #6">Fonction</th>
 													<th title="Field #7">Email</th>
 													<th title="Field #8">Date de création</th>
-                                                    <th title="Field #9">Statut</th>
+
                                                     <th title="Field #10">Action</th>
 												</tr>
 											</thead>
@@ -77,15 +77,7 @@
                                                     <td>{{$user['profil']}}</td>
                                                     <td>{{$user['email']}}</td>
 													<td>{{$user['created_at']->format('d-m-y/h:m')}}</td>
-                                                    <td>
-                                                        @if($user->statu=='0')
-                                                        <label style="color: green" title="Activer" class="fa fa-toggle-on" ></label>
-                                                      <!--  <a class="fa fa-toggle-on" href="" ></a>-->
-                                                        @elseif($user->statu=='1')
-                                                        <label style="color: red" title="Désactiver" class="fa fa-toggle-off" ></label>
-                                                       <!--  <a class="fa fa-toggle-off" href="" ></a>-->
-                                                        @endif()
-                                                    </td>
+
                                                     <td>
                                                         <a class="fa fa-edit" title="Modifier" href="{{route('User.modif',$user->id)}}"></a>
 

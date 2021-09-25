@@ -670,7 +670,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Libellé du traitement</label>
                                 <div class="col-lg-9">
-                                    <input type="text" class="form-control" name="libelletrait" placeholder="" />
+                                    <input type="text" class="form-control" name="libelletrait" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

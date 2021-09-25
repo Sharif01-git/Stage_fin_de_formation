@@ -212,8 +212,8 @@ caption {
     </table> <br>
     <div style="float: left;;" style="position: absolute; bottom: 0;width: 100%; padding-top: 50px; height: 50px;">
 
-           <b>Arrêtée la présente facture à la somme de : {{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}} FCFA (Franc CFA)</b> <br>
-
+           <b>Arrêtée la présente facture à la somme de : {{$facture->prixbonconsul+$facture->prixcarnet+$facture->prixtrait+$facture->prixprod}} FCFA (Franc CFA)</b> <br><br>
+           <b>Statut : {{$facture->statu}} </b>
            <h4 align="left"></h4>
 
 

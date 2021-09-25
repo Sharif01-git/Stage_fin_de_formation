@@ -295,10 +295,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <label class="col-lg-2 col-form-label text-right">Sexe</label>
                                 <div class="radio-inline">
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" />
+                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" required/>
                                     <span></span>Masculin</label>
                                     <label class="radio">
-                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" />
+                                    <input type="radio" name="sexe" value="{{$patient->sexe}}" required/>
                                     <span></span>Féminin</label>
                                 </div>
                             </div>

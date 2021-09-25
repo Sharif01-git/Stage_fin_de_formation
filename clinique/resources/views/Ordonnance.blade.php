@@ -682,21 +682,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
-                            <div class="form-group row align-items-center">
-                                <label class="col-lg-2 col-form-label text-right">Sexe</label>
-                                <div class="radio-inline">
-                                    <label class="radio">
-                                    <input type="radio" name="sexe" value="Masculin" />
-                                    <span></span>Masculin</label>
-                                    <label class="radio">
-                                    <input type="radio" name="sexe" value="Féminin"/>
-                                    <span></span>Féminin</label>
-                                </div>
-                            </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Produits & Dosage</label>
                                 <div class="col-lg-9 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" maxlength="500" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" name="produits" maxlength="500" placeholder="" rows="6" required></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

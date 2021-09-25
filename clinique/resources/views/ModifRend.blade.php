@@ -271,7 +271,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                         <i class="la la-chain"></i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" name="contact" class="form-control" value="{{$rendezvou->contact}}" placeholder="" />
+                                                <input type="tel" name="phone_number" class="form-control" value="{{$rendezvou->contact}}" placeholder="" />
                                             </div>
                                         </div>
                                     </div>

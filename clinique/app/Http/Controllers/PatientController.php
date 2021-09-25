@@ -12,7 +12,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\DB;
 use telesign\sdk\messaging\MessagingClient;
 use Carbon\Carbon;
-require __DIR__ . "/vendor/autoload.php";
+
 
 class PatientController extends Controller
 {
@@ -40,10 +40,11 @@ class PatientController extends Controller
 
     public function voir()
     {
+        $listerends = Rendezvous::all();
        $trait = Traitement::all();
        $consult = Consultation::all();
        $ord = Ordonnance::all();
-        return view('Medecin',compact('trait','consult','ord'));
+        return view('Medecin',compact('trait','consult','ord','listerends'));
 
      }
     public function formulaire(){
@@ -56,7 +57,7 @@ class PatientController extends Controller
             'age' =>$request->age,
             'sexe' =>$request->sexe,
             'profession' =>$request->profession,
-            'tel' =>$request->tel = "22893072173",
+            'tel' =>$request->tel ,
             'nationalite' =>$request->nationalite,
             'maladiepart' =>$request->maladiepart,
             'adressep' =>$request->adressep,
@@ -117,19 +118,11 @@ class PatientController extends Controller
             'age'=>$patient->age,
             'sexe' =>$patient->sexe,
             'profession' =>$patient->profession,
-            'phone_number' =>$patient->phone_number,
+            'tel' =>$patient->tel,
             'nationalite' =>$patient->nationalite,
             'adressep' =>$patient->adressep,
             'Email'=>$patient->Email,
             'message'=>$patient->message,
-            require __DIR__ . "/vendor/autoload.php",
-            $customer_id = "1AD41D03-6D72-4A26-9DD2-6A43D541FA1F",
-            $api_key = "*********************************",
-            $phone_number = "22893072173",
-            $message = "You're scheduled for a dentist appointment at 2:30PM.",
-            $message_type = "ARN",
-            $messaging = new MessagingClient($customer_id, $api_key),
-            $response = $messaging->message($phone_number, $message, $message_type),
         ]);
 
     }
@@ -141,7 +134,7 @@ class PatientController extends Controller
         'professiond'=>$request->professiond,
         'nationalited'=>$request->nationalited,
         'adresse'=>$request->adresse,
-        'contact'=>$request->contact,
+        'phone_number'=>$request->phone_number,
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
@@ -164,24 +157,24 @@ class PatientController extends Controller
         'professiond'=>$request->professiond,
         'nationalited'=>$request->nationalited,
         'adresse'=>$request->adresse,
-        'phone_number' =>$request->phone_number="22893072173",
+        'phone_number' =>$request->phone_number,
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,
         'dater'=>$request->dater,
         'motifr'=>$request->motifr,
         'message'=>$request->message,
-        'response'=>$request->response,
+
         $customer_id = "1AD41D03-6D72-4A26-9DD2-6A43D541FA1F",
-        $api_key = "*********************************",
-       $phone_number = "22893072173",
-        $message = "You're scheduled for a dentist appointment at 2:30PM.",
+        $api_key = "Mtqcdf6IY0O4CSK4yz0/CgJV9lbaIPtbkl1tZE4d9EFLYieBgwWyKGF323zEHq4loU1lr5Tkat49H3ytvcx58w==",
+        $phone_number = "22893072173",
+        $message = "Bonjour M. ".$request->nomd." ".$request->prenomd.", vous avez rendez-vous le ".$request->dater." à ".$request->heured." pour un(e) ".$request->motifr." avec le docteur PANA, Merci.",
         $message_type = "ARN",
         $messaging = new MessagingClient($customer_id, $api_key),
         $response = $messaging->message($phone_number, $message, $message_type),
 
         ]);
-        return redirect()->route('listeRI')->with('success', 'Rendez-vous enrégistré avec succès');
+        return redirect()->route('listeRI')->with('success', 'Rendez-vous enrégistré avec succès, Message envoyé également avec succès');
     }
 
     public function editrend(Rendezvous $rendezvou){
@@ -196,7 +189,7 @@ class PatientController extends Controller
         'professiond'=>$request->professiond,
         'nationalited'=>$request->nationalited,
         'adresse'=>$request->adresse,
-        'contact'=>$request->contact,
+        'phone_number'=>$request->phone_number,
         'emaild'=>$request->emaild,
         'sexed'=>$request->sexed,
         'heured'=>$request->heured,

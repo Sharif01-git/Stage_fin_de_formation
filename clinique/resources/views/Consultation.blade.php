@@ -676,7 +676,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-lg-3 col-form-label text-right">Prenom du patient</label>
+                                <label class="col-lg-3 col-form-label text-right">Prénom du patient</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" name="prenomp" value="{{$prenomp}}" placeholder="" readonly />
                                     <span class="form-text text-muted"></span>
@@ -685,7 +685,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Motif de consultation</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="motifconsul" placeholder="" />
+                                    <input type="text" class="form-control" name="motifconsul" placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
@@ -713,28 +713,28 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Habitude de mode de vie</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="modevie"  placeholder="" />
+                                    <input type="text" class="form-control" name="modevie"  placeholder="" required/>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Histoire</label>
                                 <div class="col-lg-8 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="histoire" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="histoire" placeholder="" rows="6" required></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Hypothèse Diagnostique</label>
                                 <div class="col-lg-8 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="diagnostic" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="diagnostic" placeholder="" rows="6" required></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label text-right">Conduite à tenir</label>
                                 <div class="col-lg-8 col-md-9 col-sm-12">
-                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="conduite" placeholder="" rows="6"></textarea>
+                                    <textarea class="form-control" id="kt_maxlength_5_modal" maxlength="500" name="conduite" placeholder="" rows="6" required></textarea>
                                     <span class="form-text text-muted"></span>
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Darryldecode\Cart\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -51,8 +52,9 @@ Route::get('RendezvousI', 'PatientController@rendezvousi')->name('Infirmiere.ren
 Route::post('RendezvousI', 'PatientController@traitementir')->name('rendezvousit');
 Route::get('Rendezvous','PatientController@listeRM')->name('listeRM');
 Route::get('Rendezvou','PatientController@listeRI')->name('listeRI');
-Route::get('Medecin','UserController@index')->name('Medecin.bord');
-Route::get('Medecins','PatientController@voir')->name('voir');
+Route::get('Medecin','PatientController@voir')->name('voir');
+
+Route::get('Administrateur','UserController@show')->name('Admin.show');
 
 Route::get('RendezvousI/{rendezvou}', 'PatientController@editrend')->name('Modifrend.edit');
 Route::post('RendezvousI/{rendezvou}', 'PatientController@updaterend')->name('Modifrend.update');
@@ -132,9 +134,9 @@ Route::get('/Caissier', function () {
     return view('Caissier');
 });
 
-Route::get('/Administrateur', function () {
+/*Route::get('/Administrateur', function () {
     return view('Administrateur');
-});
+});*/
 
 /*Route::get('/Rendezvous', function () {
     return view('/Rendezvous');
